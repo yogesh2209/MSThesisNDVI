@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+The style file: siammod.bst
+Database file #1: thbib.bib
+Warning--entry type for "NIC" isn't style-file defined
+--line 1 of file thbib.bib
+Warning--entry type for "argo" isn't style-file defined
+--line 10 of file thbib.bib
+Warning--entry type for "NOAANCDC" isn't style-file defined
+--line 18 of file thbib.bib
+Warning--entry type for "bbc" isn't style-file defined
+--line 26 of file thbib.bib
+Warning--entry type for "reutersUK" isn't style-file defined
+--line 34 of file thbib.bib
+Warning--entry type for "nasaSLR" isn't style-file defined
+--line 50 of file thbib.bib
+Warning--entry type for "NOAAOcean" isn't style-file defined
+--line 58 of file thbib.bib
+Warning--entry type for "argo_uk" isn't style-file defined
+--line 66 of file thbib.bib
+Warning--entry type for "argo_fr" isn't style-file defined
+--line 74 of file thbib.bib
+Warning--entry type for "ANDRO" isn't style-file defined
+--line 82 of file thbib.bib
+Warning--entry type for "git_proj" isn't style-file defined
+--line 91 of file thbib.bib
+Warning--entry type for "tibet_snow_man" isn't style-file defined
+--line 99 of file thbib.bib
+Warning--entry type for "gupta" isn't style-file defined
+--line 107 of file thbib.bib
+Warning--entry type for "TP_database" isn't style-file defined
+--line 115 of file thbib.bib
+Warning--entry type for "rutgers_sl" isn't style-file defined
+--line 131 of file thbib.bib
+Warning--entry type for "nat_ice" isn't style-file defined
+--line 139 of file thbib.bib
+Warning--entry type for "kaggle" isn't style-file defined
+--line 147 of file thbib.bib
+You've used 33 entries,
+            2032 wiz_defined-function locations,
+            667 strings with 9232 characters,
+and the built_in function-call counts, 9417 in all, are:
+= -- 855
+> -- 427
+< -- 0
++ -- 179
+- -- 140
+* -- 633
+:= -- 1495
+add.period$ -- 47
+call.type$ -- 33
+change.case$ -- 152
+chr.to.int$ -- 0
+cite$ -- 33
+duplicate$ -- 410
+empty$ -- 765
+format.name$ -- 140
+if$ -- 1980
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 17
+newline$ -- 116
+num.names$ -- 66
+pop$ -- 247
+preamble$ -- 1
+purify$ -- 133
+quote$ -- 0
+skip$ -- 353
+stack$ -- 0
+substring$ -- 483
+swap$ -- 145
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 128
+warning$ -- 0
+while$ -- 95
+width$ -- 35
+write$ -- 276
+(There were 17 warnings)

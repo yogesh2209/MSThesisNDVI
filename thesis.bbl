@@ -1,0 +1,173 @@
+\begin{thebibliography}{10}
+
+\bibitem{akaike1974new}
+{\sc H.~Akaike}, {\em A new look at the statistical model identification}, IEEE
+  transactions on automatic control, 19 (1974), pp.~716--723.
+
+\bibitem{argo_fr}
+{\sc Argo}, 2014.
+\newblock French Argo website \url{http://www.argo-france.fr/en/welcome/}.
+  Accessed January, 2018.
+
+\bibitem{argo_uk}
+{\sc Argo}, 2014.
+\newblock UK Argo site
+  \url{http://www.ukargo.net/about/technology/transmission_system/}. Accessed
+  January, 2018.
+
+\bibitem{argo}
+{\sc Argo}, 2018.
+\newblock These data were collected and made freely available by the
+  International Argo Program and the national programs that contribute to it.
+  (\url{http://www.argo.ucsd.edu}, \url{http://argo.jcommops.org}). The Argo
+  Program is part of the Global Ocean Observing System. Accessed January 2017.
+
+\bibitem{basist}
+{\sc A.~Basist, D.~Garrett, R.~Ferraro, N.~Grody, and K.~Mitchell}, {\em A
+  comparison between snow cover products derived from visible and microwave
+  satellite observation}, Journal of Applied Meteorology, 35 (1996),
+  pp.~163--177.
+
+\bibitem{bbc}
+{\sc BBC}, {\em "snow-hit china welcomes new year"}, 2008.
+\newblock \url{http://news.bbc.co.uk/2/hi/asia-pacific/7231622.stm}. Accessed
+  March 2018.
+
+\bibitem{box1964analysis}
+{\sc G.~E. Box and D.~R. Cox}, {\em An analysis of transformations}, Journal of
+  the Royal Statistical Society. Series B (Methodological),  (1964),
+  pp.~211--252.
+
+\bibitem{braden1986surveyor}
+{\sc B.~Braden}, {\em The surveyor’s area formula}, The College Mathematics
+  Journal, 17 (1986), pp.~326--337.
+
+\bibitem{cleveland1990stl}
+{\sc R.~B. Cleveland, W.~S. Cleveland, and I.~Terpenning}, {\em Stl: A
+  seasonal-trend decomposition procedure based on loess}, Journal of Official
+  Statistics, 6 (1990), p.~3.
+
+\bibitem{fetterer2011ims}
+{\sc F.~Fetterer and K.~Webster}, {\em Ims daily northern hemisphere snow and
+  ice analysis at 4 km and 24 km resolution}, National Snow and Ice Data
+  Center, Boulder, CO,  (2011).
+
+\bibitem{gupta}
+{\sc S.~Gupta}, 2015.
+\newblock R source code for stl() function
+  \url{https://github.com/SurajGupta/r-source/blob/master/src/library/stats/R/stl.R}.
+  Accessed January, 2018.
+
+\bibitem{kaggle}
+{\sc Kaggle}, 2018.
+\newblock Kaggle: a data science and machine learning website
+  (\url{https://www.kaggle.com}).
+
+\bibitem{kokoska2000standard}
+{\sc S.~Kokoska and D.~Zwillinger}, {\em Standard probability and statistics
+  tables: Student edition}, Boca Raton, FL: CRC,  (2000).
+
+\bibitem{ljung1978measure}
+{\sc G.~M. Ljung and G.~E. Box}, {\em On a measure of lack of fit in time
+  series models}, Biometrika, 65 (1978), pp.~297--303.
+
+\bibitem{nasaSLR}
+{\sc NASA}, 2018.
+\newblock NASA JPL Sea Level Change Data Analysis Tool (DAT)
+  \url{https://sealevel.nasa.gov/data/data-analysis-tool}. Accessed March,
+  2018.
+
+\bibitem{NIC}
+{\sc NIC}, {\em National ice center. 2008, updated daily. ims daily northern
+  hemisphere snow and ice analysis at 1 km, 4 km, and 24 km resolutions.
+  boulder, co: National snow and ice data center. digital media.}, 2008.
+\newblock accessed November 2016.
+
+\bibitem{nat_ice}
+{\sc NISDC}, 2017.
+\newblock US National Ice Center (\url{http://www.natice.noaa.gov/ims/)}.
+  Accessed December, 2017.
+
+\bibitem{NOAANCDC}
+{\sc NOAA}, 2018.
+\newblock NOAA National Centers for Environmental Information, State of the
+  Climate: Global Climate Report for Annual 2013, published online January
+  2014, retrieved on March 2, 2018 from
+  https://www.ncdc.noaa.gov/sotc/global/201313.
+  \url{https://www.ncdc.noaa.gov/sotc/global/201313}. Accessed March 2018.
+
+\bibitem{noaaOcean}
+{\sc NOAA}, 2018.
+\newblock NOAA ocean service
+  \url{https://oceanservice.noaa.gov/facts/oceanfreeze.html}). Accessed
+  February, 2018.
+
+\bibitem{TP_database}
+{\sc C.~A. of~Sciences}, 2017.
+\newblock Institute of Tibetan Plateau Research, Chinese Academy of Sciences
+  Third Pole Database. Accessed January, 2018.
+
+\bibitem{ANDRO}
+{\sc R.~P. Ollitrault~Michel}, {\em Andro: An argo-based deep displacement
+  dataset. seanoe.}, 2013.
+\newblock \url{http://doi.org/10.17882/47077}.
+
+\bibitem{reutersUK}
+{\sc M.~Perry}, {\em "china's snow storms not climate change-scientists"
+  reuters article.
+  \url{https://uk.reuters.com/article/idUKSYD222109._CH_.242020080131}.
+  accessed march 2018}, 2008.
+
+\bibitem{pierret20174d}
+{\sc J.~Pierret and S.~S. Shen}, {\em 4d visual delivery of big climate data: A
+  fast web database application system}, Advances in Data Science and Adaptive
+  Analysis, 9 (2017), p.~1750006.
+
+\bibitem{ramsay1998interactive}
+{\sc B.~H. Ramsay}, {\em The interactive multisensor snow and ice mapping
+  system}, Hydrological Processes, 12 (1998), pp.~1537--1546.
+
+\bibitem{rutgers_sl}
+{\sc Rutgers}, 2017.
+\newblock Rutgers Global Snow Lab (\url{http://climate.rutgers.edu/snowcover)},
+  Accessed January, 2017.
+
+\bibitem{shen2015TPSC}
+{\sc S.~S.~P. Shen, R.~Yao, J.~Ngo, A.~M. Basist, N.~Thomas, and T.~Yao}, {\em
+  Characteristics of the tibetan plateau snow cover variations based on daily
+  data during 1997--2011}, Theoretical and Applied Climatology, 120 (2015),
+  pp.~445--453.
+
+\bibitem{snyder1987map}
+{\sc J.~P. Snyder}, {\em Map projections--A working manual}, vol.~1395, US
+  Government Printing Office, 1987.
+
+\bibitem{git_proj}
+{\sc T.~Tucker}, {\em Tibet git repository at
+  \url{(http://www.github.com/tylertucker202/tibet_snow_man)}}, 2017.
+
+\bibitem{tibet_snow_man}
+{\sc T.~Tucker}, {\em Tibet snow man and argo blog
+  (\url{http://www.itsonlyamodel.us})}, 2017.
+
+\bibitem{wei2006time}
+{\sc W.~W. Wei et~al.}, {\em Time series analysis: univariate and multivariate
+  methods}, Pearson Addison Wesley, 2006.
+
+\bibitem{argo_man}
+{\sc C.~Wong, Keeley}, {\em Argo user’s manual V3.2.
+  \url{http://doi.org/10.13155/29825}}.
+
+\bibitem{yao2013review}
+{\sc T.~Yao, V.~Masson-Delmotte, J.~Gao, W.~Yu, X.~Yang, C.~Risi, C.~Sturm,
+  M.~Werner, H.~Zhao, Y.~He, et~al.}, {\em A review of climatic controls on
+  $\delta$18o in precipitation over the tibetan plateau: Observations and
+  simulations}, Reviews of Geophysics, 51 (2013), pp.~525--548.
+
+\bibitem{yao2012different}
+{\sc T.~Yao, L.~Thompson, W.~Yang, W.~Yu, Y.~Gao, X.~Guo, X.~Yang, K.~Duan,
+  H.~Zhao, B.~Xu, et~al.}, {\em Different glacier status with atmospheric
+  circulations in tibetan plateau and surroundings}, Nature Climate Change, 2
+  (2012), pp.~663--667.
+
+\end{thebibliography}

@@ -1,0 +1,53 @@
+\contentsline {schapter}{ABSTRACT}{vi}{Doc-Start}
+\contentsline {schapter}{LIST OF TABLES}{x}{Doc-Start}
+\contentsline {schapter}{LIST OF FIGURES}{xi}{Doc-Start}
+\contentsline {schapter}{GLOSSARY}{xv}{Doc-Start}
+\contentsline {schapter}{ACKNOWLEDGMENTS}{xix}{section*.2}
+\pagebreak [3]
+\contentsline {chaphd}{CHAPTER}{1}{section*.2}
+\nopagebreak 
+\contentsline {chapter}{\numberline {1}REVIEW OF DATA VISUALIZATION AND DELIVERY TECHNIQUES}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}INTERACTIVE MULTISENSOR SNOW AND ICE MAPPING SYSTEM DATA VISUALIZATION}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}ARGO VISUALIZATION AND DATA RETRIEVAL}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Profile Cycles for Floats}{4}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Float Hardware and Data Transmission}{5}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Data Delivery}{5}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Argo Visualization Tools}{7}{subsection.1.2.4}
+\contentsline {subsubsection}{\numberline {1.2.4.1}Coriolis Visualization Application}{7}{subsubsection.1.2.4.1}
+\contentsline {subsubsection}{\numberline {1.2.4.2}NASA Sea Level Change Data Analysis Tool}{7}{subsubsection.1.2.4.2}
+\contentsline {subsubsection}{\numberline {1.2.4.3}4D Visual Delivery of Big Climate Data}{9}{subsubsection.1.2.4.3}
+\contentsline {subsection}{\numberline {1.2.5}Visualization and data retrieval tool Argovis}{11}{subsection.1.2.5}
+\contentsline {chapter}{\numberline {2}DAILY SNOW COVER MONTITORING FOR THE TIBETAN PLATEAU}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Data and Methods}{14}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Interactive Multi-sensor Snow and Ice Mapping System (IMS)}{14}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Mathematics of the stereographic mapping}{15}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}IMS data description}{17}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}IMS data delivery}{19}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}IMS data manipulation and analysis}{20}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Comparison with exact solution}{23}{subsection.2.2.6}
+\contentsline {section}{\numberline {2.3}Results}{25}{section.2.3}
+\contentsline {section}{\numberline {2.4}TSM Applications}{30}{section.2.4}
+\contentsline {section}{\numberline {2.5}Conclusions}{31}{section.2.5}
+\contentsline {chapter}{\numberline {3}A WEB APPLICATION FOR QUICK EXTRACTION AND ANALYSIS OF ARGO DATA}{35}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{35}{section.3.1}
+\contentsline {section}{\numberline {3.2}Web Application Overview}{36}{section.3.2}
+\contentsline {section}{\numberline {3.3}Argovis Data Visualization and Extraction Tutorials}{40}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Labrador Sea Summer Selection}{40}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Track a single platform in the Southern Ocean}{44}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Value added educational tool: Argovis video tutorials}{48}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Back-End Overview}{49}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Data Format and Delivery}{49}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Database Architecture}{50}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Python API}{54}{section.3.5}
+\contentsline {section}{\numberline {3.6}API Applications}{54}{section.3.6}
+\contentsline {section}{\numberline {3.7}Conclusion}{58}{section.3.7}
+\contentsline {chapter}{\numberline {4}CONCLUSIONS AND DISCUSSION}{60}{chapter.4}
+\pagebreak [3]
+\contentsline {chaphd}{APPENDIX}{64}{chapter*.58}
+\nopagebreak 
+\contentsline {chapter}{NONLINEAR LEAST SQUARES FITTING OF TIME SERIES}{65}{appendix.A}
+\contentsline {chapter}{SEASONAL DECOMPOSITION BASED ON LOESS}{72}{appendix.B}
+\contentsline {chapter}{Python API}{76}{appendix.C}
+\contentsline {chapter}{Shell script used to update MongoDB database}{80}{appendix.D}
+\vspace {5.98pt}\vspace {-3pt}\hspace {-0.25in}\parbox {0.25in}{Z}SOURCE CODE .\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {1pt}.\hspace {3pt}\space \hbox {on CD} 

@@ -1,0 +1,356 @@
+\appendix
+%
+% If you only have one appendix, you should change the above to:
+%\appendix
+%
+
+\chapter{NONLINEAR LEAST SQUARES FITTING OF TIME SERIES}\label{append:TS}
+
+This chapter explains how one can create time series models from ARGO and IMS data sets. The programming language R uses built in time series model fitting and diagnostic tools, and are used extensively to produce model parameters. A theoretical background, borrowed heavily on Wei's textbook~\cite{wei2006time}, on how these models are created is appropriate. First the theory behind linear time series shall be explained. Next model selection criterion will be discussed, followed by how model parameters are estimated.
+
+\section{LINEAR TIME SERIES MODELS}
+
+Time series modeling of climate data involves taking into account noise shocks. The linear time time series used in this thesis are linear combinations of past values and stochastic shocks as an input. For example sea surface temperature measurement $T$ indexed by time $t$ has the form
+
+\begin{equation}\label{eq:ts}
+T_t = f(T_{t-1}, T_{t-2}, ..., a_t, a_{t-1})
+\end{equation}
+
+With $a_t$ being a white noise process. White noise processes are time-invariant are centered about a mean $\mu$ with a standard deviation $\sigma^2_a$. A single realization at time index $t$ produces a shock $a_t$ on \ref{eq:ts}. 
+
+\subsection{STATIONARITY}
+
+It is worth noteing that a white noise process is an example of a stationary time series, that is, a finite process $a_t$ for time index $t=1,2,...n$ has a probability density function
+\begin{equation}\label{eq:WN}
+P(a_t) = WN(\mu, \sigma^2_a)
+\end{equation}
+Moreover, each shock $a_t$ has the same probability for any time $t$. The first order is in reference to the marginal distribution $P(Z_t)$.
+\begin{equation}
+P(a_1) = P(a_2) ... = P(a_n) = WN(\mu, \sigma^2_a)
+\end{equation}
+Any process with this characteristic is first order stationary. This concept can be extended to any order with the inclusion of additional input parameters to $P(Z_t)$.
+\begin{definition} \label{def:PDF}
+A finite set of random variables in a sample space $\omega$ has the form $Z_t = \{ Z_1, Z_2, ... , Z_n \}$ from a stochastic process ${Z(t): t = \pm 1, \pm 2, ...}$ has an $n$ dimensional probability distribution $F_{Z_t}(x_1, x_2, ..., x_n) = P\{\omega:Z_1 \leq x_1,  Z_2 \leq x_2, ..., Z_n \leq x_n\}$ for any set of real numbers $x_i = {x_1, x_2, ...x_n}$.
+\end{definition}
+A probability distribtion definded by \ref{def:PDF} with arbitrary real numbers $x_i$ can be further refined by setting some values of $x_i$ to be equal. If all values $x_i$ are equal, than the distribtion is first order, and so on. In terms of a definition
+\begin{definition} \label{def:nOrder}
+Given a set of $j$ unique real numbers from the set $x_i$, a process $Z_t$ is $j$ order stationary if its probility distribution is time invarient.
+\end{definition}
+$Z_t$ can be 1,2,...n order stationary. Higher order stationarity m inplies lower order stationarity n for $n < m$. In the event that $Z_t$ is $n$ order, it is said to be strictly stationary.
+Linear time series can be used to model \textit{strictly stationary} processes such as \ref{eq:ts}.
+For a given real-valued process $Z_t$, an expected value 
+\begin{equation}\label{eq:mean}
+\mu_t = E(Z_t)
+\end{equation}
+and variance 
+\begin{equation}\label{eq:std}
+\sigma^2 = E(Z_t - \mu_t)^2
+\end{equation}
+$Z_t$ also has an autocovariance between two times $t_1$ and $t_2$ denoted by 
+\begin{equation}\label{eq:cov}
+\gamma(t_1, t_2) = E(Z_{t_1} - \mu_{t_1})(Z_{t_2} - \mu_{t_2})
+\end{equation}
+and an autocorrelation function 
+\begin{equation}\label{eq:corr}
+\rho(t_1, t_2) = \frac{\gamma(t_1, t_2)}{\sqrt{\sigma_{t_1}^2}\sqrt{\sigma_{t_2}^2}}
+\end{equation}
+$Z_t$ is strictly stationarity when all equations \ref{eq:mean} to \ref{eq:corr} do not depend on time index $t$. 
+
+Linear time series can be used to model \textit{stationary} time series. The white noise process $Z_t = a_t$ can be modeled as a linear time series because its probability density function \ref{eq:WN} does not depend on $t$ and so neither do \ref{eq:mean} to \ref{eq:corr}, hence it is stationary. In practice, time series data are usually shown to be covariance stationary. Only \ref{eq:cov} is satisfied and the rest is assumed. Hereon, the term covariance stationarity shall be refered to only as stationarity.
+The remaining subsections will describe the models used to make up linear time series.
+
+\subsection{AUTOREGRESSIVE (AR) MODELS}
+
+Past values of a time series such as \ref{eq:ts} often hold a critical role in climate data. To model this process, past values are weighted by a set of real numbers. This model is called an autogregressive (AR) model and is defined by
+
+\begin{equation}\label{eq:ar}
+\dot{T_t} = \phi_1 \dot{T}_{t-1} + \phi_2 \dot{T}_{t-2} + \phi_p \dot{T}_{t-p} + ... + a_t = \Sigma_{k=1}^p \phi_k \dot{T}_{t-k} + a_t
+\end{equation}
+
+Integer p is finite and $\phi_k$ are constants, whose values are chosen so that the model is stationary. For simplicity of notation without loss of generality, $\dot{T_t}=T_t - \mu$. Time series are often written in a compact form using the backshift operator $B$. The operator acts on a time index by shifting it back once. For example $Ba_t = a_{t-1}$, $B^2a_t = a_{t-2}$ and so forth. The AR model using this notation\ref{eq:arB} is written below.
+\begin{equation}\label{eq:arB}
+\dot{T}_{t} = \phi_1 \dot{T}_{t-1} + \phi_2 \dot{T}_{t-2} + ... + a_t = \phi_1 \dot{T}_{t} B + \phi_2 \dot{T}_{t} B^2 + \phi_p B^p \dot{T}_{t}... a_t = \Sigma_{k=1}^p \phi_k B^k \dot{T_{t}} + a_t
+\end{equation}
+The backshift operator rewrites AR model. Temperature anomaly $\dot{T_{t}}$ shifts to right-hand side. 
+\begin{equation}
+ \dot{T_{t}} - \Sigma_{k=1}^p \phi_k B^k  \dot{T_{t}} = a_t
+\end{equation}
+The left-hand side compacted further by the notation
+\begin{equation}
+ \dot{T_{t}} - \Sigma_{k=1}^p \phi_k B^k  \dot{T_{t}} = \phi_p(B) \dot{T_{t}}
+\end{equation}
+Where $\phi_p(B) = \Sigma_{k=0}^p \phi_k B^k$ with $\phi_0$ always 1. So that the AR model is expressed by
+\begin{equation}\label{eq:arc}
+\phi_p(B) \dot{T_{t}} = a_t
+\end{equation}
+
+\subsection{MOVING AVERAGE (MA) MODELS}
+
+Moving average models multiply the white noise variable $a_{t-k}$ by a constant $\phi_k$ for k = 1, 2, ..., q.
+\begin{equation}
+\dot{T_{t}} = a_t + \theta a_{t-1} + \theta a_{t-2} ... \theta a_{t-q}
+\end{equation}
+Using the backshift notation, $a_t + \theta_1 a_{t-1} + \theta_2 a_{t-2} ... \theta_q a_{t-q} = \theta_q(B)a_t$ so that the AR model is expressed as
+\begin{equation}\label{eq:mac}
+\dot{T_{t}} = \theta_q(B)a_t
+\end{equation}
+
+\subsection{AUTOREGRESSIVE MOVEING AVERAGE (ARMA) MODEL}
+
+Combining AR \ref{eq:arc} and MA \ref{eq:mac} creates an ARMA model expressed by
+\begin{equation}
+\phi_p(B) \dot{T_{t}} = \theta_q(B)a_t
+\end{equation}
+
+\subsection{AUTOGREGRESSIVE INTEGREATED MOVING AVERAGE (ARIMA) MODEL}
+
+Up until now each of these time series are stationary. If random variable temperature for step $t$ = a, $\dot{T_{a}}$ has the same probability for $\dot{T_{b}}$ then it is stationary.
+
+Imagine a increasing time series; The first point is likely smaller than the last point. Then this time series is not stationary. In this case, taking the difference and applying time series satisfies stationarity. The change in temperature is constant, so its time series is stationary. In the finite realm, we take an initial differencing step corresponding to the "integrated" part of the model. For generalization, this can be applied d times until the resulting series is stationary.
+
+\begin{equation}
+\dot{T}_{t}(1 - B)^d = S_{t}
+\end{equation}
+
+Where, $S_t$ is a stationary time series. Until now, the time series models had to be stationary, with this mean stabilizing transformation, it is possible to model some non stationary processes using an AR, MA, or the generalized ARMA model. From a calculus framework, the model is integrated d times to return it to its original design.  called an ARIMA model written as
+
+\begin{equation}\label{eq:arima}
+\phi_p(B)(1-B)^d  \dot{T_{t}} = \theta_q(B)a_t
+\end{equation}
+
+\subsection{VARIANCE STABILIZING TRANSFORMATION}
+
+As it was shown in the previous sections, it is possible to transform some non-stationary time series into stationary. Difference transformations are suitable for trending time series, but do not sucessfully account for variance stationarity. A common example would be the volitility of snowfall during the winter/spring months compared to small variation during the summer months, a clear indication of a non-stationary process. To stabilize the variance, assume variance is a function dependent on a moving average.
+\begin{equation}\label{eq:varz}
+Var(Z_t) = cf(\mu_t)
+\end{equation}
+Where $c$ is a arbitrary positive constant, and $f(\mu_t)$ is a positive function dependent on an . average indexed by $t$. Next consider a transformation $T(Z_t$ such that
+\begin{equation}
+Var(T(Z_t)) = \sigma^2_T
+\end{equation}
+Taking the Taylor series about $\mu_t$
+\begin{equation} \label{eq:Tts}
+T(Z_t) \approx T(\mu_t) + T'(\mu_t)(Z_t-\mu_t)
+\end{equation}
+The variance of \ref{eq:Tts} is
+\begin{equation} \label{eq:Vts}
+Var(T(Z_t)) \approx \cancelto{0}{T(\mu_t)} + T'(\mu_t)^2(Var(Z_t)-\cancelto{0}{Var(\mu_t)})
+\end{equation}
+Substituting \ref{eq:varz} into \ref{eq:Vts} yields
+\begin{equation}\label{eq:Vts2}
+Var(T(Z_t)) \approx T'(\mu_t)^2 cf(\mu_t)
+\end{equation}
+Knowing that a stationary time series has constant variance, let $Var(T(Z_t)) = c$ and rearrange \ref{eq:Vts2} to solve for $T'(\mu_t)$.
+\begin{equation}\label{eq:T}
+T'(\mu_t) \approx \frac{1}{f(\mu_t)}
+\end{equation}
+Taking the indefinite integral of \ref{eq:T} yields the following criteria that the transformation function must statisfy the following.
+\begin{equation}\label{eq:Sat}
+T(\mu_t) = \int \frac{1}{f(\mu_t)} + C
+\end{equation}
+In general Box and Cox provided a generalized expression for variance stabilizing functions\cite{box1964analysis}, that satisfy \ref{eq:Sat}
+\begin{equation}
+  T(Z_t)=\begin{cases}
+    Z_t^{\lambda}, & \lambda \neq 0\\
+    ln(Z_t), & \lambda = 0
+  \end{cases}
+\end{equation}
+Note that here the natural log transformation will fail to transform $Z_t \leq 0$. Oftentimes climate data is is described as anomalies, which are centered about 0 with negative values. Another example could be temperature taken in Celcuis. Without loss of generality, it is possible to perform a linear transformation on $Z_t$ followed by a log transformation. Adhering to temperature, this would be equivalent to taking the log transform of degrees Kelvin instead of Celcius. 
+\begin{equation}
+T(Z_t) = ln(Z_t + C)
+\end{equation}
+Where $Z_t = C \geq 0$.
+
+Variance transformations when needed make better fitting models. In the next selection, two main criteria are used to determine which linear time series is best.
+
+\subsection{MODEL DIAGNOSTICS}
+
+There is no ideal model selection method. Singling out best fitting models is a subjective decision, however there do exist metrics that can be used to compare different models with one another. One well known metric is the Akaike information criterion (AIC)\cite{akaike1974new}.
+\begin{equation}
+AIC = 2k - 2log(\hat{L})
+\end{equation}
+where k is the number of parameters and $\hat{L}$ is the maximum value for the Likilihood function for the model. The AIC provides a balanced metric that rewards goodness of fit and penalizes overfitting models.
+
+Box and Ljung \cite{ljung1978measure} also include a diagnostic that tests the lack of fit. The test is applied to the residuals of a model after fitting the model to the data by examining the first $m$ autocorrelations of the residuals. If the model is a good fit, there should be no autocorrelations. There are $m$ p-values calculated. The null hypothesis states The model does not show a lack of fit. Thus large p-values indicate that the test fails to reject the null Hypothesis.
+
+Given a time series $Z_t$ with length $n$, Consider the summation
+\begin{equation}\label{eq:BL}
+Q = n(n+2)\Sigma^m_{k=1} \frac{\hat{r}_k^2}{n-k}
+\end{equation}
+where $\hat{r}_k^2$ is the estimated autocorrelation of the series at lag $k$. The Box-Ljung test rejects the null hypothesis if $Q > \chi^2_{1-\alpha,h}$. $\chi^2_{1-\alpha,h}$ is the chi-square distribution with $h=m-p-q$ degrees of freedom of a ARMA(p,q) model.
+
+\chapter{SEASONAL DECOMPOSITION BASED ON LOESS}\label{append:STL}
+
+Seasonal Decomposition Based on LOESS by Cleveland et al. \cite{cleveland1990stl} allows a non stationary time series with a seasonal trend to be decomposed into three parts: The trend $T_t$, season $S_t$, and the residual $R_t$. Where the original signal $Z_t$ is combination of all three.
+\begin{equation}\label{eq:stl}
+Z_t = T_t + S_t + R_t
+\end{equation}
+In comparison, seasonal averaging as seen in Chapter 2 only decomposes the Seasonal element, leaving the trend and residuals intact. Modeling stationarity time series favors the LOESS approach, and modeling the residuals as a stationary time series. R's STL() function, is the implentation to this non-parametric approach by Clevelant et al. \cite{cleveland1990stl}. 
+
+\subsubsection{LOESS FIT}
+
+STL uses the LOESS curve $\hat{g}(x)$ is a smoothing parameter for $y(x)$. $y(x)=\hat{g}(x) + \epsilon(x)$. The independent variable is written in a discreet form so that it is indexed by $t$. 
+\begin{equation}
+x = x_t, t = 1, 2, ... n
+\end{equation}
+LOESS fits linear or quadractic curves to regions of the time series. The size of the region is fixed by a focal window $q$ number of points of some time series $z(x)$. Let this subset of points be denoted $y(x) \subseteq z(x)$. Each point in value of $y(x)$ is weighted with a tricube function.
+\begin{equation}\label{eq:tricube}
+  W(u)=\begin{cases}
+    (1-u^3)^3, & 0 \leq u < 1\\
+    0, & \text{otherwise}
+  \end{cases}
+\end{equation}
+\begin{equation}\label{eq:u}
+v_t(x) = W \left( \frac{|x_i - x|}{\lambda_q(x)} \right)
+\end{equation}
+Where $\lambda_q(x)$is that qth farthest distance from $x_t$. Note that the focal window $q$ can be larger than $n$, by adjusting  $\lambda_q(x)$ so that $\lambda_q(x) = \lambda_n(x)\frac{q}{n}$.
+A 1st or 2nd degree order polynomial $p_{x_t}(x)^{(q)}$ with weight $v_t(x)$ at point $(x_t, y(x_t)$ is fitted to $y(x)$. Additionally, a reliablity factor $\rho_i$ is weighted to $v_t(x)$ for handling outliers in $y(x)$. For example suppose that it is known that the variance for $y_t$ is $\sigma k_t$ for a known $k_t$. Then the weight is choosen to stabilize the variance for all $y(x)$, in this case $\rho_t = 1/k_i$, there by each point is weighted by $\rho_t v_t(x)$, thus a smoothed point $z_{smoothed}(x) = p_{x_ti}(x)^{(q)}$. This adds robustness to the LOESS smoothing. Details on how stl() handles $\rho_t$ is discussed in the \ref{sec:stl}. The process is continued for each point in $z(x)$.
+
+Densely sampled seasonal time series with few missing points such as those shown in Chapters 2 and 3 work well with LOESS methods. In the next section, the STL functions underlying algorithm will show how LOESS methods and low pass filters is used to decompose $Z_t$.
+
+\subsubsection{IMPLEMENTATION OF STL ALGORITHM}\label{sec:stl}
+
+The basic structure of the STL algorithm are two forloops: The outer calculates $\rho_i$ of a completed LOESS curve $n_{(o)}$ number of times, and the inner loop decomposes a series $n_{(i)}$ number of times. Seasonal decomposition of sereries described in Chapters 2 and 3 set the outer loop length $n_{(o)} = 0$ and set $\rho_i = 1,\ \forall i$. The time series object $Z_t$ with specified period is input into stl().
+
+Pseudocode \ref{alg:stl} used to describe how the time series used in Chapters 2 and 3 implement R's stl() function as desribed in Clevelant et al. \cite{cleveland1990stl} and R source code \cite{gupta}.
+
+\begin{algorithm}
+\caption{STL Implementation}\label{alg:stl}
+\begin{algorithmic}[1]
+\Procedure{Decompose Series}{}
+\State $\textbf{INPUT:}Z_t\ \textit{(time series object)}$
+\State $n \gets \text{length of} Z_t$
+\State $period \gets \text{period of time series}$
+\State $s.window \gets 10 * n + 1$
+\State $s.degree \gets 0$
+\State $l.degree,\ t.degree \gets 1$
+\State $t.degree \gets \textbf{nextodd} \left(\lceil \frac{1.5 * period}{1 -1.5/s.window} \rceil \right)$
+\State $n_{(i)} \gets 2$
+\State $k \gets 0$
+\State $T_t^{(k)} \gets 0$
+\State $n_{(i)} \gets 2$
+\State $T_t^{(0)} \gets \text{array of zeros with length n}$
+\For{\texttt{$k = 0$, $k{+}{+}$, while $k \leq n_{(i)}$}}
+\State $DT_t^{k+1} = Z_t - T_t^{(k)}$
+\State $C_t^{(k+1)} \gets \textbf{loess}(DT_t^{(k)}, q=s.window, degree = 1)$
+\State $A_t \gets \textbf{lowpass}(C_t^{(k+1)}, period)$
+\State $B_t \gets \textbf{lowpass}(A_t, 3)$
+\State $L_t^{(k+1)} \gets \textbf{loess}(B_t, q=\textbf{nextodd}(period), degree = 1)$
+\State $S_t^{(k+1)} \gets C_t^{(k+1)} - L_t^{(k+1)}$
+\State $DS_t^{(k+1)} \gets Y_t-S_t^{(k+1)}$
+\State $T_t{(k+1)} \gets \textbf{loess}(DS_t^{(k+1)}, q=t.window, degree = 1)$
+\EndFor
+\State $R_t = Y_t - S_t^{(k+1)} - T_t^{(k+1)}$
+\State $\textbf{OUTPUT}:\ S_t^{(k+1)},\ T_t^{(k+1)},\ R_t$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\chapter{Python API}\label{append:python_api}
+
+The Python basic functionality is provided below. 
+
+\begin{lstlisting}[label={lst:api} caption=Python API to www.argovis.com]
+import pandas as pd
+import numpy as np
+import requests
+def get_profile(profile_number):
+    resp = requests.get('http://www.argovis.com/catalog/profiles/'+profile_number)
+    # Consider any status other than 2xx an error
+    if not resp.status_code // 100 == 2:
+        return "Error: Unexpected response {}".format(resp)
+    profile = resp.json()
+    return profile
+    
+def get_platform_profiles(platform_number):
+    resp = requests.get('http://www.argovis.com/catalog/platforms/'+platform_number)
+    # Consider any status other than 2xx an error
+    if not resp.status_code // 100 == 2:
+        return "Error: Unexpected response {}".format(resp)
+    if resp.status_code == 500:
+        return "Error: 500 status {}".format(resp)
+    platformProfiles = resp.json()
+    return platformProfiles
+
+def get_platform_measurements(profiles):
+    '''
+    Retrieves all measurements included in a list of platforms.
+    '''
+    stationParam = []
+    for profile in profiles:
+        stationParam.append(profile['station_parameters'])
+    flatList = [item for sublist in stationParam for item in sublist]
+    if isinstance(flatList[0], list):
+        flatList = [item for sublist in flatList for item in sublist]
+    uniqueList = list(set(flatList))
+    uniqueList = [s for s in uniqueList if s != ''] # ignore blank station params.
+                
+    measurement_keys = [x.lower() for x in uniqueList]   
+    return measurement_keys
+
+def parse_into_df(profiles):
+    #initialize dict
+    meas_keys = profiles[0]['measurements'][0].keys()
+    
+    #get measurement numbers
+    dfKeys = get_platform_measurements(profiles)
+
+    df = pd.DataFrame(columns=meas_keys)
+    for profile in profiles:
+        profileDf = pd.DataFrame(profile['measurements'])  # may inlude qc values
+        profileDf['cycle_number'] = profile['cycle_number']
+        profileDf['profile_id'] = profile['_id']
+        profileDf['lat'] = profile['lat']
+        profileDf['lon'] = profile['lon']
+        profileDf['date'] = profile['date']
+        df = pd.concat([df, profileDf])
+    return df
+
+def get_selection_profiles(startDate, endDate, shape, presRange=None):
+    
+    baseURL = 'http://www.argovis.com/selection/profiles'
+    
+    startDateQuery = '?startDate=' + startDate
+    endDateQuery = '&endDate=' + endDate
+    shapeQuery = '&shape='+shape.replace(' ','')
+    if not presRange == None:
+        pressRangeQuery = '&presRange=' + presRange
+        url = baseURL + startDateQuery + endDateQuery + pressRangeQuery + shapeQuery
+    else:
+        url = baseURL + startDateQuery + endDateQuery + shapeQuery
+    resp = requests.get(url)
+    # Consider any status other than 2xx an error
+    if not resp.status_code // 100 == 2:
+        return "Error: Unexpected response {}".format(resp)
+    if resp.status_code == 500:
+        pdb.set_trace()
+        return "Error: 500 status {}".format(resp)
+    selectionProfiles = resp.json()
+    return selectionProfiles
+\end{lstlisting}
+
+\chapter{Shell script used to update MongoDB database}\label{append:update_db}
+
+\begin{lstlisting}[language=bash, label={lst:cron}, caption=bash script used to syncronize local mirror of vdmzrs.ifremer.fr::argo. Python code updates MongoDB with changes.]
+#!/bin/bash
+echo 'Start of rsync and List'
+DATE=`date +%y-%m-%d-%H:%M`
+echo $DATE
+FTPDIR='/storage/ifremer/'
+ARGODIR='/home/argo-database/'
+QUEUEDIR=$ARGODIR'queuedFiles/'
+OUTPUTNAME=$QUEUEDIR'ALL-DACS-list-of-files-synced-'$DATE'.txt'
+echo 'Starting rsync: writing to '$FTPDIR
+#Sync only /profiles/[RDM]*
+rsync -arvzhim --delete --include='**/' --include='**/profiles/[RDM]*.nc' --exclude='*' --exclude='**/profiles/B*' vdmzrs.ifremer.fr::argo $FTPDIR > $OUTPUTNAME
+ENDDATE=`date +%y-%m-%d-%H:%M`
+echo 'End of rsync and List'
+echo $ENDDATE
+
+echo 'Starting to add DB'
+cd $ARGODIR
+python3.6 processQueue.py kadavu
+PYENDDATE=`date +%y-%m-%d-%H:%M`
+echo 'Added new files to DB'
+echo $PYENDDATE
+\end{lstlisting}

@@ -1,0 +1,45 @@
+\BOOKMARK [0][-]{Doc-Start}{ABSTRACT}{}% 1
+\BOOKMARK [0][-]{Doc-Start}{LIST OF TABLES}{}% 2
+\BOOKMARK [0][-]{Doc-Start}{LIST OF FIGURES}{}% 3
+\BOOKMARK [0][-]{Doc-Start}{GLOSSARY}{}% 4
+\BOOKMARK [0][-]{section*.2}{ACKNOWLEDGMENTS}{}% 5
+\BOOKMARK [0][-]{section*.2}{CHAPTER}{}% 6
+\BOOKMARK [0][-]{chapter.1}{REVIEW OF DATA VISUALIZATION AND DELIVERY TECHNIQUES}{}% 7
+\BOOKMARK [1][-]{section.1.1}{INTERACTIVE MULTISENSOR SNOW AND ICE MAPPING SYSTEM DATA VISUALIZATION}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.2}{ARGO VISUALIZATION AND DATA RETRIEVAL}{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.2.1}{Profile Cycles for Floats}{section.1.2}% 10
+\BOOKMARK [2][-]{subsection.1.2.2}{Float Hardware and Data Transmission}{section.1.2}% 11
+\BOOKMARK [2][-]{subsection.1.2.3}{Data Delivery}{section.1.2}% 12
+\BOOKMARK [2][-]{subsection.1.2.4}{Argo Visualization Tools}{section.1.2}% 13
+\BOOKMARK [2][-]{subsection.1.2.5}{Visualization and data retrieval tool Argovis}{section.1.2}% 14
+\BOOKMARK [0][-]{chapter.2}{DAILY SNOW COVER MONTITORING FOR THE TIBETAN PLATEAU}{}% 15
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.2}{Data and Methods}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.1}{Interactive Multi-sensor Snow and Ice Mapping System \(IMS\)}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.2}{Mathematics of the stereographic mapping}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.3}{IMS data description}{section.2.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.4}{IMS data delivery}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.5}{IMS data manipulation and analysis}{section.2.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.6}{Comparison with exact solution}{section.2.2}% 23
+\BOOKMARK [1][-]{section.2.3}{Results}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.4}{TSM Applications}{chapter.2}% 25
+\BOOKMARK [1][-]{section.2.5}{Conclusions}{chapter.2}% 26
+\BOOKMARK [0][-]{chapter.3}{A WEB APPLICATION FOR QUICK EXTRACTION AND ANALYSIS OF ARGO DATA}{}% 27
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.2}{Web Application Overview}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.3}{Argovis Data Visualization and Extraction Tutorials}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.1}{Labrador Sea Summer Selection}{section.3.3}% 31
+\BOOKMARK [2][-]{subsection.3.3.2}{Track a single platform in the Southern Ocean}{section.3.3}% 32
+\BOOKMARK [2][-]{subsection.3.3.3}{Value added educational tool: Argovis video tutorials}{section.3.3}% 33
+\BOOKMARK [1][-]{section.3.4}{Back-End Overview}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.4.1}{Data Format and Delivery}{section.3.4}% 35
+\BOOKMARK [2][-]{subsection.3.4.2}{Database Architecture}{section.3.4}% 36
+\BOOKMARK [1][-]{section.3.5}{Python API}{chapter.3}% 37
+\BOOKMARK [1][-]{section.3.6}{API Applications}{chapter.3}% 38
+\BOOKMARK [1][-]{section.3.7}{Conclusion}{chapter.3}% 39
+\BOOKMARK [0][-]{chapter.4}{CONCLUSIONS AND DISCUSSION}{}% 40
+\BOOKMARK [0][-]{chapter*.58}{APPENDIX}{}% 41
+\BOOKMARK [0][-]{appendix.A}{NONLINEAR LEAST SQUARES FITTING OF TIME SERIES}{}% 42
+\BOOKMARK [0][-]{appendix.B}{SEASONAL DECOMPOSITION BASED ON LOESS}{}% 43
+\BOOKMARK [0][-]{appendix.C}{Python API}{}% 44
+\BOOKMARK [0][-]{appendix.D}{Shell script used to update MongoDB database}{}% 45
