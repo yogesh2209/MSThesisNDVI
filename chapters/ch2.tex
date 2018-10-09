@@ -1,7 +1,7 @@
-\chapter{DAILY SNOW COVER MONTITORING FOR THE TIBETAN PLATEAU}
+\chapter{NDVI-MAP FUNCTIONS AND USER GUIDE}
 \label{chap:tibet}
 
-\section{Introduction}
+\section{What can app do?}
 
 Handling \acrfull{ims} data at several resolutions requires significant data management efforts. Universal tasks include: Parsing through dates, filtering latitude and longitude coordinates, calculating snow/ice areas, and other functions that characterize \acrfull{sacd}. Individual groups who use IMS data dedicate time and resources developing and maintaining code built to handle these tasks. Currently, there is no \acrfull{foss} available for users. Consequentially groups and users are developing personal libraries to handle data, where they probably should be analyzing and drawing inferences from that data. In response to this challenge, a convenient toolkit for the snow-SACD has been created, with the \acrfull{tp} used as an example of the toolkit's capabilities.
 The TP region, bounded by (25,45)$^\circ$N and (65,105)$^\circ$E, also known as the Third Pole of the Earth and includes the Himalaya Mountains, is used as an example to describe the 
@@ -12,9 +12,8 @@ In addition to this thesis, the website \href{http://www.itsonlyamodel.us}({www.
 
 Section~\ref{dataAndMethods} describe data and methods, Section~\ref{results} contains results, and the conclusions are in Section~\ref{conclusions}. 
 
-\section{Data and Methods}\label{dataAndMethods}
+\section{A user guide/manual}\label{dataAndMethods}
 
-\subsection{Interactive Multi-sensor Snow and Ice Mapping System (IMS)}
 
 IMS \cite{NIC} uses both satellites remote sensing data and in situ observations,
 including Advanced Very High-Resolution Radiometer
@@ -31,7 +30,7 @@ are blended results of these remote sensing and ground observations, with three 
 
 The 24 km in this resolution refers to the unscaled distance of a stereographic projection. Mapping a 3D surface to a 2D plane via stereographic projection introduces scale distortion \cite{snyder1987map}. The point at which the scale error is zero is what the IMS refers to as the resolution. Each point on the projection has a latitude-longitude (lat-lon) coordinate, determined by a set of assumptions. 
 
-\subsection{Mathematics of the stereographic mapping}
+
 For the coarse 24x24 resolution, models the Earth as a sphere of a fixed radius of 6371.2 km \cite{NIC}. The stereographical projection transformation is obtained by one-to-one mapping between a point on the projected plane with Cartesian coordinates $(x,y)$ and a point on the sphere with lat-lon coordinates $(\phi, \lambda)$. 
  Following \cite{snyder1987map}, the mapping formulas from a sphere point $(\phi, \lambda)$ to a Cartesian point $(x,y)$  are below:
 \begin{equation}
@@ -135,7 +134,7 @@ Mapping both the sphere and ellipsoidal surface to a plane using stereographic p
 
 This non-uniformity can be a source of confusion, leading to misinterpretations of the square kilometer estimation of snow coverage. This paper attempts to eliminate this confusion by explicitly calculating the surface area around each grid box of the $24 \times 24$ and $4 \times 4$ km resolution datasets.
 
-\subsection{IMS data description}
+
 IMS stores its data in zipped .asc files for each day. Each file includes header and a body. The body is in the form of a $n \times n$ matrix. The $24 \times 24$ km resolution has $n=1024$ and $4 \times 4$ km resolution has $n=6144$. Each point on the body is digits 0, 1, 2, 3, and 4 representing categorical information listed in Table 1. 
 
 \begin{table}[hbt]
@@ -181,11 +180,9 @@ Figure~\ref{fig:dry earth} is an illustration of the grid coordinate ticks on a 
 \end{minipage}
 \end{figure}
 
-\subsection{IMS data delivery}
 
 Data is placed on a FTP server at \url{ftp://sidads.colorado.edu/pub/DATASETS/NOAA/G02156/}. FTP directory includes separate folders for lat-lon grids (metadata) and for each resolution. Data can be downloaded by selecting files in a directory while working in the browser. This process can be automated an FTP client/server software such as \gls{filezilla}. The dataset can be downloaded in parts or in its entirety and stored locally for manipulation. FileZilla can also syncronize local and remote directories. FTP server updates daily for each resolution folder.
 
-\subsection{IMS data manipulation and analysis}
 
 Each IMS data file corresponds to one day. TSM main routine parses through each file and calculates the given area of snow and ice coverage. Python's Numpy, Pandas, and H5py libraries are used to handle daily datasets, grid area estimation, and database archives. TSM filters each file by the appropriate latitude and longitude and flattens it into a \gls{dataseries} object. TSM groups each series by year and stores them as a Hierarchal Data Format 5 (HDF5) file for each year. Basemap library is used for the projection transformations and plotting contours on maps.
 
@@ -293,7 +290,6 @@ As an example, the top five points in Figure~\ref{fig:areas_section_ii} are cove
 \end{minipage}
 \end{figure}
 
-\subsection{Comparison with exact solution}
 
 The Earth is modeled as a sphere of radius $R = 6,371 \ km$ The Haversine function calculates the great circle distance between two lat-lon points in degrees.
 
@@ -325,7 +321,7 @@ A_{tibet} = R^2(\Delta_{top} - \Delta_{bottom}),
 \end{equation}
 where $A_{tibet}$ is treated as the exact solution and compared to the sum of areas in our data frame
 
-\section{Results}\label{results}
+
 Snow data are visualized by plotting an interpolated contour grid onto a Mercator projection of the TP, region shown in Figure~\ref{compare_grids}.
 \begin{figure}[ht]
 \centering
@@ -492,7 +488,7 @@ The AR(6) model with estimated parameters shown in Table~\ref{tbl:ar6} have a re
 \end{minipage}
 \end{figure}
 
-\section{TSM Applications}
+
 The TSM is currently used to generate daily snow mapping at \url{http://www.itsonlyamodel.us/daily-snow.html}. See Figure~\ref{fig:daily_map}.
 
 \begin{figure}[ht]
@@ -515,7 +511,6 @@ The Chinese National Earth System Science Data Sharing Infrastructure website us
 \end{minipage}
 \end{figure}
 
-\section{Conclusions}\label{conclusions}
 
 The TSM project provided on GitHub \cite{git_proj} is a convenient tool for parsing through large IMS data sets. Statistical inferencing using this set has never been easier or more accessible to both professional and amateur alike. Anyone who can run a python environment can generate time series, snow and ice maps, histograms, spectral series over TP or any region over the Northern Hemisphere. TSM provides users with data sets that can be used for statistical inferencing as shown by the simple statistical inferencing in the results section.
 

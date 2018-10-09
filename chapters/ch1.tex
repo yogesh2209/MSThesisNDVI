@@ -1,5 +1,7 @@
-\chapter{REVIEW OF DATA VISUALIZATION AND DELIVERY TECHNIQUES}
+\chapter{INTRODUCTION}
 \label{chap:intro}
+
+%intro here in one paragraph
 
 The advent of big data sets has put pressure on the Mathematics and Statistics community to rethink how to apply traditional of analysis and inferencing. Both climate and oceanographic science disciplines are feeling this data explosion and are struggling to scale. Unprecedented amounts of data are made available by governmental agencies like \gls{noaa} and \gls{nasa}, and heavily used by the scientific community to draw inferences. The traditional visualization and delivery tools can be improved to handle a surge of new data delivery. The techniques used to visualize and retrieve these data needs to be reevaluated. Global predictions need modern web app technologies for professional and amateur to visualize and receive data quickly, accurately, and as painlessly as possible.
 
@@ -11,7 +13,7 @@ An unsettling reality is that as new technologies unfurl, mathematicians, statis
 
 Time series analysis and gridded interpolation of climate systems are usually done on local spatiotemporal realms. The mathematical models that describe complex systems simplify climate regimes to seasonal, spatial, and temporal scales small enough to be computed on a single machine. A butterfly's flapping its wings in the Amazon is not modeled for Gulf rainfall after all! In this sense, the methods used to simplify the data is under investigation. Models are evaluated by how well they fit different data sets, and it is of interest to the community to try as many models as possible and to compare results with each other. In this sense, data visualization and accessibility aid the scientific process, as it allows ease of data for modeling, and is means of comparing. In the next sections, we hope to introduce current visualization platforms available for two different datasets. A 3D gridded satellite product, and a 4D in situ ocean sensor array product.
 
-\section{INTERACTIVE MULTISENSOR SNOW AND ICE MAPPING SYSTEM DATA VISUALIZATION}
+\section{Background and significance of visualizing spatial data using smart phones}
 
 The daily snow and ice coverage dataset over the Northern Hemisphere (NH)
 based on the Interactive Multisensor Snow and Ice Mapping System (IMS) maintained by the United States' NSIDC \cite{NIC} is a useful tool for numerous applications, such as monitoring day-to-day weather variations for water resources and agriculture, and estimating the snowstorm severity for insurance industries and governmental agencies. 
@@ -37,11 +39,18 @@ Chapter 2 of this thesis describes a software toolkit written in Python that cal
 
 Information and improvements regarding the toolkit shall be discussed, chiefly the opportunity for the creation of a web application that provides users with visualization and data retrieval built with modern website technology. Providing the source code limits the users to those who know Python; on the other hand, a web app connected to an intuitively designed user interface is a pragmatic way to serve the current IMS community to expand its user base.
 
-\section{ARGO VISUALIZATION AND DATA RETRIEVAL}
+
+\subsection{Past work}
+\subsection{Current scenario}
+\subsection{Future work for quick visualization and analysis of big data}
+
+
+
+\section{Motivation of the VACYD research: crop yield data visualization}
 
 For over a decade, the Argo program has provided temperature, salinity and pressure data (T/S/P) on a global scale for depths as far as 2000 decibar (dbar), with unprecedented spatial and temporal resolution and no seasonal bias \cite{argo}. Close to two million profiles have been collected and made publicly available on Argo’s Global Data Assembly Centres (GDACs) on \gls{ftp} servers. Data is recorded by various types of floats that drift at a resting depth and raise every few days to transmit information to GDACS. From there data underwent quality control markers and adjustments and released as a \gls{NetCDF} product on FTP servers. Users can download either profile (one cycle of a floating measurement) or the entire profile history of a float. Though there are visualization tools available, almost all of them do not allow querying based on a spatial-temporal selection. For example, retrieving Argo profile data for North Sea regions at a certain depth and date. Chapter 3 will describe a web app that is used to allow such a data retrieval service.
 
-\subsection{Profile Cycles for Floats}
+\section{A short summary of the app development method and results}
 
 Argo floats are equipped with an inflatable bladder, allowing them to float and sink. Once deployed the floats are programmed to drift at a 1000 meter depth for nine days. After nine days before descending to 2000 meters, then rising at a rate of 10 cm/s. While ascending the float sensors begin sampling parameters described in Table~\ref{tbl:argoParams}. Ascension takes 6 hours. Once at the surface the float transmits data via satellite to the GDAC, taking 6-12 hours for floats using the Argos1 and Argos2 satellite systems. \cite{argo_uk}.
 
@@ -63,126 +72,4 @@ As early as 2005, floats with GPS navigation have been introduced \cite{argo_man
   \end{minipage}
 \end{figure}
 
-\subsection{Float Hardware and Data Transmission}
-
-An international program such as Argo consists of many float types for different functions. In addition to T/S/P, some floats optic/biologic measurements, as shown in table ~\ref{tbl:argoParams}
-
-\begin{table}[th]
-\caption{Abridged list of Argo mission parameters.}
-\label{tbl:argoParams}
-{\begin{tabular}{ | p{4.5cm} | p{5cm} | p{4cm} |} 
-        \hline
-        \textbf{Parameter name} & \textbf{long name} & \textbf{units} \tabularnewline \hline
-        CNDC & conductivity & Siemens/m \tabularnewline \hline
-        PRES & sea water pressure & decibar \tabularnewline \hline
-        PSAL & practical salinity & practical salinity unit \newline (psu) \tabularnewline \hline
-        TEMP & sea temperature & Celsius  \tabularnewline \hline
-        DOXY & dissolved oxygen & $\mu Mol/kg$  \tabularnewline \hline
-        BBPx & particle backscattering at x \newline nanometers & $1/m$  \tabularnewline \hline
-        TURBIDITY & sea water turbidity & nephelometric turbidity \newline unit (NTU)  \tabularnewline \hline
-        CPx & Particle beam attenuation at x \newline nanometers & $1/m$   \tabularnewline \hline
-        CHLA & chlorophyll-A & $mg/m^3$   \tabularnewline \hline
-        CDOM & concentration of coloured \newline dissolved organic matter in \newline sea water & ppb \tabularnewline \hline
-        NITRATE & nitrates & $\mu Mol/kg$ \tabularnewline \hline
-        BISULFIDE & bisulfides & $\mu Mol/kg$ \tabularnewline \hline
-        PH\textunderscore IN\textunderscore SITU\textunderscore TOTAL & pH & dimensionless \tabularnewline \hline
-        DOWN\textunderscore IRRADIANCEx & downwelling irradiance at \newline x nanometers & $W/m^2/nm$ \tabularnewline \hline
-        UP\textunderscore IRRADIANCEx & upwelling irradiance at \newline x nanometers & $W/m^2/nm/sr$ \tabularnewline \hline
-        DOWNWELLING\textunderscore PAR & downwelling photosynthetic \newline available radiation & $\mu Mol\ Quanta\ sec/m^2$ \tabularnewline \hline
-        \end{tabular}}
-\end{table}
-
-\subsection{Data Delivery}
-
-All Argo data collected since its inception is available at a US-based GDAC FTP server at \url{ftp://usgodae.org/pub/outgoing/argo/} or a Europian Server at \url{ftp://ftp.ifremer.fr/ifremer/argo/}. Users navigate through directory structure with sparse documentation. Each DAC folder contains float and profile netCDF files. From there users can either download netCDF, either individually or bundled together by its float. The server is designed for those familiar with the Argo manual \cite{argo_man}. Each float file is named by its WMO number. Each profile file is designated by its WMO number appended by the cycle number and prefixed with a real-time/delayed-time marker. The amount of data available to the user is on the scale of hundreds of Gigabytes, yet there is no way to select data based on location, date, measured parameters, etc. A few opportunities to allow better navigation arise if the Argo data is transferred to a database. By design, databases can be queried quickly by indexing frequently queried fields such as latitude, longitude, date, WMO, et cetera.
-
-Databases are designed to accomplish storing and accessing large datasets. As Argo grows and expands, methods for reporting large and more complex data is essential to allow access to this information to as many people as possible. This database required to have an intuitive interface for selection, such as that made by the Coriolis group shown in Figure~\ref{fig:argo_france}. The next section introduces a proposed database and web-application interface.
-
-\subsection{Argo Visualization Tools}
-
-The limitations of selecting by profile and platform number through an FTP server has caused visualization tools to sprout up among the Argo community. The majority of these applications are based on visualization, and their utility is somewhat limited to displaying points on a map. A few prominent ones are mentioned below. Their merits and limitations shall be covered in detail before revealing the Argovis web app covered in Section~\ref{argovis} and Chapter 3.
-
-\subsubsection{Coriolis Visualization Application} \label{coriolis}
-
-Coriolis, Argo's French group, includes an app showing profiles on a tile map interface.\cite{argo_fr}. Users can pan, zoom in and out, and select floats on the map, represented by dots. See Figure \ref{fig:argo_france} for a screenshot of the webpage. Moreover, the site includes velocity fields derived from drifting floats provided via the ANDRO product \cite{ANDRO}. Data displayed on the map is limited to profiles reported within the past week. Upon clicking a point, a sidebar opens, revealing interactive charts of Pressure vs. Temperature and Pressure vs. Salinity. The side panel also includes meta-data: float identification number (WMO), date, DAC, project name, primary investigator and float model. Data can be viewed and downloaded in greater detail by clicking on links to another page.
-
-\begin{figure}
-\begin{minipage}{6in}
-\includegraphics[width=.5\linewidth]{argo_france.png}
-\includegraphics[width=.5\linewidth]{argo_france_zoomed.png}
-\caption{\label{fig:argo_france}Argo Active network map (left) \url{http://www.argo-france.fr/en/argo-active-network-map/}\cite{argo_fr} Showing argo profiles owned by the Coriolis (French) DAC. Yellow dots represent floats operated by the Coriolis project. Selecting a dot reveals a side panel with additional information (right). Velocity field animations overlay the profile dots showing currents generated via ANDRO.}
-\end{minipage}
-\end{figure}
-
-Argo-active-network-map's primary function is visualization but restrictive even at that. Users can only view one profile at a time for profiles reported in the last seven days. More importantly, they restricted from making spatial-temporal selections. Tilemap interfaces have draw plugins that allow users to draw polygon shapes. These points can then be used to select and view profiles contained within that polygon. It can be useful for users interested in climate change to view data on decadal timescales. Nonetheless, the app provided by Coriolis is a significant advancement over the main source of accessing Argo data on FTP server.
-
-\subsubsection{NASA Sea Level Change Data Analysis Tool} \label{dat}
-
-The \gls{dat} has been designed to allow for quick-look comparisons and analysis of NASA datasets of sea level change. The project is in its beta phase and can be viewed at \url{https://sealevel.nasa.gov/data-analysis-tool/}\cite{nasaSLR}. Gridded Argo products, among many other in situ and remote sensing products make up this app. The project states that its goal is to track sea level rise, it can visualize Argo temperature and salinity data. 
-
-DAT comprises of interactive map and side control bar shown on ee Figure~\ref{fig:dat}. The mapping component uses an open source library \gls{cmc} library, located at \url{https://github.com/nasa/common-mapping-client}.
-
-\begin{figure}
-\begin{minipage}{6in}
-\centering
-\includegraphics[width=\linewidth]{datMain.png}
-\caption{\label{fig:dat} DAT web app format with Data tab displayed on the side bar. Argo derived gridded salinity and temperature products from January 2004 to January 2017 are available to plot.}
-\end{minipage}
-\end{figure}
-
-CMC allows drawing points, lines and rectangles on the Mercator projection only. Lines vertically slice the ocean, whose temperature and salinity is viewed in a color chart. Shapes are editable, and plots are redrawn by clicking a new button. Unfortunately, this feature is not available for Argo data at this time.
-
-Images of temperature and salinity overlay the CNC map. Users select which depth time, and an image of either temperature or salinity anomalies are displayed. See Figure~\ref{fig:dat_color_map}
-
-\begin{figure}
-\begin{minipage}{6in}
-\centering
-\includegraphics[width=\linewidth]{datTempAnom.png}
-\caption{\label{fig:dat_color_map} DAT web app format with temperature anomalies layer displayed. Anomolies are for March 2016, indicated by the date selection on the bottom right. Pressure ranges are from -1.25 to 6.25 dbar, as indicated by the drop-down menu shown on the top right portion of the map.}
-\end{minipage}
-\end{figure}
-
-Views and data are accessed through the URL. This RESTfull design extends the app beyond the browser. It allows API extensions data access without the need of the user manually retrieving data by a series of clicks on the browser. Scientists can automate these tasks for Repeatability and scalability.
-
-DAT is an unprecedented tool in making selections from large climate data sets, yet some features limit its potential to be widely used by the Argo community.
-
-\begin{enumerate}
-\item The map cuts off at 180 degrees latitude. Unfortunately, the map cuts off in the middle of the Pacific basin. 
-\item It is unclear how the gridded product interpolates Argo profiles. With no reference to the source, scientists are reluctant to use this data other than visualization.
-\item The CMC library is capable of plotting points, yet Argo products are limited to gridded products. DAT would benefit from having a platform plotting feature, similar to the app covered in Section~\ref{coriolis}.
-\item Does not allow images to show using different projections. South Sea and North Sea ocean views are limited. Stereographic projections would better serve these regions of interest. Storing data and plotting it using a heat map plugin displays the data in any map projection. 
-
-\end{enumerate}
-
-The app generates plots on the server-side. The client side doesn't get strained, making the app more responsive. The downside here is that the server requires more resources to work efficiently, making the app expensive to run and maintain.
-
-This project sets a new precedence for data delivery and visualization. However, the cons may discourage its use as a scientific tool. In the later sections, these pros and cons are addressed. A compromise attempted that balances visualization features with data transparency in Section~\ref{argovis}.
-
-\subsubsection{4D Visual Delivery of Big Climate Data}
-
-Pierret et alli released another RESTfull app that displays big data sets on either a Web Mercator projection or a 3d globe \cite{pierret20174d}. A 3d orthographic projection greets users upon visiting \url{http://climate2.mrsharky.com/}. Different views are made by spinning and zooming the globe, shown in Figure~\ref{fig:mr_sh_south}.
-
-Data is added after selecting the sidebar tab and choosing different data sets in a drop-down menu. Argo data sets are not currently available; gridded data can be added similar to DAT. 
-
-MrSharky will also generate time series by clicking on the globe (Figure~\ref{fig:mr_sh_south}). A popup window indicates the data value and the location in latitude-longitude coordinates. A screenshot showing the data is generated and downloaded with a click of a button. 
-
-\begin{figure}
-\begin{minipage}{6in}
-\centering
-\fbox{\includegraphics[width=.75\linewidth]{mrSharkySouthView.png}}
-\fbox{\includegraphics[width=.75\linewidth]{mrShTS.png}}
-\caption{\label{fig:mr_sh_south} Clicking a point on the globe will generate a box element showing the point's value and latitude-longitude coordinates, shown in the lower left corner of the (top) subfigure. Clicking the teal button will generate a time series (bottom) that can be downloaded as a .csv file.}
-\end{minipage}
-\end{figure}
-
-This app is intuitive enough to use, yet allows a great deal of customization. The sidebar control lets users select different projections, datasets, color bars, adjust sphere resolution, et cetera.
-
-The bulk of the server side involves the transfer of HTML scripts and data\cite{pierret20174d}. Pushing the plotting, rastering, and graphics manipulation tasks to the client side unburden the server, reducing the hardware and networking resource requirements and lowering the cost to run the app. 
-
-MrSharky's architecture and data delivery method has influenced the web app described in Section~\ref{argovis} and in Chapter 3 of this thesis.
-
-\subsection{Visualization and data retrieval tool Argovis} \label{argovis}
-
-This thesis introduces a new website at \url{www.argovis.com} that allows easy navigation of profiles from the Argo GDACs. This web app offers a simple user interface and allows both scientists and the general public to draw polygons on an interactive map and view the profiles within given date and depth ranges. After selection, the user may browse T/S/P profiles on interactive charts, either from a single float or those found within the drawn polygons. Some metadata about the floats are displayed as well, along with a list of links to locate the data of interest on the GDACs.
-
-Overall, Argovis offers seamless navigation of the Argo dataset written with a representational state transfer (REST) architecture. RESTful design allows the opportunity to feature API and cloud computing applications, e.g., map comparison from existing gridded Argo products, as well as derived variables. Argo now has a maintainable, scalable, and portable tool to support this ever-expanding big data set. Chapter 3 shall provide further detail on the web app's front end and back end architecture and database information, along with some time series and grid-interpolation applications.
+\section{Literature review}
