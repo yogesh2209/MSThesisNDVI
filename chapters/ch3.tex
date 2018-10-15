@@ -37,11 +37,22 @@ Let's look at the example shown in the fig 3.1.
             \caption{\label{fig:level_list_screen} NDVI Example - Courtsey: NASA}
     \end{figure}
 
-Data is normally stored in a \gls{gdac} \gls{ftp} server, either at a US-based server at \url{ftp://usgodae.org/pub/outgoing/argo/} or a Europian server at \url{ftp://ftp.ifremer.fr/ifremer/argo/}. The data is assumed to be sufficiently quality controlled and in a stable format. Platform and profile name is the only identification. This data structure does not allow seasonal selection or spatial selection: a key feature to any climate data set. The FTP server is meant to act as an archive. Scientists are encouraged to download the data locally for their uses, a process that relies on significant domain knowledge of the FTP site. Few people will go through the trouble of understanding the FTP structure, and fewer still will take time to make the process easier for others. The current unwieldy system, Stunts the Argo community from expanding.
+Data is normally stored in a \gls{gdac} \gls{ftp} server, at a US-based server at \url{https://gimms.gsfc.nasa.gov/MODIS/}.
 
-The Argo program depends on government and by extension, public support. Without the understanding of these parties, the program is in danger of budget cuts, sequestration, and general apathy to scientific endeavor. As is, the public is reliant on the Argo community to extract meaning from the dataset. There is an opportunity to design a system intuitive enough for Laypeople to view data. 
+The information is thought to be adequately quality controlled and in a steady arrangement. Stage and profile name is the main distinguishing proof. This information structure does not permit regular determination or spatial choice: a key element to any atmosphere informational index. The FTP server is intended to go about as a chronicle. Researchers are urged to download the information locally for their utilization's, a procedure that depends on noteworthy space learning of the FTP website. Barely any individuals will experience the inconvenience of understanding the FTP structure, less still will set aside opportunity to make the procedure less demanding for other people.
 
-The remainder of this chapter will describe a proposed data storage and visualization system that uses a \gls{dod} to supplant the FTP server, and a RESTfull web app to view database content both spatially and temporally.
+\subsection{Significance}
+
+The term \gls{ndvi} in the farming business has positively increased more mindfulness of late because of the developing ubiquity of little unmanned elevated vehicles. 
+
+\gls{ndvi} is positively not another child on the square and with regards to social affair and preparing this data, rural experts have known and been utilizing this information for quite a long time. Anyway already assembling this information may have been tedious, awkward, not exceptionally precise and costly. 
+
+As innovation enhances and the methods in which we would now be able to catch this information, agriculturists are beginning to take this basic and successful information all the more genuinely by hoping to join this technique into their product administration methodology. 
+
+Information is enter in exactness farming, knowing your product's well being is a certain something yet really pre-empting the state of harvest's well being, endorsing compost application, distinguish any potential sickness and precisely assessing yield puts the control in your grasp consequently making you all around educated to settle on the correct business choices as and when required.
+
+\gls{ndvi} is valuable for evaluating the well being and thickness of vegetation. \gls{ndvi} esteems close to 0 show extremely inadequate vegetation. Thick vegetation is demonstrated by \gls{ndvi} esteems moving toward 1. By utilizing a period arrangement of \gls{ndvi} perceptions, one can look at the elements of the developing season and screen wonders, for example, dry spell. A full supplement of information has been finished from the earliest starting point of Terra satellite activity to the present and is accessible for download in peruse and 250m goals.
+
 
 \section{Wireframes Designs}
 The main page, shown in Figure~\ref{fig:main_page}, consists of an interactive map and sidebar with controls, allowing users an intuitive way to navigate through profiles, either a region and date range or by entering a float's WMO number. The map is created using the \gls{leaflet} library.
