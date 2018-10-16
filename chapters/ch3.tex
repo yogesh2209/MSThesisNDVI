@@ -15,6 +15,28 @@
 
 \gls{modis} vegetation indices, delivered on 16-day interims and at various spatial goals, give steady spatial and worldly correlations of vegetation covering greenness, a composite property of leaf territory, chlorophyll and shade structure. Two vegetation lists are gotten from environmentally redressed reflectance in the red, close infrared, and blue wavebands; the standardized contrast vegetation list \gls{ndvi}, which gives coherence \gls{noaa}'s AVHRR \gls{ndvi} time arrangement record for verifiable and atmosphere applications, and the upgraded vegetation list (EVI), which limits covering soil varieties and enhances affectability over thick vegetation conditions. The two items all the more successfully describe the worldwide scope of vegetation states and procedures. 
 
+
+As of now, NASA has the website to utilize the GIMMS Global Agricultural Monitoring (GLAM) System to see MODIS NDVI symbolism and recover MODIS NDVI time arrangement information. The framework gives close ongoing and science quality Terra and Aqua MODIS 8-day composited, worldwide NDVI datasets. These datasets are gotten from the Collection 6 MOD09 and MYD09 surface reflectance items which are given by NASA/GSFC/EOSDIS LANCE and NASA/GSFC MODAPS.
+
+The GIMMS MODIS GLAM System is produced and given by the NASA/GSFC/GIMMS bunch for the USDA/FAS/IPAD Global Agricultural Monitoring venture. The USDA/FAS/IPAD mission is to give objective, auspicious, and consistent appraisal of the worldwide agrarian generation standpoint and conditions influencing worldwide sustenance security. You can see the website at the url mentioned below. \\
+\centerline{\MYhref{https://glam1.gsfc.nasa.gov//}{NASA's NDVI website}}
+
+Please see the figures 3.1 and 3.2 for user guide of the website.
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch3/nasa_website_1.png}
+            \caption{\label{fig:nasa_website_1} NASA's NDVI website user guide part-I}
+    \end{figure}
+    
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch3/nasa_website_2.png}
+            \caption{\label{fig:nasa_website_2} NASA's NDVI website user guide part-II}
+    \end{figure}    
+
+
 The vegetation records are recovered from day by day, air redressed, bidirectional surface reflectance. The VI's utilization a \gls{modis}-particular compositing strategy dependent on item quality confirmation measurements to evacuate low quality pixels. From the staying great quality VI esteems, an obliged see edge approach at that point chooses a pixel to speak to the compositing time frame (from the two most elevated \gls{ndvi} esteems it chooses the pixel that is nearest to-nadir). Since the \gls{modis} sensors on board Terra and Aqua satellites are indistinguishable, the VI calculation creates every 16-day composite eight days separated (staged items) to allow a higher worldly goals item by joining the two information records. The \gls{modis} VI item suite is currently utilized effectively in all environment, atmosphere, and regular assets administration contemplates and operational research as exhibited by the consistently expanding group of associate distributions. \\
 
 \centerline{\textbf{How do you calculate NDVI?}}
@@ -29,12 +51,12 @@ Solid vegetation (chlorophyll) reflects more close \gls{nir} and green light con
 
 This is the reason our eyes consider vegetation to be the shading green.
 
-Let's look at the example shown in the fig 3.1.
+Let's look at the example shown in the fig 3.3.
 
     \begin{figure}[H]
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch3/ndvi-example.png}
-            \caption{\label{fig:level_list_screen} NDVI Example - Courtsey: NASA}
+            \caption{\label{fig:ndvi_example} NDVI Example - Courtsey: NASA}
     \end{figure}
 
 Data is normally stored in a \gls{gdac} \gls{ftp} server, at a US-based server at \url{https://gimms.gsfc.nasa.gov/MODIS/}.
@@ -56,9 +78,80 @@ Information is enter in exactness farming, knowing your product's well being is 
 
 \section{Wireframes Designs}
 
+A versatile application wireframe, otherwise called a page schematic or screen outline, is a visual guide that speaks to the skeletal structure of an application. Wireframes are made to arrange components to best achieve a specific reason.
+
+In other words, they are the skeleton of any product. This skeleton is a two-dimensional delineation of a page's interface that demonstrates the dividing of components on the page, how content is organized, what functionalities are accessible, and how clients will cooperate with the site. They likewise assume an essential job in interfacing data engineering to the visual parts of the outline by indicating pathways between the different pages. Wireframes are purposefully drained of shading, illustrations and adapted textual styles. The tool used for creating wireframes here is \textbf{Axure RP 8}. \\
+
+Reasons for using wireframes are mentioned below:
+
+\begin{itemize}
+    \item Wireframes enable you to outline the usefulness of the pages, get issues early, and spare time on corrections later. It is considerably less excruciating to roll out improvements to a wireframe than to a high devotion mockup with heaps of plan components. \\
+    
+    \item Wireframes are an incredible method to organize content by uncovering space requirements and planning the pecking order of components on the page. Having the open door right off the bat to envision the chain of command of your pages and start outwardly showing the space requirements will spare you a ton of time later when you start adapting the pages and filling them with substance. \\
+\end{itemize}
+
+\centerline{\textbf{Some of the Wireframes designs are shown below in figure 3.4, 3.5 and 3.6}} 
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch3/wireframe_1.png}
+            \caption{\label{fig:wireframe_1} Wireframe - Registration process}
+    \end{figure}
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch3/wireframe_2.png}
+            \caption{\label{fig:wireframe_2} Wireframe - Login and forgot password process}
+    \end{figure}
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch3/wireframe_3.png}
+            \caption{\label{fig:wireframe_3} Wireframe - Main screen and home screen}
+    \end{figure}
 
 
 \section{Database Architecture}
+
+\textbf{Definition}
+
+An organized arrangement of information held in a \gls{pc}, particularly one that is available in different ways.
+
+
+Database structure was outlined subsequent to planning \gls{uml} Diagrams in order to improve comprehension of the structure.
+
+In the \gls{uml}, an utilization case chart can condense the subtle elements of your framework's clients (otherwise called on-screen characters) and their communications with the framework. Figure 3.7 shows the use case diagram of the app.
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch3/usecase.png}
+            \caption{\label{fig:wireframe_3} Use case diagram of the app}
+    \end{figure}
+
+As you can see in the above figure, it clearly shows the actions which user can interact with in the app.
+
+On the other hand, Class diagrams are a standout amongst the most valuable kinds of outlines in \gls{uml} as they plainly delineate the structure of a specific framework by demonstrating its classes, characteristics, activities, and connections between articles. With our  \gls{uml} graphing programming, making these charts isn't as overpowering as it may show up. This guide will demonstrate to you generally accepted methods to comprehend, plan, and make your own class outlines. Figure 3.8 will give you better understanding how class diagrams can be used to make the product better.
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch3/classdiagram.png}
+            \caption{\label{fig:wireframe_3} Class diagram of the app}
+    \end{figure}
+    
+    \newpage
+
+ \centerline{\textbf{Database Structure}}    
+  PostgreSQL database has been used for the project, which is a general purpose and object-relational database management system. 
+  Database tables and their entities are shown in the figure 3.9.
+  
+  \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch3/database_structure.png}
+            \caption{\label{fig:database_structure} Database tables}
+    \end{figure}
+    
+    
+
 
 
 
