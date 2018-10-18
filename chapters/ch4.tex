@@ -12,11 +12,52 @@ The development of the iOS app is divided into two areas which are :
 
     \item Back-end
         \begin{itemize}
+            \item Process of getting data from NASA's server
+        
             \item Web services required for \gls{json} parsing between database and the front-end
     \end{itemize}
 \end{itemize}
 
-\section{Process of getting data from NASA's server}
+\section{FRONT-END OF THE APP}
+
+\subsection{App Designing}
+    
+\centerline{\textbf{Xcode - IDE}}
+
+\centerline{Xcode 9.3 has been used for the development of the app}
+
+\textbf{Xcode} is an Integrated Development Environment, which implies it pulls every one of the instruments expected to create an application (especially a content tool, a compiler, and a manufacture framework) into one programming bundle instead of abandoning them as an arrangement of individual devices associated by contents. Xcode is Apple's authentic \gls{ide} for \gls{mac} and \gls{iOS} engineers. It was initially known as Project Builder in the NeXT days, and renamed to Xcode some place around Mac OS X 10.3 or 10.4. By adaptation 4, Apple had collapsed in the sidekick Interface Builder program so there was just a single application package; the plan of the program hasn't changed a ton from that point forward, albeit clearly the instruments are refreshed routinely. \\
+
+%add to this biblipography as my copying from apple's website.
+
+Apple provides Built-In Interface Builder in the \gls{ide} for designing.
+According to Apple's website, The Interface Builder editor within Xcode makes it simple to design a full user interface without writing any code. Simply drag and drop windows, buttons, text fields, and other objects onto the design canvas to create a functioning user interface. \\
+
+Because Cocoa and Cocoa Touch are built using the Model-View-Controller pattern, it is easy to independently design your interfaces, separate from their implementations. User interfaces are actually archived Cocoa or Cocoa Touch objects (saved as .nib files), and \gls{macOS} and \gls{iOS} will dynamically create the connection between \gls{ui} and code when the app is run. \\
+
+%add to this biblipography as my copying from apple's website.
+%https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/Storyboard.html
+As you know, i have used built in feature of Xcode for designing. Apple also provides one more tool for visualization of the design which is \textbf{Storyboard}. \\ \\
+According to Apple, A storyboard is a visual representation of the user interface of an \gls{iOS} application, showing screens of content and the connections between those screens. A storyboard is composed of a sequence of scenes, each of which represents a view controller and its views; scenes are connected by segue objects, which represent a transition between two view controllers. \\
+
+Xcode provides a visual editor for storyboards, where you can lay out and design the user interface of your application by adding views such as buttons, table views, and text views onto scenes. In addition, a storyboard enables you to connect a view to its controller object, and to manage the transfer of data between view controllers. Using storyboards is the recommended way to design the user interface of your application because they enable you to visualize the appearance and flow of your user interface on one canvas. Figure 4.1 shows the storyboard of the app. 
+
+Some of the advantages of using Storyboard are mentioned below:-
+\begin{itemize}
+    \item It's a container for all your Scenes (View Controllers, TabBar Controllers and more).
+    \item A director of associations and transitions between these scenes (called Segues).
+    \item It gives you the chance to see what My view will look like at runtime without running your application.
+\end{itemize}
+
+\newpage
+
+ \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{figures/ch4/storyboard_2.png}
+            \caption{\label{fig:wireframe_3} Storyboard of the app}
+    \end{figure}
+    
+
 \section{Mobile App screens and their significance}
 
 \subsection{Sign-up via Email}
