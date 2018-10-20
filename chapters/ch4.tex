@@ -156,12 +156,78 @@ User can log in in the app via certain ways:-
 \begin{itemize}
     \item Social Login
     
+    Login functionality has provided using social platforms mentioned below.
+    
     \begin{itemize}
         \item Facebook Login
-        \item Google Signin
+        
+       The Facebook \gls{sdk} for \gls{iOS} provides developers to integrate a plugin through which user can log in with their Facebook account.
+       
+       Figure 4.8 shows the pop up alert which comes after tapping on Facebook login button and 4.9 shows the screens when user opts for Facebook log in after clicking continue in fig 4.8
+       
+       
+      \begin{figure}[!htb]
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch4/facebook_1.png}
+            \caption{Facebook log in Part-I}\label{Fig:facebook_part_1}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch4/facebook_2.png}
+            \caption{Facebook log in Part-II}\label{Fig:facebook_part_2}
+        \end{minipage}
+    \end{figure}
+    
+        
+        As you can see in fig 4.9, user doesn't have to enter his Facebook id and password every time, it's a one time process, the \gls{sdk} helps developers to remember the credentials used previously they logged in on the app.
+        
+        \newpage
+       
+        \item Google Sign in
+        
+        User can also log in through their Gmail account by tapping on Google sign in button in the fig 4.10 if they don't have Facebook account or vice-verse.
+        I have used Google's \gls{api} for Sign in to \gls{iOS} devices to create this functionality in the app. \\
+        
+        Figure 4.10 and 4.11 shows Google \gls{sdk} sign in process.
+        
+        \begin{figure}[!htb]
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch4/google_1.png}
+            \caption{Google sign in Part-I}\label{Fig:google_part_1}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch4/google_2.png}
+            \caption{Google sign in Part-II}\label{Fig:google_part_2}
+        \end{minipage}
+    \end{figure}
+        
     \end{itemize}
     
+    \newpage
+    
     \item Login via email
+    
+    Those users who have registered via email can utilize the functionality of log in via email.
+    
+    They will be required to enter valid email and password to do so.
+    
+    Figure 4.12 shows the login with email screen.
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{figures/ch2/login_email.png}
+            \caption{\label{fig:wireframe_3} Login via email}
+    \end{figure}
+    
+    
+    Also, if ever user has forgot his password, he can tap on forgot password button in fig 4.12 and follow the certain steps to change his password.
+    
+    \textbf{Password recovery} screens are as follows :-
+    
+    
     
 \end{itemize}
 
