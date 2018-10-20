@@ -14,12 +14,12 @@ The development of the iOS app is divided into two areas which are :
         \begin{itemize}
             \item Process of getting data from NASA's server
             \item Web services required for \gls{json} parsing between database and the front-end
-            
-    \item API Usage
-        \begin{itemize}
-            \item Explaining major APIs used in the project.
         \end{itemize}
-    \end{itemize}
+    
+     \item API Usage
+        \begin{itemize}
+            \item Major APIs used
+        \end{itemize}    
 \end{itemize}
 
 \section{FRONT-END OF THE APP}
@@ -55,7 +55,7 @@ Some of the advantages of using Storyboard are mentioned below:-
 
 \newpage
 
- \begin{figure}[H]
+    \begin{figure}[H]
             \centering
             \includegraphics[width=\linewidth]{figures/ch4/storyboard_2.png}
             \caption{\label{fig:wireframe_3} Storyboard of the app}
@@ -64,7 +64,107 @@ Some of the advantages of using Storyboard are mentioned below:-
 \subsection{Mobile App screens and their significance}
 
 \subsubsection{Sign-up via Email}
+
+Sign up process is a one time process which enables you to enter the application out of the blue. It likewise gives us the chance to include the client in our database for future logins and additionally the record.
+
+Sign up via email process consists of 5 screens which are listed below:-
+
+\newpage
+
+\begin{itemize}
+
+    \item Personal details
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.4\linewidth]{figures/ch2/register_personal.png}
+            \caption{\label{fig:wireframe_3} Register Part-I Personal detail screen}
+    \end{figure}
+    
+    Here in the figure 4.2, mandatory fields are First name, Last name and year of birth where as we have kept middle name as an optional because not everyone has one. \\
+    
+    UIPickerView is used for selection of year of birth, According to Apple's documentation, UIPickerView is a view that uses a spinning-wheel or slot-machine metaphor to show one or more sets of values.
+    
+    Figure 4.3 shows the image of the pickerview designed in the app.
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.4\linewidth]{figures/ch4/pickerview.png}
+            \caption{\label{fig:wireframe_3} UIPickerView for year selection}
+    \end{figure}
+    
+    \newpage
+    
+    \item Contact details
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{figures/ch2/register_contact.png}
+            \caption{\label{fig:wireframe_3} Register Part-II Contact detail screen}
+    \end{figure}
+    
+    Figure 4.3 represents contact detail screen in which both the fields i.e Email and Phone are mandatory for record purpose and to avoid fake entries. User with unique email and phone can register only once. It's a good point to note that both the fields have been verified syntactically here.
+    
+    \newpage
+  
+    \item Location details
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{figures/ch2/register_location.png}
+            \caption{\label{fig:wireframe_3} Register Part-III Location detail screen}
+    \end{figure}
+    
+    This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of device.
+    
+    In this screen, user has two possible choices for entering his location, he can enter the area physically or can simply tap on pickup current area which will eventually get the present location and display it in text area showed. Despite everything he can still alter the area if he wants to.
+    
+    \newpage
+    
+    \item Setup Credentials
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{figures/ch2/credentials_setup.png}
+            \caption{\label{fig:wireframe_3} Register Part-IV Credentials setup screen}
+    \end{figure}
+    
+    As you can see in figure 4.6, it allows you to setup password for your secure log in. Point to note here is that minimum length of password has been set 6 digits.
+    
+    
+    \newpage
+    
+    \item Purpose of using the app
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{figures/ch2/purpose_app.png}
+            \caption{\label{fig:wireframe_3} Register Part-V Purpose of using the app screen}
+    \end{figure}
+    
+    This screen is really important for us to know what and why people wants to use this app. Moreover, it has additional check mark for privacy policy and terms of use to which every user must agree before going further. It also protects us from some bot attack.
+    
+    \newpage
+ 
+\end{itemize}
+
+
 \subsubsection{Login process}
+
+User can log in in the app via certain ways:-
+
+\begin{itemize}
+    \item Social Login
+    
+    \begin{itemize}
+        \item Facebook Login
+        \item Google Signin
+    \end{itemize}
+    
+    \item Login via email
+    
+\end{itemize}
+
 \subsubsection{Home screen}
 \subsubsection{Sliding Menu}
 \subsubsection{Filter process and its sub-screens}
