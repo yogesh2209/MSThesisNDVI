@@ -1,4 +1,4 @@
-s\chapter{DEVELOPMENT OF THE iOS APP}
+\chapter{DEVELOPMENT OF THE iOS APP}
 \label{chap:development of the app}
 
 The development of the iOS app is divided into two areas which are :
@@ -7,18 +7,20 @@ The development of the iOS app is divided into two areas which are :
     \item Front-end
         \begin{itemize}
             \item App designing
-            \item Mobile App screens and their significance
+            \item Mobile App screens and their significance \\
         \end{itemize}
 
     \item Back-end
         \begin{itemize}
             \item Process of getting data from NASA's server
-            \item Web services required for \gls{json} parsing between database and the front-end
+            \item Web services required for \gls{json} parsing between database and the front-end \\
         \end{itemize}
     
-     \item API Usage
+     \item APIs, Softwares and Languages Usage
         \begin{itemize}
             \item Major APIs used
+            \item Softwares used
+            \item Software Languages used \\
         \end{itemize}    
 \end{itemize}
 
@@ -28,7 +30,7 @@ The development of the iOS app is divided into two areas which are :
     
 \centerline{\textbf{Xcode - IDE}}
 
-\centerline{Xcode 9.3 has been used for the development of the app}
+\centerline{\textbf{Xcode 9.2} has been used for the development of the app.}
 
 \textbf{Xcode} is an Integrated Development Environment, which implies it pulls every one of the instruments expected to create an application (especially a content tool, a compiler, and a manufacture framework) into one programming bundle instead of abandoning them as an arrangement of individual devices associated by contents. Xcode is Apple's authentic \gls{ide} for \gls{mac} and \gls{iOS} engineers. It was initially known as Project Builder in the NeXT days, and renamed to Xcode some place around Mac OS X 10.3 or 10.4. By adaptation 4, Apple had collapsed in the sidekick Interface Builder program so there was just a single application package; the plan of the program hasn't changed a ton from that point forward, albeit clearly the instruments are refreshed routinely. \\
 
@@ -156,7 +158,7 @@ User can log in in the app via certain ways:-
 \begin{itemize}
     \item Social Login
     
-    Login functionality has provided using social platforms mentioned below.
+    Login functionality has been provided using social platforms mentioned below :-
     
     \begin{itemize}
         \item Facebook Login
@@ -334,7 +336,7 @@ Figure 4.16 shows the sliding menu and the options it includes.
             
     \end{itemize}
 
-\subsubsection{Filter process, sub-screens and effect on home}
+\subsubsection{Filter process}
 
 This is one of the most crucial part of the application which enables user to filter the data according to the needs.
 
@@ -422,18 +424,36 @@ Filtering is being done on various parameters :
     
 \end{itemize}
 
-\section{API usage}
 
-This section explains the major APIs used in the project to make it better in any way.
+
+
+
+
+\section{BACK-END OF THE APP}
+
+
+\subsection{Process of getting data from NASA's server}
+\subsection{Web services required for JSON parsing between database and the front-end}
+
+
+
+
+
+
+\section{APIs, Softwares and Languages Usage}
+
+\subsection{APIs Usage}
+
+Major APIs used in the project to make the application better are:-
 
 \begin{itemize}
-    \item Alamofire - Networking Library
+    \item \textbf{Alamofire} - HTTP Networking Library
     
     Alamofire is a Swift-based HTTP networking library for \gls{iOS} and \gls{macOS}. It gives a rich interface over Apple's Foundation organizing stack that disentangles various basic networking assignments.\\
     
     It can be found here - \url{https://github.com/Alamofire/Alamofire} \\
    
-    \item WhirlyGlobe - Globe SDK
+    \item \textbf{WhirlyGlobe} - Globe SDK
     
     Focusing on mobile technology with based on OpenGL ES, WhirlyGlobe-Maply is an open source library which is utilized in a wide assortment of Atlas, climate, representation, and guide applications. The \gls{sdk} is both a 3D intelligent globe for \gls{iOS} and a 2D map for \gls{iOS}. \\
     
@@ -441,9 +461,9 @@ This section explains the major APIs used in the project to make it better in an
     
     It can be found here - \url{https://github.com/mousebird/WhirlyGlobe} \\
     
-    \item SwiftCSVExport - Exporting data
+    \item \textbf{SwiftCSVExport} - Exporting data
     
-    Swift CSV Export is lightweight and rich highlights framework and it accommodating to make, read and compose CSV records in basic way. It underpins both Objective-C and Swift projects. \\
+    Swift CSV Export is lightweight and rich highlights framework and it accommodating to make, read and compose CSV records in basic way. \\
     
     This library has been utilized to change over the JSONDictionary to the required objects which it takes and to package the information into CSV file and at last to send out it through email. Remember, this library has also been customized and used according to our data types requirements. \\
     
@@ -451,18 +471,31 @@ This section explains the major APIs used in the project to make it better in an
     
 \end{itemize}
 
+\subsection{Softwares used in the project}
 
-\section{Softwares used in making of the app}
+List of Softwares used in the project with their significance are :-
 
-Visualization Apps like Argovis have served two purposes. The first purpose is to serve the community; the second is to expand the community. Global data sets in the oceanographic and earth science disciplines could potentially benefit from such apps, with minimal cost to their endeavors. The architecture of Argovis is designed for high traffic demands at low computation by placing visualization loads on the client side. The server side acts as a database and web server only; this allows a relatively high traffic web app be hosted and maintained at a low cost. Moreover, the software used is open source. 
+\begin{itemize}
+    \item \textbf{Xcode}
+    It's an \gls{ide} by Apple and is used for development of the app. \\
+    
+    \item \textbf{Axure RP 8}
+    Used for creating wireframes \\
+    
+    \item \textbf{Bracket}
+    It's a text editor used to code web services in \gls{php}. \\
+    
+    \item \textbf{FileZilla}
+    It's a cross platform \gls{ftp} application used to update and transfer files to server. \\
+    
+\end{itemize}
 
-Governmental agencies NOAA and NASA are required to release their data. The amount of data gathered and released is now on the petabyte scale. Without accessibility, this amounts to little more than an archive, accessible only to domain experts. This thesis proposes that agencies and groups design their data interfaces with a user interface in mind. Argovis is designed around the following data acquisition procedure: 
-\begin{enumerate}
-  \item browse datasets. 
-  \item assess its relevance to their needs.
-  \item visualize/select their region of interest.
-  \item download data in a format they can use.
-\end{enumerate}
-An additional consideration would be to include a discussion forum to the web app, similar to \url{www.kaggle.com} \cite{kaggle} competitions, where each dataset has its discussion forum, where users post their code, figures and results in \gls{Jupyter} notebooks. Forums allow outside users to contribute to the project. As the institutions themselves may be limited in manpower and funding, they may rely on forums for additional code, tutorials or discussion. For example, Argovis has an API in Python, but users proficient in other scientific languages can write APIs in other languages, such as R, Matlab, and Julia. A forum section of the site works as a source of feedback for the development team. Questions, requests, complaints can be posted and be resolved/answered by either other users or the developers themselves.
+\subsection{Software Languages used in the project}
 
-The scientific community can become bogged down in data storage problem. Open, community-driven web applications to big data visualization and analysis can help users float on this sea of data.
+List of software languages used in the process :-
+
+\begin{itemize}
+    \item \textbf{Swift 4.1} - for development of iOS app \\
+    \item \textbf{PHP} - for data parsing between server and the app \\
+    \item \textbf{Python} - script for getting data from \gls{nasa}'s server and storing it in database. \\
+\end{itemize}
