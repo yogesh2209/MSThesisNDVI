@@ -165,7 +165,6 @@ User can log in in the app via certain ways:-
        
        Figure 4.8 shows the pop up alert which comes after tapping on Facebook login button and 4.9 shows the screens when user opts for Facebook log in after clicking continue in fig 4.8
        
-       
       \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
@@ -179,7 +178,6 @@ User can log in in the app via certain ways:-
         \end{minipage}
     \end{figure}
     
-        
         As you can see in fig 4.9, user doesn't have to enter his Facebook id and password every time, it's a one time process, the \gls{sdk} helps developers to remember the credentials used previously they logged in on the app.
         
         \newpage
@@ -277,15 +275,15 @@ This is an essential part of any application. In a context of mobile application
 
 Home screen has two nature which are :-
 
- \begin{figure}[!htb]
+    \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch2/home.png}
+            \includegraphics[width=0.8\linewidth]{figures/ch4/home_globe.png}
             \caption{Globe view}\label{Fig:home_globe}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch2/home.png}
+            \includegraphics[width=0.8\linewidth]{figures/ch4/home.png}
             \caption{2D Map view}\label{Fig:home_map}
         \end{minipage}
     \end{figure}
@@ -338,7 +336,107 @@ Figure 4.16 shows the sliding menu and the options it includes.
 
 \subsubsection{Filter process, sub-screens and effect on home}
 
+This is one of the most crucial part of the application which enables user to filter the data according to the needs.
+
+Filtering is being done on various parameters :
+
+%FIGURE MANAGE PROPERLY - CORRECT IMAGES AFTER EDITING - BLURR HERE
+
+\begin{itemize}
+    \item \gls{ndvi} or Anomaly data
+    
+    This feature has been developed to give the user freedom of choosing the type of data he wants to visualize.
+    
+    A visual toggle - UISwitch has been used for this purpose to enable \gls{ndvi} or anomaly data. By default, \gls{ndvi} is selected. When the user changes the toggle, to make it clear, the text under the heading also changes displaying what is being currently selected.
+    
+    Both the choices and their text values on selection have been shown in the figures below.
+    
+    \begin{figure}[!htb]
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch4/home_globe.png}
+            \caption{NDVI selected}\label{Fig:ndvi_selected}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch4/home.png}
+            \caption{Anomaly selected}\label{Fig:anomaly_selected}
+        \end{minipage}
+    \end{figure}
+    
+    \newpage
+    
+    \item Globe or Map - Visualization medium
+    
+    User has the option to choose between 2D map view or Globe view.
+    This has shown in figures 4.16 and 4.17. \\
+    
+    \item Year and date
+    
+    Year and date list is to pick a specific date for which he wants to see the data. Dates are only available after selecting the year from year list screen.
+    
+    Note: The year list and dates for that year is coming from server, so user will not see those dates or years which we don't have the data for.
+    This dynamic thing has been done to increase user interaction and to give the stability to the app by making it dynamic as well as keeping in mind for future updates.
+    
+    % click year - blurr on other and show date list screen
+    
+    Figure 4.23 and 4.24 represents year and date list screens.
+    
+    \begin{figure}[!htb]
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch4/home_globe.png}
+            \caption{NDVI selected}\label{Fig:ndvi_selected}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{figures/ch4/home.png}
+            \caption{Anomaly selected}\label{Fig:anomaly_selected}
+        \end{minipage}
+    \end{figure}
+    
+    \newpage
+    
+    \item Color scheme
+    
+    This is an additional feature which has given to the application to make it interesting. It enables user to view the data into different color palette forms.
+    Remember, the color palettes are custom made and stored locally in \gls{json} files according to the \gls{ndvi} range.
+    
+    Figure 4.25 shows color palette options available in the app. User just have to select any of the available options and tap apply to make the commit to the choice.
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.35\linewidth]{figures/ch2/side_menu.png}
+            \caption{\label{fig:pass_recovery_1} About us screen}
+    \end{figure}
+        
+    Here is an example of part of one of the entries of \gls{json} file.
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch4/color_map_final.png}
+            \caption{\label{fig:color_json} JSON sample of colormap file}
+    \end{figure}
+
+    \newpage
+    
+\end{itemize}
+
 \section{API usage}
+
+This section explains the APIs used in the project to make it better in any way.
+
+\begin{itemize}
+    \item Alamofire - Networking Library
+    
+    
+    
+    
+    \item WhirlyGlobe - Globe SDK
+    \item SwiftCSVExport - Exporting data
+\end{itemize}
+
+
 \section{Softwares used in making of the app}
 
 Visualization Apps like Argovis have served two purposes. The first purpose is to serve the community; the second is to expand the community. Global data sets in the oceanographic and earth science disciplines could potentially benefit from such apps, with minimal cost to their endeavors. The architecture of Argovis is designed for high traffic demands at low computation by placing visualization loads on the client side. The server side acts as a database and web server only; this allows a relatively high traffic web app be hosted and maintained at a low cost. Moreover, the software used is open source. 
