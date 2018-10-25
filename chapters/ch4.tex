@@ -61,8 +61,6 @@ Some of the advantages of using Storyboard are mentioned below:-
     \item It gives you the chance to see what My view will look like at runtime without running your application.
 \end{itemize}
 
-\newpage
-
     \begin{figure}[H]
             \centering
             \includegraphics[width=\linewidth]{figures/ch4/storyboard_final.png}
@@ -85,7 +83,7 @@ Sign up via email process consists of 5 screens which are listed below:-
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.4\linewidth]{figures/ch2/register_personal.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/register_personal.png}
             \caption{\label{fig:wireframe_3} Register Part-I Personal detail screen}
     \end{figure}
     
@@ -97,62 +95,54 @@ Sign up via email process consists of 5 screens which are listed below:-
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.4\linewidth]{figures/ch4/pickerview.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/pickerview.png}
             \caption{\label{fig:wireframe_3} UIPickerView for year selection}
     \end{figure}
     
     \newpage
-    
+
     \item Contact details
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/register_contact.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/register_contact.png}
             \caption{\label{fig:wireframe_3} Register Part-II Contact detail screen}
     \end{figure}
     
     Figure 4.3 represents contact detail screen in which both the fields i.e Email and Phone are mandatory for record purpose and to avoid fake entries. User with unique email and phone can register only once. It's a good point to note that both the fields have been verified syntactically here.
     
-    \newpage
-  
     \item Location details
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/register_location.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/register_location.png}
             \caption{\label{fig:wireframe_3} Register Part-III Location detail screen}
     \end{figure}
     
     This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of device.
     
     In this screen, user has two possible choices for entering his location, he can enter the area physically or can simply tap on pickup current area which will eventually get the present location and display it in text area showed. Despite everything he can still alter the area if he wants to.
-    
-    \newpage
-    
+  
     \item Setup Credentials
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/credentials_setup.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/credentials_setup.png}
             \caption{\label{fig:wireframe_3} Register Part-IV Credentials setup screen}
     \end{figure}
     
     As you can see in figure 4.6, it allows you to setup password for your secure log in. Point to note here is that minimum length of password has been set 6 digits.
-    
-    
-    \newpage
-    
+   
     \item Purpose of using the app
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/purpose_app.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/purpose_app.png}
             \caption{\label{fig:wireframe_3} Register Part-V Purpose of using the app screen}
     \end{figure}
     
     This screen is really important for us to know what and why people wants to use this app. Moreover, it has additional check mark for privacy policy and terms of use to which every user must agree before going further. It also protects us from some bot attack.
-    
-    \newpage
+   
  
 \end{itemize}
 
@@ -171,49 +161,46 @@ User can log in in the app via certain ways:-
         
        The Facebook \gls{sdk} for \gls{iOS} provides developers to integrate a plugin through which user can log in with their Facebook account.
        
-       Figure 4.8 shows the pop up alert which comes after tapping on Facebook login button and 4.9 shows the screens when user opts for Facebook log in after clicking continue in fig 4.8
+       Figure 4.8 shows the pop up alert which comes after tapping on Facebook login button and 4.9 shows the screens when user opts for Facebook log in after clicking continue in fig 4.8.
        
       \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/facebook_1.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/facebook_1.png}
             \caption{Facebook log in Part-I}\label{Fig:facebook_part_1}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/facebook_2.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/facebook_2.png}
             \caption{Facebook log in Part-II}\label{Fig:facebook_part_2}
         \end{minipage}
     \end{figure}
     
         As you can see in fig 4.9, user doesn't have to enter his Facebook id and password every time, it's a one time process, the \gls{sdk} helps developers to remember the credentials used previously they logged in on the app.
         
-        \newpage
-       
+      
         \item Google Sign in
         
         User can also log in through their Gmail account by tapping on Google sign in button in the fig 4.10 if they don't have Facebook account or vice-verse.
-        I have used Google's \gls{api} for Sign in to \gls{iOS} devices to create this functionality in the app. \\
-        
+        I have used Google's \gls{api} for Sign in to \gls{iOS} devices to create this functionality in the app. 
+      
         Figure 4.10 and 4.11 shows Google \gls{sdk} sign in process.
         
         \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/google_1.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/google_1.png}
             \caption{Google sign in Part-I}\label{Fig:google_part_1}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/google_2.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/google_2.png}
             \caption{Google sign in Part-II}\label{Fig:google_part_2}
         \end{minipage}
     \end{figure}
         
     \end{itemize}
-    
-    \newpage
-    
+ 
     \item Login via email
     
     Those users who have registered via email can utilize the functionality of log in via email.
@@ -224,15 +211,13 @@ User can log in in the app via certain ways:-
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/login_email.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/login_email.png}
             \caption{\label{fig:wireframe_3} Login via email}
     \end{figure}
     
     
     Also, if ever user has forgot his password, he can tap on forgot password button in fig 4.12 and follow the certain steps to change his password. \\
-    
-    \newpage
-    
+ 
     \textbf{Password recovery} screens and their significance are as follows :-
     
     \begin{itemize}
@@ -240,39 +225,33 @@ User can log in in the app via certain ways:-
         
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch4/pass_recovery_1.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/pass_recovery_1.png}
             \caption{\label{fig:pass_recovery_1} Password Recovery Part-I - Email verification}
         \end{figure}
     
     First part of the password recovery is to check if the user exist with the email he entered in the fig 4.13. If yes, then take him to next screen else show him the alert saying that record does not exist with this email.
     
-     \newpage
-    
      \item Year of birth verification screen
         
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch4/pass_recovery_2.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/pass_recovery_2.png}
             \caption{\label{fig:pass_recovery_1} Password Recovery Part-II - Year of birth verification}
     \end{figure}
     
     This screen is to make this process more secure by asking user his year of birth. It must match the year of birth he entered in registering via email process.
     If this matches, then allow him to change his password.
-    
-     \newpage
-    
+ 
      \item Change credentials screen
         
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch4/pass_recovery_3.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/pass_recovery_3.png}
             \caption{\label{fig:pass_recovery_1} Password Recovery Part-III- Change credentials screen}
         \end{figure}
     
     Now, this screen enables you to change your password so that you can log in again and enjoy the app.
     
-     \newpage
-        
     \end{itemize}
     
 \end{itemize}
@@ -286,19 +265,18 @@ Home screen has two nature which are :-
     \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/home_globe.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/home_globe.png}
             \caption{Globe view}\label{Fig:home_globe}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/home.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/home.png}
             \caption{2D Map view}\label{Fig:home_map}
         \end{minipage}
     \end{figure}
     
     It also includes Google Ads at the bottom of the screen. Google AdMob for \gls{iOS} framework has been integrated to achieve this. Google has a lot of different types of ads but the one we have implemented is the banner view.
 
-\newpage
 
 \subsubsection{Sliding Menu}
 
@@ -308,7 +286,7 @@ Figure 4.16 shows the sliding menu and the options it includes.
 
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
             \caption{\label{fig:pass_recovery_1} Sliding menu screen}
     \end{figure}
 
@@ -323,22 +301,21 @@ Figure 4.16 shows the sliding menu and the options it includes.
             
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
             \caption{\label{fig:pass_recovery_1} About us screen}
         \end{figure}
         
-        \newpage
         
          \item Help \\
             The main reason for keeping help screen in slide menu is to provide user easier access to help in case of any query. He can follow certain steps and contact the developer / organization in case of any difficulties.
             
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
             \caption{\label{fig:pass_recovery_1} About us screen}
         \end{figure}
         
-            \newpage
+       
             
     \end{itemize}
 
@@ -362,18 +339,16 @@ Filtering is being done on various parameters :
     \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/home_globe.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/home_globe.png}
             \caption{NDVI selected}\label{Fig:ndvi_selected}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/home.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/home.png}
             \caption{Anomaly selected}\label{Fig:anomaly_selected}
         \end{minipage}
     \end{figure}
-    
-    \newpage
-    
+  
     \item Globe or Map - Visualization medium
     
     User has the option to choose between 2D map view or Globe view.
@@ -393,18 +368,16 @@ Filtering is being done on various parameters :
     \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/home_globe.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/home_globe.png}
             \caption{NDVI selected}\label{Fig:ndvi_selected}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.8\linewidth]{figures/ch4/home.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/home.png}
             \caption{Anomaly selected}\label{Fig:anomaly_selected}
         \end{minipage}
     \end{figure}
-    
-    \newpage
-    
+   
     \item Color scheme
     
     %add images of color schemes used in this project too
@@ -416,7 +389,7 @@ Filtering is being done on various parameters :
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.35\linewidth]{figures/ch2/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
             \caption{\label{fig:pass_recovery_1} About us screen}
     \end{figure}
         
@@ -428,8 +401,6 @@ Filtering is being done on various parameters :
             \caption{\label{fig:color_json} JSON sample of colormap file}
     \end{figure}
 
-    \newpage
-    
 \end{itemize}
 
 
@@ -486,8 +457,6 @@ List of web services creates for the project :-
     It has all the services for the ndvi data including filtering process. \\
 \end{itemize}
 
-\newpage
-
 \section{USING THE APP}
 
 \subsection{Data Visualization}
@@ -514,35 +483,29 @@ Different types of level data are :-
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
             \caption{\label{fig:pass_recovery_1} About us screen}
         \end{figure}
     
-    \newpage
-    
     \item \textbf{Admin Level 1 - State Wise} \\
-    Mean for every state under specific country for specific date has been calculated and colored accordingly. \\
+    Mean for every state under specific country for specific date has been calculated and colored accordingly.
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
             \caption{\label{fig:pass_recovery_1} About us screen}
         \end{figure}
-    
-    \newpage
-    
+  
     \item \textbf{Admin Level 2 - District Wise} \\
-    District mean values has been calculated for the country and then district regions have been colored accordingly. \\
+    District mean values has been calculated for the country and then district regions have been colored accordingly.
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch2/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
             \caption{\label{fig:pass_recovery_1} About us screen}
         \end{figure}
     
 \end{itemize}
-
-\newpage
 
 
 \section{APIs, Softwares, Design pattern and Languages Usage}
@@ -575,8 +538,6 @@ Major APIs used in the project to make the application better are:-
     It can be found here - \url{https://github.com/vigneshuvi/SwiftCSVExport} \\ 
     
 \end{itemize}
-
-\newpage
 
 \subsection{Softwares used in the project}
 
@@ -622,9 +583,7 @@ As explained in the definition, MVC is as direct as its name. It's comprised of 
     
     \item \textbf{View} \\
     The View layer is the essence of your application. Its classes are commonly reusable, since there aren't any area particular rationale in them. For instance, a UILabel is a view that presents message on the screen, and it's effectively reusable. \\
-    
-    \newpage
-    
+  
     \item \textbf{Controller} \\
     The Controller intercedes between the view and the model, normally through the delegation concept. In the perfect situation, the controller element won't know the solid view it's managing. Rather, it will speak with an abstraction with the help of protocols. An exemplary model is the manner in which a UITableView interacts with its data source through the UITableViewDataSource protocol. \\
     

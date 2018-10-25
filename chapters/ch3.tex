@@ -11,17 +11,28 @@
 
 \gls{modis} is a key instrument on board the Terra (initially known as EOS AM-1) and Aqua (initially known as EOS PM-1) satellites. Land's circle around the Earth is coordinated with the goal that it goes from north to south over the equator early in the day, while Aqua disregards south to north the equator toward the evening. Land \gls{modis} and Aqua \gls{modis} are seeing the whole Earth's surface each 1 to 2 days, gaining information in 36 ghastly groups, or gatherings of wavelengths (see \gls{modis} Technical Specifications). These information will enhance our comprehension of worldwide elements and procedures happening on the land, in the seas, and in the lower climate. \gls{modis} is assuming a fundamental job in the improvement of approved, worldwide, intuitive Earth framework models ready to foresee worldwide change precisely enough to help arrangement creators in settling on quality choices concerning the security of our condition. \\
 
+\centerline{\textbf{Terra vs. Aqua}}
+
+According to \gls{nsidc} distributes \gls{modis} data from both the Terra and Aqua satellites.
+
+Figure 3.1 shows the difference between the two satellites. For the application, we have worked with Aqua satellite's data.
+
+ \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch3/satellites.png}
+            \caption{\label{fig:modis_satellites_difference} Difference between MODIS satellites}
+    \end{figure}
+
 \subsection{Overview of NDVI Dataset}
 
 \gls{modis} vegetation indices, delivered on 16-day interims and at various spatial goals, give steady spatial and worldly correlations of vegetation covering greenness, a composite property of leaf territory, chlorophyll and shade structure. Two vegetation lists are gotten from environmentally redressed reflectance in the red, close infrared, and blue wavebands; the standardized contrast vegetation list \gls{ndvi}, which gives coherence \gls{noaa}'s AVHRR \gls{ndvi} time arrangement record for verifiable and atmosphere applications, and the upgraded vegetation list (EVI), which limits covering soil varieties and enhances affectability over thick vegetation conditions. The two items all the more successfully describe the worldwide scope of vegetation states and procedures. 
-
 
 As of now, NASA has the website to utilize the GIMMS Global Agricultural Monitoring (GLAM) System to see MODIS NDVI symbolism and recover MODIS NDVI time arrangement information. The framework gives close ongoing and science quality Terra and Aqua MODIS 8-day composited, worldwide NDVI datasets. These datasets are gotten from the Collection 6 MOD09 and MYD09 surface reflectance items which are given by NASA/GSFC/EOSDIS LANCE and NASA/GSFC MODAPS.
 
 The GIMMS MODIS GLAM System is produced and given by the NASA/GSFC/GIMMS bunch for the USDA/FAS/IPAD Global Agricultural Monitoring venture. The USDA/FAS/IPAD mission is to give objective, auspicious, and consistent appraisal of the worldwide agrarian generation standpoint and conditions influencing worldwide sustenance security. You can see the website at the url mentioned below. \\
 \centerline{\MYhref{https://glam1.gsfc.nasa.gov//}{NASA's NDVI website}}
 
-Please see the figures 3.1 and 3.2 for user guide of the website.
+Please see the figures 3.2 and 3.3 for user guide of the website.
 
     \begin{figure}[H]
             \centering
@@ -51,7 +62,7 @@ Solid vegetation (chlorophyll) reflects more close \gls{nir} and green light con
 
 This is the reason our eyes consider vegetation to be the shading green.
 
-Let's look at the example shown in the fig 3.3.
+Let's look at the example shown in the fig 3.4.
 
     \begin{figure}[H]
             \centering
@@ -90,23 +101,25 @@ Reasons for using wireframes are mentioned below:
     \item Wireframes are an incredible method to organize content by uncovering space requirements and planning the pecking order of components on the page. Having the open door right off the bat to envision the chain of command of your pages and start outwardly showing the space requirements will spare you a ton of time later when you start adapting the pages and filling them with substance. \\
 \end{itemize}
 
-\centerline{\textbf{Some of the Wireframes designs are shown below in figure 3.4, 3.5 and 3.6}} 
+\centerline{\textbf{Some of the Wireframes designs are shown below in figure 3.5, 3.6 and 3.7}} 
 
     \begin{figure}[H]
             \centering
-            \includegraphics[width=1.0\linewidth]{figures/ch3/wireframe_1.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch3/wireframe_1.png}
             \caption{\label{fig:wireframe_1} Wireframe - Registration process}
     \end{figure}
-    
+  
+  
+  
     \begin{figure}[H]
             \centering
-            \includegraphics[width=1.0\linewidth]{figures/ch3/wireframe_2.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch3/wireframe_2.png}
             \caption{\label{fig:wireframe_2} Wireframe - Login and forgot password process}
     \end{figure}
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=1.0\linewidth]{figures/ch3/wireframe_3.png}
+            \includegraphics[width=0.5\linewidth]{figures/ch3/wireframe_3.png}
             \caption{\label{fig:wireframe_3} Wireframe - Main screen and home screen}
     \end{figure}
 
@@ -120,7 +133,7 @@ An organized arrangement of information held in a \gls{pc}, particularly one tha
 
 Database structure was outlined subsequent to planning \gls{uml} Diagrams in order to improve comprehension of the structure.
 
-In the \gls{uml}, an utilization case chart can condense the subtle elements of your framework's clients (otherwise called on-screen characters) and their communications with the framework. Figure 3.7 shows the use case diagram of the app.
+In the \gls{uml}, an utilization case chart can condense the subtle elements of your framework's clients (otherwise called on-screen characters) and their communications with the framework. Figure 3.8 shows the use case diagram of the app.
 
     \begin{figure}[H]
             \centering
@@ -130,7 +143,7 @@ In the \gls{uml}, an utilization case chart can condense the subtle elements of 
 
 As you can see in the above figure, it clearly shows the actions which user can interact with in the app.
 
-On the other hand, Class diagrams are a standout amongst the most valuable kinds of outlines in \gls{uml} as they plainly delineate the structure of a specific framework by demonstrating its classes, characteristics, activities, and connections between articles. With our  \gls{uml} graphing programming, making these charts isn't as overpowering as it may show up. This guide will demonstrate to you generally accepted methods to comprehend, plan, and make your own class outlines. Figure 3.8 will give you better understanding how class diagrams can be used to make the product better.
+On the other hand, Class diagrams are a standout amongst the most valuable kinds of outlines in \gls{uml} as they plainly delineate the structure of a specific framework by demonstrating its classes, characteristics, activities, and connections between articles. With our  \gls{uml} graphing programming, making these charts isn't as overpowering as it may show up. This guide will demonstrate to you generally accepted methods to comprehend, plan, and make your own class outlines. Figure 3.9 will give you better understanding how class diagrams can be used to make the product better.
 
     \begin{figure}[H]
             \centering
@@ -142,7 +155,7 @@ On the other hand, Class diagrams are a standout amongst the most valuable kinds
 
  \centerline{\textbf{Database Structure}}    
   PostgreSQL database has been used for the project, which is a general purpose and object-relational database management system. 
-  Database tables and their entities are shown in the figure 3.9.
+  Database tables and their entities are shown in the figure 3.10.
   
   \begin{figure}[H]
             \centering
