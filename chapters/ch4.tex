@@ -64,7 +64,7 @@ Some of the advantages of using Storyboard are mentioned below:-
     \begin{figure}[H]
             \centering
             \includegraphics[width=\linewidth]{figures/ch4/storyboard_final.png}
-            \caption{\label{fig:wireframe_3} Storyboard of the app}
+            \caption{\label{fig:storyboard_final} Storyboard of the app}
     \end{figure}
     
 \subsection{Mobile App screens and their significance}
@@ -83,8 +83,8 @@ Sign up via email process consists of 5 screens which are listed below:-
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/register_personal.png}
-            \caption{\label{fig:wireframe_3} Register Part-I Personal detail screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/register_personal.png}
+            \caption{\label{fig:register_personal_ch4} Register Part-I Personal detail screen}
     \end{figure}
     
     Here in the figure 4.2, mandatory fields are First name, Last name and year of birth where as we have kept middle name as an optional because not everyone has one. \\
@@ -96,7 +96,7 @@ Sign up via email process consists of 5 screens which are listed below:-
     \begin{figure}[H]
             \centering
             \includegraphics[width=0.25\linewidth]{figures/ch4/pickerview.png}
-            \caption{\label{fig:wireframe_3} UIPickerView for year selection}
+            \caption{\label{fig:pickerview} UIPickerView for year selection}
     \end{figure}
     
     \newpage
@@ -105,8 +105,8 @@ Sign up via email process consists of 5 screens which are listed below:-
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/register_contact.png}
-            \caption{\label{fig:wireframe_3} Register Part-II Contact detail screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/register_contact.png}
+            \caption{\label{fig:register_contact_ch4} Register Part-II Contact detail screen}
     \end{figure}
     
     Figure 4.3 represents contact detail screen in which both the fields i.e Email and Phone are mandatory for record purpose and to avoid fake entries. User with unique email and phone can register only once. It's a good point to note that both the fields have been verified syntactically here.
@@ -115,8 +115,8 @@ Sign up via email process consists of 5 screens which are listed below:-
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/register_location.png}
-            \caption{\label{fig:wireframe_3} Register Part-III Location detail screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/register_location.png}
+            \caption{\label{fig:register_location_ch4} Register Part-III Location detail screen}
     \end{figure}
     
     This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of device.
@@ -127,8 +127,8 @@ Sign up via email process consists of 5 screens which are listed below:-
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/credentials_setup.png}
-            \caption{\label{fig:wireframe_3} Register Part-IV Credentials setup screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/credentials_setup.png}
+            \caption{\label{fig:credentials_setup_ch4} Register Part-IV Credentials setup screen}
     \end{figure}
     
     As you can see in figure 4.6, it allows you to setup password for your secure log in. Point to note here is that minimum length of password has been set 6 digits.
@@ -137,8 +137,8 @@ Sign up via email process consists of 5 screens which are listed below:-
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/purpose_app.png}
-            \caption{\label{fig:wireframe_3} Register Part-V Purpose of using the app screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/purpose_app.png}
+            \caption{\label{fig:purpose_app_ch4} Register Part-V Purpose of using the app screen}
     \end{figure}
     
     This screen is really important for us to know what and why people wants to use this app. Moreover, it has additional check mark for privacy policy and terms of use to which every user must agree before going further. It also protects us from some bot attack.
@@ -203,18 +203,13 @@ User can log in in the app via certain ways:-
  
     \item Login via email
     
-    Those users who have registered via email can utilize the functionality of log in via email.
-    
-    They will be required to enter valid email and password to do so.
-    
-    Figure 4.12 shows the login with email screen.
+    Those users who have registered via email can utilize the functionality of log in via email. They will be required to enter valid email and password to do so. Figure 4.12 shows the login with email screen.
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/login_email.png}
-            \caption{\label{fig:wireframe_3} Login via email}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/login_email.png}
+            \caption{\label{fig:login_email_ch4} Login via email}
     \end{figure}
-    
     
     Also, if ever user has forgot his password, he can tap on forgot password button in fig 4.12 and follow the certain steps to change his password. \\
  
@@ -236,7 +231,7 @@ User can log in in the app via certain ways:-
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.25\linewidth]{figures/ch4/pass_recovery_2.png}
-            \caption{\label{fig:pass_recovery_1} Password Recovery Part-II - Year of birth verification}
+            \caption{\label{fig:pass_recovery_2} Password Recovery Part-II - Year of birth verification}
     \end{figure}
     
     This screen is to make this process more secure by asking user his year of birth. It must match the year of birth he entered in registering via email process.
@@ -247,7 +242,7 @@ User can log in in the app via certain ways:-
         \begin{figure}[H]
             \centering
             \includegraphics[width=0.25\linewidth]{figures/ch4/pass_recovery_3.png}
-            \caption{\label{fig:pass_recovery_1} Password Recovery Part-III- Change credentials screen}
+            \caption{\label{fig:pass_recovery_3} Password Recovery Part-III- Change credentials screen}
         \end{figure}
     
     Now, this screen enables you to change your password so that you can log in again and enjoy the app.
@@ -282,12 +277,12 @@ Home screen has two nature which are :-
 
 Sliding menu has been used in the app to make navigation easier for the user. It enables user to visit some of the key screens without any hustle.
 
-Figure 4.16 shows the sliding menu and the options it includes.
+Figure 4.18 shows the sliding menu and the options it includes.
 
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} Sliding menu screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
+            \caption{\label{fig:side_menu_ch4} Sliding menu screen}
     \end{figure}
 
     User can easily navigate to the following :-
@@ -301,7 +296,7 @@ Figure 4.16 shows the sliding menu and the options it includes.
             
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
             \caption{\label{fig:pass_recovery_1} About us screen}
         \end{figure}
         
@@ -311,8 +306,8 @@ Figure 4.16 shows the sliding menu and the options it includes.
             
         \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} About us screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
+            \caption{\label{fig:pass_recovery_1} Help screen}
         \end{figure}
         
        
@@ -321,9 +316,7 @@ Figure 4.16 shows the sliding menu and the options it includes.
 
 \subsubsection{Filter process}
 
-This is one of the most crucial part of the application which enables user to filter the data according to the needs.
-
-Filtering is being done on various parameters :
+This is one of the most crucial part of the application which enables user to filter the data according to the needs. Filtering is being done on various parameters:-
 
 %FIGURE MANAGE PROPERLY - CORRECT IMAGES AFTER EDITING - BLURR HERE
 
@@ -371,12 +364,12 @@ Filtering is being done on various parameters :
         \begin{minipage}{0.5\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch4/home_globe.png}
-            \caption{NDVI selected}\label{Fig:ndvi_selected}
+            \caption{NDVI selected}\label{Fig:home_globe}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch4/home.png}
-            \caption{Anomaly selected}\label{Fig:anomaly_selected}
+            \caption{Anomaly selected}\label{Fig:home_ch4}
         \end{minipage}
     \end{figure}
    
@@ -391,8 +384,8 @@ Filtering is being done on various parameters :
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} About us screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
+            \caption{\label{fig:pass_recovery_1} Color scheme screen}
     \end{figure}
         
     Here is an example of part of one of the entries of \gls{json} file.
@@ -485,8 +478,8 @@ Different types of level data are :-
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} About us screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
+            \caption{\label{fig:pass_recovery_1} Admin level 0 data visualization}
         \end{figure}
     
     \item \textbf{Admin Level 1 - State Wise} \\
@@ -494,8 +487,8 @@ Different types of level data are :-
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} About us screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
+            \caption{\label{fig:pass_recovery_1}  Admin level 1 data visualization}
         \end{figure}
   
     \item \textbf{Admin Level 2 - District Wise} \\
@@ -503,8 +496,8 @@ Different types of level data are :-
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch2/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} About us screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
+            \caption{\label{fig:pass_recovery_1}  Admin level 2 data visualization}
         \end{figure}
     
 \end{itemize}
