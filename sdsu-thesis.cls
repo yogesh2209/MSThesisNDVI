@@ -9,7 +9,7 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{sdsu-thesis}
               [2012/02/13 v2012-02-13-17:31:23-PST
- SDSU-Thesis Class for Mathematics Department]
+ SDSU-Thesis Class for Computer Science Department]
 \RequirePackage{calc}% part of LaTeX tools bundle   
 %
 % We have to use the Times font for roman family font rather then Computer
