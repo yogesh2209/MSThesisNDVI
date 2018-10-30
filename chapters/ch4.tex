@@ -43,14 +43,13 @@ The development of the iOS app is divided into two areas which are :
 %add to this biblipography as my copying from apple's website.
 
 Apple provides Built-In Interface Builder in the \gls{ide} for designing.
-According to Apple's website, The Interface Builder editor within Xcode makes it simple to design a full user interface without writing any code. Simply drag and drop windows, buttons, text fields, and other objects onto the design canvas to create a functioning user interface. \\
+According to Apple's website, The Interface Builder editor within Xcode makes it simple to design a full user interface without writing any code. Simply drag and drop windows, buttons, text fields, and other objects onto the design canvas to create a functioning user interface. \cite{Xcode} \\
 
 Because Cocoa and Cocoa Touch are built using the Model-View-Controller pattern, it is easy to independently design your interfaces, separate from their implementations. User interfaces are actually archived Cocoa or Cocoa Touch objects (saved as .nib files), and \gls{macOS} and \gls{iOS} will dynamically create the connection between \gls{ui} and code when the app is run. \\
 
-%add to this biblipography as my copying from apple's website.
-%https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/Storyboard.html
+
 As you know, i have used built in feature of Xcode for designing. Apple also provides one more tool for visualization of the design which is \textbf{Storyboard}. \\ \\
-According to Apple, A storyboard is a visual representation of the user interface of an \gls{iOS} application, showing screens of content and the connections between those screens. A storyboard is composed of a sequence of scenes, each of which represents a view controller and its views; scenes are connected by segue objects, which represent a transition between two view controllers. \\
+According to Apple, A storyboard is a visual representation of the user interface of an \gls{iOS} application, showing screens of content and the connections between those screens. A storyboard is composed of a sequence of scenes, each of which represents a view controller and its views; scenes are connected by segue objects, which represent a transition between two view controllers. \cite{Storyboard}  \\
 
 Xcode provides a visual editor for storyboards, where you can lay out and design the user interface of your application by adding views such as buttons, table views, and text views onto scenes. In addition, a storyboard enables you to connect a view to its controller object, and to manage the transfer of data between view controllers. Using storyboards is the recommended way to design the user interface of your application because they enable you to visualize the appearance and flow of your user interface on one canvas. Figure 4.1 shows the storyboard of the app. 
 
@@ -409,7 +408,7 @@ This procedure of getting information from NASA's server and afterward putting a
 
 %put source wikipedia here
 
-According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file. The potential additional information includes map projection, coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact spatial reference for the file.
+According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file. The potential additional information includes map projection, coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact spatial reference for the file. \cite{GeoTIFF_Wikipedia}
 
 Figure 4.27 represents NASA's data bundled in \gls{geoTiff} file.
 
@@ -433,9 +432,7 @@ Figure 4.27 represents NASA's data bundled in \gls{geoTiff} file.
 
 \subsection{Web services required for JSON parsing between database and the front-end}
 
-% https://docs.oracle.com/javaee/6/tutorial/doc/gijqy.html
-
-\textbf{RESTful web services} are built to work best on the Web. Representational State Transfer (REST) is an architectural style that specifies constraints, such as the uniform interface, that if applied to a web service induce desirable properties, such as performance, scalability, and modifiability, that enable services to work best on the Web. In the REST architectural style, data and functionality are considered resources and are accessed using Uniform Resource Identifiers (URIs), typically links on the Web. The resources are acted upon by using a set of simple, well-defined operations. The REST architectural style constrains an architecture to a client/server architecture and is designed to use a stateless communication protocol, typically HTTP. In the REST architecture style, clients and servers exchange representations of resources by using a standardized interface and protocol. \\
+\textbf{RESTful web services} are built to work best on the Web. Representational State Transfer (REST) is an architectural style that specifies constraints, such as the uniform interface, that if applied to a web service induce desirable properties, such as performance, scalability, and modifiability, that enable services to work best on the Web. In the REST architectural style, data and functionality are considered resources and are accessed using Uniform Resource Identifiers (URIs), typically links on the Web. The resources are acted upon by using a set of simple, well-defined operations. The REST architectural style constrains an architecture to a client/server architecture and is designed to use a stateless communication protocol, typically HTTP. In the REST architecture style, clients and servers exchange representations of resources by using a standardized interface and protocol. \cite{RESTful_web_services} \\
 
 \textbf{\gls{json}} is a lightweight information trade arrange. JSON is a content arrangement that is totally dialect free yet utilizes traditions that are recognizable to software engineers of the C-group of dialects, including C, C++, Java, JavaScript, PHP, Python, and numerous others. These properties make JSON a perfect information exchange dialect and helps developers to transfer data between the server and the front-end of any software. The language used for creating web services is \textbf{\gls{php}}. \\
 
@@ -512,13 +509,13 @@ Major APIs used in the project to make the application better are:-
 \begin{itemize}
     \item \textbf{Alamofire} - HTTP Networking Library
     
-    Alamofire is a Swift-based HTTP networking library for \gls{iOS} and \gls{macOS}. It gives a rich interface over Apple's Foundation organizing stack that disentangles various basic networking assignments.\\
+    Alamofire is a Swift-based HTTP networking library for \gls{iOS} and \gls{macOS}. It gives a rich interface over Apple's Foundation organizing stack that disentangles various basic networking assignments. \cite{Alamofire} \\
     
     It can be found here - \url{https://github.com/Alamofire/Alamofire} \\
    
     \item \textbf{WhirlyGlobe} - Globe SDK
     
-    Focusing on mobile technology with based on OpenGL ES, WhirlyGlobe-Maply is an open source library which is utilized in a wide assortment of Atlas, climate, representation, and guide applications. The \gls{sdk} is both a 3D intelligent globe for \gls{iOS} and a 2D map for \gls{iOS}. \\
+    Focusing on mobile technology with based on OpenGL ES, WhirlyGlobe-Maply is an open source library which is utilized in a wide assortment of Atlas, climate, representation, and guide applications. The \gls{sdk} is both a 3D intelligent globe for \gls{iOS} and a 2D map for \gls{iOS}. \cite{WhirlyGlobe} \\
     
     One important thing to mention is this library has been customized a lot according to the needs of the application. Classes has been modified by adding some delegate methods which enables developers to have more control on the visualization. \\
     
@@ -526,7 +523,7 @@ Major APIs used in the project to make the application better are:-
     
     \item \textbf{SwiftCSVExport} - Exporting data
     
-    Swift CSV Export is lightweight and rich highlights framework and it accommodating to make, read and compose CSV records in basic way. \\
+    Swift CSV Export is lightweight and rich highlights framework and it accommodating to make, read and compose CSV records in basic way. \cite{Swift_CSV_Export} \\
     
     This library has been utilized to change over the JSONDictionary to the required objects which it takes and to package the information into CSV file and at last to send out it through email. Remember, this library has also been customized and used according to our data types requirements. \\
     
@@ -558,17 +555,11 @@ List of Softwares used in the project with their significance are :-
 
 %biblipgraphy - https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture
 
-\textbf{\gls{mvc}} is a software architecture pattern, commonly used to implement user interfaces: it is therefore a popular choice for architecting web apps. In general, it separates out the application logic into three separate parts, promoting modularity and ease of collaboration and reuse. It also makes applications more flexible and welcoming to iterations. \\
+\textbf{\gls{mvc}} is a software architecture pattern, commonly used to implement user interfaces: it is therefore a popular choice for architecting web apps. In general, it separates out the application logic into three separate parts, promoting modularity and ease of collaboration and reuse. It also makes applications more flexible and welcoming to iterations. \cite{MVC} \\
 
 %bibliography https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html
 
-According to Apple's documentation about design patterns, \gls{mvc} is central to a good design for a Cocoa application. The benefits of adopting this pattern are numerous. Many objects in these applications tend to be more reusable, and their interfaces tend to be better defined. Applications having an \gls{mvc} design are also more easily extensible than other applications. Moreover, many Cocoa technologies and architectures are based on \gls{mvc} and require that your custom objects play one of the \gls{mvc} roles. \\
-
-
-
-%talk about MVC architecture used
-%singleton used
-%key value observer - notifications
+According to Apple's documentation about design patterns, \gls{mvc} is central to a good design for a Cocoa application. The benefits of adopting this pattern are numerous. Many objects in these applications tend to be more reusable, and their interfaces tend to be better defined. Applications having an \gls{mvc} design are also more easily extensible than other applications. Moreover, many Cocoa technologies and architectures are based on \gls{mvc} and require that your custom objects play one of the \gls{mvc} roles. \cite{MVC_Apple} \\
 
 As explained in the definition, MVC is as direct as its name. It's comprised of three layers: the model, the view and the controller.
 
@@ -590,7 +581,7 @@ As explained in the definition, MVC is as direct as its name. It's comprised of 
     \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch4/mvc.png}
-            \caption{\label{fig:mvc} MVC Architecture}
+            \caption{\label{fig:mvc} MVC Architecture \cite{MVC_Apple}}
         \end{figure}
 
 \subsection{Software Languages used in the project}

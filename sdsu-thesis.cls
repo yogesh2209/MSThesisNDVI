@@ -155,6 +155,16 @@ don't use the twocolumn option}
   {\gdef\@committeechair{#1}}
 \newcommand{\committeechairdept}[1]%
   {\gdef\@committeechairdept{#1}}
+  
+%co chair
+%\newcommand{\cochair}[1]{\renewcommand{\@cochair}{#1}}
+
+\newcommand{\committeecochair}[1]%
+  {\gdef\@committeecochair{#1}}
+\newcommand{\committeecochairdept}[1]%
+  {\gdef\@committeecochairdept{#1}}  
+  
+ 
 % Second committee member
 \newcommand{\committeesecond}[1]%
   {\gdef\@committeesecond{#1}}
@@ -821,6 +831,15 @@ don't use the twocolumn option}
   {\@committeechair}, Chair \\
   {\@committeechairdept}
   \par\vspace*{2\baselineskip}
+  
+  %
+  
+   \rule{3.75in}{1pt}\\
+  {\@committeecochair}, Co-Chair \\
+  {\@committeecochairdept}
+  \par\vspace*{2\baselineskip}
+  
+  
 %
   \rule{3.75in}{1pt}\\
   {\@committeesecond} \\
