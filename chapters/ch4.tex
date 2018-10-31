@@ -471,22 +471,36 @@ Different types of level data are :-
 
 \begin{itemize}
     \item \textbf{Admin Level 0 - Country Wise} \\
-    The country has been colored with value of mean for the whole country on particular date calculated using the appropriate formulae. \\
+    The country has been colored with the mean value of NDVI for the whole country on particular date calculated using the appropriate formulae.
     
-     \begin{figure}[H]
+     \begin{figure}[!htb]
+        \begin{minipage}{0.45\textwidth}
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} Admin level 0 data visualization}
-        \end{figure}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/admin_level_0_a.png}
+            \caption{Admin level 0 mean NDVI shown country wise - United States}\label{Fig:admin_level_0_a}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.45\linewidth]{figures/ch4/admin_level_0_b.png}
+            \caption{Another example of Admin level 0 mean NDVI shown country wise}\label{Fig:admin_level_0_b}
+        \end{minipage}
+    \end{figure}
     
     \item \textbf{Admin Level 1 - State Wise} \\
-    Mean for every state under specific country for specific date has been calculated and colored accordingly.
+    Every state of the country has been colored with the mean value of \gls{ndvi} for that state on specific date and shown in the below figures.
     
-    \begin{figure}[H]
+    \begin{figure}[!htb]
+        \begin{minipage}{0.45\textwidth}
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
-            \caption{\label{fig:pass_recovery_1}  Admin level 1 data visualization}
-        \end{figure}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/admin_level_1_a.png}
+            \caption{Admin level 1 mean NDVI shown state wise - United States}\label{Fig:admin_level_1_a}
+        \end{minipage}\hfill
+        \begin{minipage}{0.5\textwidth}
+            \centering
+            \includegraphics[width=0.45\linewidth]{figures/ch4/admin_level_1_b.png}
+            \caption{Another example of Admin level 1 mean NDVI shown state wise - Brazil}\label{Fig:admin_level_1_b}
+        \end{minipage}
+    \end{figure}
   
     \item \textbf{Admin Level 2 - District Wise} \\
     District mean values has been calculated for the country and then district regions have been colored accordingly.
@@ -576,7 +590,7 @@ As explained in the definition, MVC is as direct as its name. It's comprised of 
 \end{itemize}
 
 
-\gls{mvc} has been shown visually in the figure 4.31.
+\gls{mvc} has been shown visually in the figure 4.33.
 
     \begin{figure}[H]
             \centering
