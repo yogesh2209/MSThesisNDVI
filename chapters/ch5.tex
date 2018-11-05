@@ -59,20 +59,19 @@ Process of data downloading is described below.
     \item \textbf{Mean} \\
     According to a paper published in 1997, The mean of a data set is simply the arithmetic average of the values in the set, obtained by summing the values and dividing by the number of values. Recall that when we summarize a data set in a frequency distribution, we are approximating the data set by "rounding" each value in a given class to the class mark. With this in mind, it is natural to define the mean of a frequency distribution by figure 5.5. \cite{Mean_SD}
     
-     \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch5/mean_formula.png}
-            \caption{\label{fig:info_button} Mean formula}
-    \end{figure}
+    \begin{equation} \label{eq:mean_formula}
+       \mu = \frac{1}{n} \sum\limits_{i=1}^{n}f_{i}x_{i} \doteq \sum\limits_{i=1}^{n}p_{i}x_{i}
+    \end{equation}
     
     \item \textbf{Standard Deviation} \\
    It is defined as the amount computed to show the degree of deviation for a gathering all in all.
+   
+  \begin{equation} \label{eq:standarddeviation_formula}
+      \sigma = \sqrt{\frac{\sum\limits_{i=1}^{n}(x_{i} - \mu)^2}{n}}
+    \end{equation}
     
-     \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch5/standard_deviation.png}
-            \caption{\label{fig:info_button} Standard deviation formula}
-    \end{figure}
+
+where $\sigma$ represents the standard deviation, $x_{i}$ are the individual values and $\mu$ represents the mean which can be calculated by equation 5.1.
     
 \end{itemize}
 
@@ -87,110 +86,101 @@ We have investigated \gls{ndvi} and Anomaly a portion of the nations just to dem
 \begin{itemize}
     \item \textbf{Mean NDVI \& Anomaly distribution over the years}
     
-    \begin{figure}[!htb]
-        \begin{minipage}{0.5\textwidth}
+     \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/Mean/AUSTRALIA_mean.png}
             \caption{Mean graph - Australia}\label{Fig:AUSTRALIA_mean}
-        \end{minipage}\hfill
-        \begin{minipage}{0.5\textwidth}
+    \end{figure}
+    
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/Mean/BRAZIL_mean.png}
             \caption{Mean graph - Brazil}\label{Fig:BRAZIL_mean}
-        \end{minipage}
     \end{figure}
     
-     \begin{figure}[!htb]
-        \begin{minipage}{0.5\textwidth}
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/Mean/CHINA_mean.png}
             \caption{Mean graph - China}\label{Fig:CHINA_mean}
-        \end{minipage}\hfill
-        \begin{minipage}{0.5\textwidth}
+    \end{figure}
+    
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/Mean/INDIA_mean.png}
             \caption{Mean graph - India}\label{Fig:INDIA_mean}
-        \end{minipage}
     \end{figure}
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch5/Mean/US_mean.png}
+            \includegraphics[width=1.0\linewidth]{figures/ch5/Mean/US_mean.png}
             \caption{\label{fig:US_mean}Mean graph - United States}
     \end{figure}
 
-    \clearpage
-    \newpage
-
     \item \textbf{Standard Deviation NDVI \& Anomaly distribution over the years}
-
-    \begin{figure}[!htb]
-        \begin{minipage}{0.5\textwidth}
+    
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/StandardDeviation/AUSTRALIA_SD.png}
             \caption{Standard deviation graph - Australia}\label{Fig:AUSTRALIA_SD}
-        \end{minipage}\hfill
-        \begin{minipage}{0.5\textwidth}
-            \centering
-            \includegraphics[width=1.0\linewidth]{figures/ch5/StandardDeviation/BRAZIL_SD.png}
-            \caption{Standard deviation graph - Brazil}\label{Fig:BRAZIL_SD}
-        \end{minipage}
     \end{figure}
     
-     \begin{figure}[!htb]
-        \begin{minipage}{0.5\textwidth}
+    \begin{figure}[H]
+            \centering
+             \includegraphics[width=1.0\linewidth]{figures/ch5/StandardDeviation/BRAZIL_SD.png}
+            \caption{Standard deviation graph - Brazil}\label{Fig:BRAZIL_SD}
+    \end{figure}
+    
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/StandardDeviation/CHINA_SD.png}
             \caption{Standard deviation graph - China}\label{Fig:CHINA_SD}
-        \end{minipage}\hfill
-        \begin{minipage}{0.5\textwidth}
+    \end{figure}
+    
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/StandardDeviation/INDIA_SD.png}
             \caption{Standard deviation graph - India}\label{Fig:INDIA_SD}
-        \end{minipage}
     \end{figure}
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch5/StandardDeviation/US_SD.png}
+            \includegraphics[width=1.0\linewidth]{figures/ch5/StandardDeviation/US_SD.png}
             \caption{\label{fig:US_SD}Standard deviation graph - United States}
     \end{figure}
-    
-    \clearpage
+   
     \newpage
-
     
     \item \textbf{Histogram NDVI \& Anomaly distribution over the years}
-
-    \begin{figure}[!htb]
-        \begin{minipage}{0.5\textwidth}
+    
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/Histograms/AUSTRALIA_histogram.png}
             \caption{Histogram graph - Australia}\label{Fig:AUSTRALIA_histogram}
-        \end{minipage}\hfill
-        \begin{minipage}{0.5\textwidth}
+    \end{figure}
+    
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/Histograms/BRAZIL_histogram.png}
             \caption{Histogram graph - Brazil}\label{Fig:BRAZIL_histogram}
-        \end{minipage}
     \end{figure}
     
-     \begin{figure}[!htb]
-        \begin{minipage}{0.5\textwidth}
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/Histograms/CHINA_histogram.png}
             \caption{Histogram graph - China}\label{Fig:CHINA_histogram}
-        \end{minipage}\hfill
-        \begin{minipage}{0.5\textwidth}
+    \end{figure}
+    
+    
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch5/Histograms/INDIA_histogram.png}
             \caption{Histogram graph - India}\label{Fig:INDIA_histogram}
-        \end{minipage}
     \end{figure}
     
+   
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch5/Histograms/US_histogram.png}
+            \includegraphics[width=1.0\linewidth]{figures/ch5/Histograms/US_histogram.png}
             \caption{\label{fig:US_histogram} Histogram graph - United States}
     \end{figure}
 \newpage
