@@ -1,17 +1,11 @@
 \chapter{APP AS A DATA ANALYSIS TOOL}
 \label{chap:analysis_tool}
 
-\textbf{Data analysis} is a procedure used to examine, clean, change and rebuild information with a view to reach to a specific decision for a given circumstance. Information investigation is normally of two sorts: subjective or quantitative. The sort of information directs the technique for examination. In subjective research, any non-numerical information like content or individual words are broke down. Quantitative examination, then again, centers around estimation of the information and can utilize insights to help uncover results and ends. The outcomes are numerical. At times, the two types of examination are utilized as an inseparable unit. For instance, quantitative investigation can help demonstrate subjective ends. \\
-
-Spatial information investigation is concerned about that part of information examination where the land referencing of articles contains imperative data. This chapter talks about the ways this app can be used as an analysis tool directly or indirectly. \\
+\textbf{Data analysis} is a procedure used to examine, clean, change and rebuild information with a view to reach to a specific decision for a given circumstance. Information investigation is normally of two sorts: subjective or quantitative. The sort of information directs the technique for examination. In subjective research, any non-numerical information like content or individual words are broke down. Quantitative examination, then again, centers around estimation of the information and can utilize insights to help uncover results and ends. The outcomes are numerical. At times, the two types of examination are utilized as an inseparable unit. For instance, quantitative investigation can help demonstrate subjective ends. Spatial information investigation is concerned about that part of information examination where the land referencing of articles contains imperative data. This chapter talks about the ways this app can be used as an analysis tool directly or indirectly. \\
 
 \section{Data downloading}
 
-\textbf{Downloading} is defined as the transfer of data from server to your system or belonging. In other words, it is defined as the transmission of data from one machine to another. The significant advantage of downloading is that it gives you the full power over the information with the goal that you can utilize that information. \\
-
-The app gives you the feature of exporting any admim level (0, 1 or 2) data in \gls{csv} format via email option so that it can be used in any form of spatial analysis.
-
-Process of data downloading is described below.
+\textbf{Downloading} is defined as the transfer of data from server to your system or belonging. In other words, it is defined as the transmission of data from one machine to another. The significant advantage of downloading is that it gives you the full power over the information with the goal that you can utilize that information. The app gives you the feature of exporting any admim level (0, 1 or 2) data in \gls{csv} format via email option so that it can be used in any form of spatial analysis. Process of data downloading is described below.
 
 \begin{itemize}
     \item Select year, date and tap on country to see the data and then tap on any region. Once you do that, you will see two buttons on both top corners of the screen. Figure 5.1 shows the two buttons which appears after having valid data on globe / map. \\
@@ -35,29 +29,26 @@ Process of data downloading is described below.
      \begin{figure}[H]
             \centering
             \includegraphics[width=0.25\linewidth]{figures/ch5/export_view.png}
-            \caption{\label{fig:info_button} Export button action on home screen}
+            \caption{\label{fig:export_button} Export button action on home screen}
     \end{figure}
     
-    On selecting yes in the figure 5.3, it then converts the raw \gls{json} data to a valid \gls{csv} format and attaches it as a file on the MFMailComposeViewController. \\
-    
-    
-    According to Apple, It's a standard interface for managing, editing, and sending an email message in \gls{iOS} app. \cite{MFMailComposer} Figure 5.4 shows the MFMailComposerViewController view which helps user to email the \gls{csv} file. 
+    On selecting yes in figure 5.3, \gls{json} data is converted to a valid \gls{csv} format and attached as a file on the MFMailComposeViewController. According to Apple, It's a standard interface for managing, editing, and sending an email message in \gls{iOS} app. \cite{MFMailComposer} Figure 5.4 shows the MFMailComposerViewController view which helps user to email the \gls{csv} file. 
     
     \begin{figure}[H]
             \centering
             \includegraphics[width=0.25\linewidth]{figures/ch5/export_view.png}
-            \caption{\label{fig:info_button} Email controller after selecting yes on export action screen}
+            \caption{\label{fig:email_controller} Email controller after selecting yes on export action screen}
     \end{figure}
     
 \end{itemize}
 
 \newpage
 
-\section{Computing mean, Standard Deviation, histograms}
+\section{Computing mean, standard deviation and histogram}
 
 \begin{itemize}
     \item \textbf{Mean} \\
-    According to a paper published in 1997, The mean of a data set is simply the arithmetic average of the values in the set, obtained by summing the values and dividing by the number of values. Recall that when we summarize a data set in a frequency distribution, we are approximating the data set by "rounding" each value in a given class to the class mark. With this in mind, it is natural to define the mean of a frequency distribution by figure 5.5. \cite{Mean_SD}
+    According to a paper published in 1997, the mean of a data set is simply the arithmetic average of the values in the set, obtained by summing the values and dividing by the number of values. Recall that when we summarize a data set in a frequency distribution, we are approximating the data set by "rounding" each value in a given class to the class mark. With this in mind, it is natural to define the mean of a frequency distribution by figure 5.5. \cite{Mean_SD}
     
     \begin{equation} \label{eq:mean_formula}
        \mu = \frac{1}{n} \sum\limits_{i=1}^{n}f_{i}x_{i} \doteq \sum\limits_{i=1}^{n}p_{i}x_{i}
@@ -77,9 +68,7 @@ where $\sigma$ represents the standard deviation, $x_{i}$ are the individual val
 
 \centerline{\textbf{Why use mean and standard deviation for analysis?}}
 
-The main purpose of using mean and standard deviation as a parameter for analysis is that the Normal Curve discloses to us that numerical data will be disseminated in an pattern around a normal line whereas Standard deviation is viewed as the most valuable list of variability. It is a solitary number that discloses to us the inconstancy, or spread, of an appropriation (gathering of scores).
-
-We have investigated \gls{ndvi} and Anomaly a portion of the nations just to demonstrate that with the sent out information through the app, client can do these things:
+The main purpose of using mean and standard deviation as a parameter for analysis is that the Normal Curve discloses to us that numerical data will be disseminated in an pattern around a normal line whereas Standard deviation is viewed as the most valuable list of variability. It is a solitary number that discloses to us the inconstancy, or spread, of an appropriation (gathering of scores). We have investigated \gls{ndvi} and Anomaly a portion of the nations just to demonstrate that with the sent out information through the app, client can do these things:
 
 \newpage
 
@@ -187,5 +176,74 @@ We have investigated \gls{ndvi} and Anomaly a portion of the nations just to dem
 
 \end{itemize}
 
+\section{SVD Analysis}
 
+\gls{svd} is a factorization of a real or complex matrix.  It is the generalization of the eigendecomposition of a positive semidefinite normal matrix (for example, a symmetric matrix with positive eigenvalues) to any $m$ x $n$ matrix via an extension of the polar decomposition. It has many useful applications in signal processing and statistics. \cite{SVD}
 
+\begin{equation} \label{eq:svd_formula}
+ A = UDV^{T}
+\end{equation}
+
+where $A$ is $m$ x $voin$ real matrix with $m>n$, $U$ as $m$ x $m$ and $V$ as an $n$ x $n$. Figure 5.20 shows visualisation of the matrix multiplications in \gls{svd}.
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.5\linewidth]{figures/ch5/svd_matrix.png}
+            \caption{\label{fig:svd_matrix} Matrix multiplications in SVD shown visually \cite{SVD}}
+    \end{figure}
+
+As an application, SVD is utilized to perform principle component analysis (PCA) that intends to decompose a matrix with the end goal to discover the directions (called principal axes). It also tells about the directions in which the data is distributed and is useful for dimensionality reduction.
+
+Figure 5.21 shows the portion of snapshot of the mean \gls{ndvi} data that has been used for the analysis.
+
+  \begin{figure}[H]
+            \centering
+            \includegraphics[width=1.0\linewidth]{figures/ch5/svd_data_snapshot.png}
+            \caption{\label{fig:svd_data_snapshot} Snapshot of United States mean NDVI data of all years represented state wise}
+    \end{figure}
+
+The size of $A$ matrix is $50$ x $712$, column belongs to dates and row for states. After applying \gls{svd} to matrix $A$, the matrices, $U$, $D$ and $VT$ are shown below in figure 5.22.
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\linewidth]{figures/ch5/svd_result_matrix.png}
+            \caption{\label{fig:svd_result_matrices} Result of SVD on matrix A - U, D \& VT}
+    \end{figure}
+    
+    Time series plots and state wise mask mapping for first two and the last vectors has been shown in below figures.
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/EOF_1.png}
+            \caption{\label{fig:EOF_1} Mask mapping state wise of U1 - first vector of matrix U}
+    \end{figure}
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/V1.png}
+            \caption{\label{fig:V_1} Time series analysis of V1 - first vector of matrix V}
+    \end{figure}
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/EOF_2.png}
+            \caption{\label{fig:EOF_2} Mask mapping state wise of U2 - second vector of matrix U}
+    \end{figure}
+    
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/V2.png}
+            \caption{\label{fig:V_2} Time series analysis of V2 - second vector of matrix V}
+    \end{figure}
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/EOF_3.png}
+            \caption{\label{fig:EOF_3} Mask mapping state wise of U711 - last vector of matrix U}
+    \end{figure}
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/V3.png}
+            \caption{\label{fig:V_3} Time series analysis of V711 - last vector of matrix V}
+    \end{figure}

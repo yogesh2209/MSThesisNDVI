@@ -1,7 +1,7 @@
 \chapter{DEVELOPMENT OF THE iOS APP}
 \label{chap:development of the app}
 
-The development of the iOS app is divided into two areas which are :
+The development of the iOS app is divided into two areas which are mentioned below.
 
 \begin{itemize}
     \item Front-end
@@ -33,27 +33,20 @@ The development of the iOS app is divided into two areas which are :
 \section{Front-end of the app}
 
 \subsection{App Designing}
-    
-\centerline{\textbf{Xcode - IDE}}
 
-\centerline{\textbf{Xcode 9.2} has been used for the development of the app.}
-
-\textbf{Xcode} is an Integrated Development Environment, which implies it pulls every one of the instruments expected to create an application (especially a content tool, a compiler, and a manufacture framework) into one programming bundle instead of abandoning them as an arrangement of individual devices associated by contents. Xcode is Apple's authentic \gls{ide} for \gls{mac} and \gls{iOS} engineers. It was initially known as Project Builder in the NeXT days, and renamed to Xcode some place around Mac OS X 10.3 or 10.4. By adaptation 4, Apple had collapsed in the sidekick Interface Builder program so there was just a single application package; the plan of the program hasn't changed a ton from that point forward, albeit clearly the instruments are refreshed routinely. \\
+\textbf{Xcode 9.2} has been used for the development of the app. It is an \gls{ide}, which implies it pulls every one of the instruments expected to create an application (especially a content tool, a compiler, and a manufacture framework) into one programming bundle instead of abandoning them as an arrangement of individual devices associated by contents. Xcode is Apple's authentic \gls{ide} for \gls{mac} and \gls{iOS} engineers. It was initially known as Project Builder in the NeXT days, and renamed to Xcode some place around Mac OS X 10.3 or 10.4. By adaptation 4, Apple had collapsed in the sidekick Interface Builder program so there was just a single application package; the plan of the program hasn't changed a ton from that point forward, albeit clearly the instruments are refreshed routinely. \\
 
 %add to this biblipography as my copying from apple's website.
 
 Apple provides Built-In Interface Builder in the \gls{ide} for designing.
 According to Apple's website, The Interface Builder editor within Xcode makes it simple to design a full user interface without writing any code. Simply drag and drop windows, buttons, text fields, and other objects onto the design canvas to create a functioning user interface. \cite{Xcode} \\
 
-Because Cocoa and Cocoa Touch are built using the Model-View-Controller pattern, it is easy to independently design your interfaces, separate from their implementations. User interfaces are actually archived Cocoa or Cocoa Touch objects (saved as .nib files), and \gls{macOS} and \gls{iOS} will dynamically create the connection between \gls{ui} and code when the app is run. \\
+Because Cocoa and Cocoa Touch are built using the Model-View-Controller pattern, it is easy to independently design your interfaces, separate from their implementations. User interfaces are actually archived Cocoa or Cocoa Touch objects (saved as .nib files), and \gls{macOS} and \gls{iOS} will dynamically create the connection between \gls{ui} and code when the app is run. Built in feature of Xcode which is Interface builder using storyboard has been used for designing. Apple also provides one more tool for Visualization of the design which is the \textbf{Storyboard}. \\
 
-
-As you know, i have used built in feature of Xcode for designing. Apple also provides one more tool for visualization of the design which is \textbf{Storyboard}. \\ \\
 According to Apple, A storyboard is a visual representation of the user interface of an \gls{iOS} application, showing screens of content and the connections between those screens. A storyboard is composed of a sequence of scenes, each of which represents a view controller and its views; scenes are connected by segue objects, which represent a transition between two view controllers. \cite{Storyboard}  \\
 
-Xcode provides a visual editor for storyboards, where you can lay out and design the user interface of your application by adding views such as buttons, table views, and text views onto scenes. In addition, a storyboard enables you to connect a view to its controller object, and to manage the transfer of data between view controllers. Using storyboards is the recommended way to design the user interface of your application because they enable you to visualize the appearance and flow of your user interface on one canvas. Figure 4.1 shows the storyboard of the app. 
+Xcode provides a visual editor for storyboards, where you can lay out and design the user interface of your application by adding views such as buttons, table views, and text views onto scenes. In addition, a storyboard enables you to connect a view to its controller object, and to manage the transfer of data between view controllers. Using storyboards is the recommended way to design the user interface of your application because they enable you to visualize the appearance and flow of your user interface on one canvas. Figure 4.1 shows the storyboard of the app. Some of the advantages of using Storyboard are mentioned below.
 
-Some of the advantages of using Storyboard are mentioned below:-
 \begin{itemize}
     \item It's a container for all your Scenes (View Controllers, TabBar Controllers and more).
     \item A director of associations and transitions between these scenes (called Segues).
@@ -70,9 +63,7 @@ Some of the advantages of using Storyboard are mentioned below:-
 
 \subsubsection{Sign-up via Email}
 
-Sign up process is a one time process which enables you to enter the application out of the blue. It likewise gives us the chance to include the client in our database for future logins and additionally the record.
-
-Sign up via email process consists of 5 screens which are listed below:-
+Sign up process is a one time process which enables you to enter the application out of the blue. It likewise gives us the chance to include the client in our database for future logins and additionally the record. Sign up via email process consists of 5 screens which are listed below.
 
 \begin{itemize}
 
@@ -84,11 +75,7 @@ Sign up via email process consists of 5 screens which are listed below:-
             \caption{\label{fig:register_personal_ch4} Register Part-I Personal detail screen}
     \end{figure}
     
-    Here in the figure 4.2, mandatory fields are First name, Last name and year of birth where as we have kept middle name as an optional because not everyone has one. \\
-    
-    UIPickerView is used for selection of year of birth, According to Apple's documentation, UIPickerView is a view that uses a spinning-wheel or slot-machine metaphor to show one or more sets of values.
-    
-    Figure 4.3 shows the image of the pickerview designed in the app.
+    Here in figure 4.2, mandatory fields are First name, Last name and year of birth where as we have kept middle name as an optional because not everyone has one. UIPickerView is used for selection of year of birth, According to Apple's documentation, UIPickerView is a view that uses a spinning-wheel or slot-machine metaphor to show one or more sets of values. Figure 4.3 shows the image of the pickerview designed in the application.
     
     \begin{figure}[H]
             \centering
@@ -106,7 +93,7 @@ Sign up via email process consists of 5 screens which are listed below:-
             \caption{\label{fig:register_contact_ch4} Register Part-II Contact detail screen}
     \end{figure}
     
-    Figure 4.3 represents contact detail screen in which both the fields i.e Email and Phone are mandatory for record purpose and to avoid fake entries. User with unique email and phone can register only once. It's a good point to note that both the fields have been verified syntactically here.
+    Figure 4.4 represents contact detail screen in which both the fields i.e Email and Phone are mandatory for record purpose and to avoid fake entries. User with unique email and phone can register only once. It's a good point to note that both the fields have been verified syntactically here.
     
     \item Location details
     
@@ -116,9 +103,7 @@ Sign up via email process consists of 5 screens which are listed below:-
             \caption{\label{fig:register_location_ch4} Register Part-III Location detail screen}
     \end{figure}
     
-    This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of device.
-    
-    In this screen, user has two possible choices for entering his location, he can enter the area physically or can simply tap on pickup current area which will eventually get the present location and display it in text area showed. Despite everything he can still alter the area if he wants to.
+    This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of device. In this screen, user has two possible choices for entering his location, he can enter the area physically or can simply tap on pickup current area which will eventually get the present location and display it in text area showed. Despite everything he can still alter the area if he wants to.
   
     \item Setup Credentials
     
@@ -138,27 +123,24 @@ Sign up via email process consists of 5 screens which are listed below:-
             \caption{\label{fig:purpose_app_ch4} Register Part-V Purpose of using the app screen}
     \end{figure}
     
-    This screen is really important for us to know what and why people wants to use this app. Moreover, it has additional check mark for privacy policy and terms of use to which every user must agree before going further. It also protects us from some bot attack.
+    This screen is really important for us to know what and why people wants to use this app. Moreover, it has an additional check mark for privacy policy and terms of use to which every user must agree before going further. It also protects the application from bot attack.
    
- 
 \end{itemize}
 
 
 \subsubsection{Login process}
 
-User can log in in the app via certain ways:-
+User can log in in the app via certain ways which are mentioned below.
 
 \begin{itemize}
     \item Social Login
     
-    Login functionality has been provided using social platforms mentioned below :-
+    Login functionality has been further divided into social platforms which are explained below.
     
     \begin{itemize}
         \item Facebook Login
         
-       The Facebook \gls{sdk} for \gls{iOS} provides developers to integrate a plugin through which user can log in with their Facebook account.
-       
-       Figure 4.8 shows the pop up alert which comes after tapping on Facebook login button and 4.9 shows the screens when user opts for Facebook log in after clicking continue in fig 4.8.
+       The Facebook \gls{sdk} for \gls{iOS} provides developers to integrate a plugin, which allows users to log into their Facebook accounts. Figure 4.8 shows the pop up alert which comes after tapping on Facebook login button and 4.9 shows the screens when user opts for Facebook log in after clicking continue in fig 4.8.
        
       \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
@@ -178,10 +160,7 @@ User can log in in the app via certain ways:-
       
         \item Google Sign in
         
-        User can also log in through their Gmail account by tapping on Google sign in button in the fig 4.10 if they don't have Facebook account or vice-verse.
-        I have used Google's \gls{api} for Sign in to \gls{iOS} devices to create this functionality in the app. 
-      
-        Figure 4.10 and 4.11 shows Google \gls{sdk} sign in process.
+        User can also log in through their Gmail account by tapping on Google sign in button in the fig 4.10 if they don't have Facebook account or vice-verse. Google's \gls{api} for Sign-in has been implemented to create this functionality in the app. Figure 4.10 and 4.11 shows Google \gls{sdk} sign in process. \\
         
         \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
@@ -208,9 +187,9 @@ User can log in in the app via certain ways:-
             \caption{\label{fig:login_email_ch4} Login via email}
     \end{figure}
     
-    Also, if ever user has forgot his password, he can tap on forgot password button in fig 4.12 and follow the certain steps to change his password. \\
- 
-    \textbf{Password recovery} screens and their significance are as follows :-
+    Also, if ever user has forgot his password, he can tap on forgot password button in fig 4.12 and follow the certain steps to change his password. \textbf{Password recovery} screens and their significance are explained below. 
+    
+    \newpage
     
     \begin{itemize}
         \item Email verification screen
@@ -231,8 +210,7 @@ User can log in in the app via certain ways:-
             \caption{\label{fig:pass_recovery_2} Password Recovery Part-II - Year of birth verification}
     \end{figure}
     
-    This screen is to make this process more secure by asking user his year of birth. It must match the year of birth he entered in registering via email process.
-    If this matches, then allow him to change his password.
+    This screen is to make this process more secure by asking user his year of birth. It must match the year of birth he entered in registering via email process. If this matches, then allow him to change his password.
  
      \item Change credentials screen
         
@@ -250,15 +228,13 @@ User can log in in the app via certain ways:-
 
 \subsubsection{Home screen}
 
-This is an essential part of any application. In a context of mobile applications, it's the main screen from which users interact with most options of the application. \\
-
-Home screen has two nature which are :-
+This is an essential part of any application. In a context of mobile applications, it's the main screen from which users interact with most options of the application. Home screen has two modes which are mentioned below.
 
     \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch4/home_globe.png}
-            \caption{Globe view}\label{Fig:home_globe}
+            \caption{Globe view}\label{Fig:home_globe_mode}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
@@ -269,12 +245,9 @@ Home screen has two nature which are :-
     
     It also includes Google Ads at the bottom of the screen. Google AdMob for \gls{iOS} framework has been integrated to achieve this. Google has a lot of different types of ads but the one we have implemented is the banner view.
 
-
 \subsubsection{Sliding Menu}
 
-Sliding menu has been used in the app to make navigation easier for the user. It enables user to visit some of the key screens without any hustle.
-
-Figure 4.18 shows the sliding menu and the options it includes.
+Sliding menu has been used in the app to make navigation easier for the user. It enables user to visit some of the key screens without any hustle. Figure 4.18 shows the sliding menu and the options it includes.
 
     \begin{figure}[H]
             \centering
@@ -282,7 +255,7 @@ Figure 4.18 shows the sliding menu and the options it includes.
             \caption{\label{fig:side_menu_ch4} Sliding menu screen}
     \end{figure}
 
-    User can easily navigate to the following :-
+    User can easily navigate to the below mentioned screens.
 
     \begin{itemize}
     \item Home \\
@@ -290,54 +263,28 @@ Figure 4.18 shows the sliding menu and the options it includes.
     
         \item About \\
             The main role of an about us page is to inform user about the organization and its tasks. This is a clear objective that almost all organizations need to satisfy in some form or another.
-            
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} About us screen}
-        \end{figure}
-        
-        
+    
          \item Help \\
             The main reason for keeping help screen in slide menu is to provide user easier access to help in case of any query. He can follow certain steps and contact the developer / organization in case of any difficulties.
-            
-        \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} Help screen}
-        \end{figure}
-        
-       
             
     \end{itemize}
 
 \subsubsection{Filter process}
 
-This is one of the most crucial part of the application which enables user to filter the data according to the needs. Filtering is being done on various parameters:-
+This is one of the most crucial part of the application which enables user to filter the data according to the needs. Filtering is being done on various parameters which are mentioned below. Filter screen is shown below in figure 4.19.
+
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.25\linewidth]{figures/ch4/filter.png}
+            \caption{\label{fig:filter_datatype} Filter screen showing different filtering options}
+    \end{figure}
 
 %FIGURE MANAGE PROPERLY - CORRECT IMAGES AFTER EDITING - BLURR HERE
 
 \begin{itemize}
     \item \gls{ndvi} or Anomaly data
     
-    This feature has been developed to give the user freedom of choosing the type of data he wants to visualize.
-    
-    A visual toggle - UISwitch has been used for this purpose to enable \gls{ndvi} or anomaly data. By default, \gls{ndvi} is selected. When the user changes the toggle, to make it clear, the text under the heading also changes displaying what is being currently selected.
-    
-    Both the choices and their text values on selection have been shown in the figures below.
-    
-    \begin{figure}[!htb]
-        \begin{minipage}{0.5\textwidth}
-            \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch4/home_globe.png}
-            \caption{NDVI selected}\label{Fig:ndvi_selected}
-        \end{minipage}\hfill
-        \begin{minipage}{0.5\textwidth}
-            \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch4/home.png}
-            \caption{Anomaly selected}\label{Fig:anomaly_selected}
-        \end{minipage}
-    \end{figure}
+    This feature has been developed to give the user freedom of choosing the type of data he wants to visualize. A visual toggle - UISwitch has been used for this purpose to enable \gls{ndvi} or anomaly data. By default, \gls{ndvi} is selected. When the user changes the toggle, to make it clear, the text under the heading also changes displaying what is being currently selected. 
   
     \item Globe or Map - Visualization medium
     
@@ -346,27 +293,21 @@ This is one of the most crucial part of the application which enables user to fi
     
     \item Year and date
     
-    Year and date list is to pick a specific date for which he wants to see the data. Dates are only available after selecting the year from year list screen.
-    
-    Note: The year list and dates for that year is coming from server, so user will not see those dates or years which we don't have the data for.
-    This dynamic thing has been done to increase user interaction and to give the stability to the app by making it dynamic as well as keeping in mind for future updates. 
+    Year and date list is to pick a specific date for which he wants to see the data. Dates are only available after selecting the year from year list screen. The one thing to note here is that the year list and dates for that year is coming from server, so user will not see those dates or years which the data is not available for.
+    This dynamic thing has been done to increase user interaction and to give the stability to the app by making it dynamic as well as keeping in mind for future updates. Figure 4.20 and 4.21 represents year and date list screens respectively.
     
     \newpage
-    
-    % click year - blurr on other and show date list screen
-    
-    Figure 4.23 and 4.24 represents year and date list screens. \\
     
     \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch4/home_globe.png}
-            \caption{NDVI selected}\label{Fig:home_globe}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/year_list.png}
+            \caption{Year list}\label{Fig:year_list_ch4}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch4/home.png}
-            \caption{Anomaly selected}\label{Fig:home_ch4}
+            \includegraphics[width=0.5\linewidth]{figures/ch4/dates_list.png}
+            \caption{Date list on selecting year}\label{Fig:date_list_ch4}
         \end{minipage}
     \end{figure}
    
@@ -374,15 +315,12 @@ This is one of the most crucial part of the application which enables user to fi
     
     %add images of color schemes used in this project too
     
-    This is an additional feature which has given to the application to make it interesting. It enables user to view the data into different color palette forms.
-    Remember, the color palettes are custom made and stored locally in \gls{json} files according to the \gls{ndvi} range.
-    
-    Figure 4.25 shows color palette options available in the app. User just have to select any of the available options and tap apply to make the commit to the choice.
+    This is an additional feature which has given to the application to make it interesting. It enables user to view the data into different color palette forms. Remember, the color palettes are custom made and stored locally in \gls{json} files according to the \gls{ndvi} range. Figure 4.22 shows color palette options available in the app. User just have to select any of the available options and tap apply to make the commit to the choice.
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
-            \caption{\label{fig:pass_recovery_1} Color scheme screen}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/color_scheme.png}
+            \caption{\label{fig:color_scheme_screen} Color scheme screen}
     \end{figure}
         
     Here is an example of part of one of the entries of \gls{json} file.
@@ -390,7 +328,7 @@ This is one of the most crucial part of the application which enables user to fi
     \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch4/color_map_final.png}
-            \caption{\label{fig:color_json} JSON sample of colormap file}
+            \caption{\label{fig:color_json} Sample JSON of custom created colormap file}
     \end{figure}
 
 \end{itemize}
@@ -402,18 +340,16 @@ This is one of the most crucial part of the application which enables user to fi
 
 \subsection{Process of getting data from NASA's server}
 
-This procedure of getting information from NASA's server and afterward putting away the information into PostgreSQL database is a significant advance in the undertaking. It involves the development of a script in Python 3.6. The data on Nasa's server is in \gls{geoTiff} format. Important thing to note here is that all the \gls{geoTiff} files that exist in their server are compressed via zip.
+A significant advance the procedure of getting information from NASA's server and inserting information into the PostfreSWL, which involves the development of a python 3.6 script. The data on Nasa's server is in \gls{geoTiff} format. Important thing to note here is that all the \gls{geoTiff} files that exist in their server are compressed via zip.
 
 %put source wikipedia here
 
-According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file. The potential additional information includes map projection, coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact spatial reference for the file. \cite{GeoTIFF_Wikipedia}
-
-Figure 4.27 represents NASA's data bundled in \gls{geoTiff} file.
+According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file. The potential additional information includes map projection, coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact spatial reference for the file. \cite{GeoTIFF_Wikipedia}. Figure 4.24 represents NASA's data bundled in \gls{geoTiff} file.
 
     \begin{figure}[H]
             \centering
             \includegraphics[width=0.35\linewidth]{figures/ch4/geotiff.png}
-            \caption{\label{fig:geotiff} Sample of NASA's NDVI Data file}
+            \caption{\label{fig:geotiff} Sample of NASA's NDVI GeoTiff data file}
     \end{figure}
 
     Steps taken to get the raw data from this \gls{geoTiff} file, process the data and finally to store that data to a database are as follows :-
@@ -432,9 +368,7 @@ Figure 4.27 represents NASA's data bundled in \gls{geoTiff} file.
 
 \textbf{RESTful web services} are built to work best on the Web. Representational State Transfer (REST) is an architectural style that specifies constraints, such as the uniform interface, that if applied to a web service induce desirable properties, such as performance, scalability, and modifiability, that enable services to work best on the Web. In the REST architectural style, data and functionality are considered resources and are accessed using Uniform Resource Identifiers (URIs), typically links on the Web. The resources are acted upon by using a set of simple, well-defined operations. The REST architectural style constrains an architecture to a client/server architecture and is designed to use a stateless communication protocol, typically HTTP. In the REST architecture style, clients and servers exchange representations of resources by using a standardized interface and protocol. \cite{RESTful_web_services} \\
 
-\textbf{\gls{json}} is a lightweight information trade arrange. JSON is a content arrangement that is totally dialect free yet utilizes traditions that are recognizable to software engineers of the C-group of dialects, including C, C++, Java, JavaScript, PHP, Python, and numerous others. These properties make JSON a perfect information exchange dialect and helps developers to transfer data between the server and the front-end of any software. The language used for creating web services is \textbf{\gls{php}}. \\
-
-List of web services creates for the project :-
+\textbf{\gls{json}} is a lightweight information trade arrange. JSON is a content arrangement that is totally dialect free yet utilizes traditions that are recognizable to software engineers of the C-group of dialects, including C, C++, Java, JavaScript, PHP, Python, and numerous others. These properties make JSON a perfect information exchange dialect and helps developers to transfer data between the server and the front-end of any software. The language used for creating web services is \textbf{\gls{php}}. List of web services creates for the project are mentioned below.
 
 \begin{itemize}
     \item \textbf{dbcon.php} \\
@@ -463,9 +397,7 @@ Process of displaying the data is describred as below.
     \item Tap on any country / region to see the data of that country for those date. \\
 \end{itemize}
 
-This section contains all three cases of Admin Level and their effect on Home screen i.e data visualization. \\
-
-Different types of level data are :-
+This section contains all three cases of Admin Level and their effect on Home screen i.e data visualization. Different types of level data are mentioned below.
 
 \begin{itemize}
     \item \textbf{Admin Level 0 - Country Wise} \\
@@ -506,7 +438,7 @@ Different types of level data are :-
      \begin{figure}[H]
             \centering
             \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
-            \caption{\label{fig:pass_recovery_1}  Admin level 2 data visualization}
+            \caption{\label{fig:admin_level_2_visual}  Admin level 2 data visualization}
         \end{figure}
     
 \end{itemize}
@@ -516,36 +448,26 @@ Different types of level data are :-
 
 \subsection{APIs Usage}
 
-Major APIs used in the project to make the application better are:-
+Major APIs used in the project to make the application better are explained below.
 
 \begin{itemize}
     \item \textbf{Alamofire} - HTTP Networking Library
     
-    Alamofire is a Swift-based HTTP networking library for \gls{iOS} and \gls{macOS}. It gives a rich interface over Apple's Foundation organizing stack that disentangles various basic networking assignments. \cite{Alamofire} \\
-    
-    It can be found here - \url{https://github.com/Alamofire/Alamofire} \\
+    Alamofire is a Swift-based HTTP networking library for \gls{iOS} and \gls{macOS}. It gives a rich interface over Apple's Foundation organizing stack that disentangles various basic networking assignments. \cite{Alamofire}. It can be found here - \url{https://github.com/Alamofire/Alamofire} \\
    
     \item \textbf{WhirlyGlobe} - Globe SDK
     
-    Focusing on mobile technology with based on OpenGL ES, WhirlyGlobe-Maply is an open source library which is utilized in a wide assortment of Atlas, climate, representation, and guide applications. The \gls{sdk} is both a 3D intelligent globe for \gls{iOS} and a 2D map for \gls{iOS}. \cite{WhirlyGlobe} \\
-    
-    One important thing to mention is this library has been customized a lot according to the needs of the application. Classes has been modified by adding some delegate methods which enables developers to have more control on the visualization. \\
-    
-    It can be found here - \url{https://github.com/mousebird/WhirlyGlobe} \\
+    Focusing on mobile technology with based on OpenGL ES, WhirlyGlobe-Maply is an open source library which is utilized in a wide assortment of Atlas, climate, representation, and guide applications. The \gls{sdk} is both a 3D intelligent globe for \gls{iOS} and a 2D map for \gls{iOS}. \cite{WhirlyGlobe}. One important thing to mention is this library has been customized a lot according to the needs of the application. Classes has been modified by adding some delegate methods which enables developers to have more control on the visualization. It can be found here - \url{https://github.com/mousebird/WhirlyGlobe} \\
     
     \item \textbf{SwiftCSVExport} - Exporting data
     
-    Swift CSV Export is lightweight and rich highlights framework and it accommodating to make, read and compose CSV records in basic way. \cite{Swift_CSV_Export} \\
-    
-    This library has been utilized to change over the JSONDictionary to the required objects which it takes and to package the information into CSV file and at last to send out it through email. Remember, this library has also been customized and used according to our data types requirements. \\
-    
-    It can be found here - \url{https://github.com/vigneshuvi/SwiftCSVExport} \\ 
+    Swift CSV Export is lightweight and rich highlights framework and it accommodating to make, read and compose CSV records in basic way. \cite{Swift_CSV_Export}. This library has been utilized to change over the JSONDictionary to the required objects which it takes and to package the information into CSV file and at last to send out it through email. Remember, this library has also been customized and used according to our data types requirements. It can be found here - \url{https://github.com/vigneshuvi/SwiftCSVExport} \\ 
     
 \end{itemize}
 
 \subsection{Softwares used in the project}
 
-List of Softwares used in the project with their significance are :-
+List of Softwares used in the project with their significance are mentioned below.
 
 \begin{itemize}
     \item \textbf{Xcode}
@@ -571,9 +493,7 @@ List of Softwares used in the project with their significance are :-
 
 %bibliography https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html
 
-According to Apple's documentation about design patterns, \gls{mvc} is central to a good design for a Cocoa application. The benefits of adopting this pattern are numerous. Many objects in these applications tend to be more reusable, and their interfaces tend to be better defined. Applications having an \gls{mvc} design are also more easily extensible than other applications. Moreover, many Cocoa technologies and architectures are based on \gls{mvc} and require that your custom objects play one of the \gls{mvc} roles. \cite{MVC_Apple} \\
-
-As explained in the definition, MVC is as direct as its name. It's comprised of three layers: the model, the view and the controller.
+According to Apple's documentation about design patterns, \gls{mvc} is central to a good design for a Cocoa application. The benefits of adopting this pattern are numerous. Many objects in these applications tend to be more reusable, and their interfaces tend to be better defined. Applications having an \gls{mvc} design are also more easily extensible than other applications. Moreover, many Cocoa technologies and architectures are based on \gls{mvc} and require that your custom objects play one of the \gls{mvc} roles. \cite{MVC_Apple}. As explained in the definition, MVC is as direct as its name. It's comprised of three layers: the model, the view and the controller. \gls{mvc} has been shown visually in figure 4.30.
 
 \begin{itemize}
     \item \textbf{Model} \\
@@ -587,9 +507,6 @@ As explained in the definition, MVC is as direct as its name. It's comprised of 
     
 \end{itemize}
 
-
-\gls{mvc} has been shown visually in the figure 4.33.
-
     \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch4/mvc.png}
@@ -598,7 +515,7 @@ As explained in the definition, MVC is as direct as its name. It's comprised of 
 
 \subsection{Software Languages used in the project}
 
-List of software languages used in the process :-
+List of software languages used in the process are mentioned below.
 
 \begin{itemize}
     \item \textbf{Swift 4.1} - for development of iOS app \\
