@@ -36,7 +36,7 @@
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch5/export_view.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch5/mfmailcomposer.png}
             \caption{\label{fig:email_controller} Email controller after selecting yes on export action screen}
     \end{figure}
     
@@ -192,7 +192,18 @@ where $A$ is $m$ x $voin$ real matrix with $m>n$, $U$ as $m$ x $m$ and $V$ as an
             \caption{\label{fig:svd_matrix} Matrix multiplications in SVD shown visually \cite{SVD}}
     \end{figure}
 
-As an application, SVD is utilized to perform principle component analysis (PCA) that intends to decompose a matrix with the end goal to discover the directions (called principal axes). It also tells about the directions in which the data is distributed and is useful for dimensionality reduction.
+As an application, SVD is utilized to perform principle component analysis (PCA) that intends to decompose a matrix with the end goal to discover the directions (called principal axes). It also tells about the directions in which the data is distributed and is useful for dimensionality reduction. 
+
+Steps involved in the process of implementing \gls{svd} are as follows.
+
+\begin{itemize}
+    \item Conversion of \gls{json} data into a formatted \gls{csv} file.
+    \item Load the csv file in R code and remove invalid or null entries with 0.
+    \item Remove the states which we don't have the data for.
+    \item Plot the eigen values of \gls{ndvi} covariance matrix.
+    \item Implement SVD on the matrix.
+    \item Plot first five \gls{eof}'s and \gls{pca}'s.
+\end{itemize}
 
 Figure 5.21 shows the portion of snapshot of the mean \gls{ndvi} data that has been used for the analysis.
 
@@ -201,49 +212,85 @@ Figure 5.21 shows the portion of snapshot of the mean \gls{ndvi} data that has b
             \includegraphics[width=1.0\linewidth]{figures/ch5/svd_data_snapshot.png}
             \caption{\label{fig:svd_data_snapshot} Snapshot of United States mean NDVI data of all years represented state wise}
     \end{figure}
+    
+\newpage    
+Eigen values of \gls{ndvi} covariance matrix plot has been shown in the figure 5.22.
 
-The size of $A$ matrix is $50$ x $712$, column belongs to dates and row for states. After applying \gls{svd} to matrix $A$, the matrices, $U$, $D$ and $VT$ are shown below in figure 5.22.
+\begin{figure}[H]
+            \centering
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/covarianceeigen.png}
+            \caption{\label{fig:covriance} Eigen values of NDVI covariance matrix.}
+    \end{figure}
+
+
+The size of $A$ matrix is $47$ x $714$, column belongs to dates and row for states. After applying \gls{svd} to matrix $A$, the matrices, $U$, $D$ and $VT$ are shown below in figure 5.23.
 
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.85\linewidth]{figures/ch5/svd_result_matrix.png}
+            \includegraphics[width=0.70\linewidth]{figures/ch5/svd_result_matrix.png}
             \caption{\label{fig:svd_result_matrices} Result of SVD on matrix A - U, D \& VT}
     \end{figure}
     
-    Time series plots and state wise mask mapping for first two and the last vectors has been shown in below figures.
+    \gls{eof}s and \gls{pca}s plots of first five vectors has been shown in below figures.
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/EOF_1.png}
-            \caption{\label{fig:EOF_1} Mask mapping state wise of U1 - first vector of matrix U}
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/eof1.png}
+            \caption{\label{fig:EOF_1} Mask mapping state wise of U1 vector of matrix U}
     \end{figure}
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/V1.png}
-            \caption{\label{fig:V_1} Time series analysis of V1 - first vector of matrix V}
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc1.png}
+            \caption{\label{fig:V_1} Time series analysis of V1 vector of matrix V}
     \end{figure}
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/EOF_2.png}
-            \caption{\label{fig:EOF_2} Mask mapping state wise of U2 - second vector of matrix U}
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/eof2.png}
+            \caption{\label{fig:EOF_2} Mask mapping state wise of U2 vector of matrix U}
     \end{figure}
     
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/V2.png}
-            \caption{\label{fig:V_2} Time series analysis of V2 - second vector of matrix V}
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc2.png}
+            \caption{\label{fig:V_2} Time series analysis of V2 vector of matrix V}
     \end{figure}
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/EOF_3.png}
-            \caption{\label{fig:EOF_3} Mask mapping state wise of U711 - last vector of matrix U}
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/eof3.png}
+            \caption{\label{fig:EOF_3} Mask mapping state wise of U3 vector of matrix U}
     \end{figure}
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.85\linewidth]{figures/ch5/SVD/V3.png}
-            \caption{\label{fig:V_3} Time series analysis of V711 - last vector of matrix V}
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc3.png}
+            \caption{\label{fig:V_3} Time series analysis of V3 vector of matrix V}
+    \end{figure}
+    
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/eof4.png}
+            \caption{\label{fig:EOF_4} Mask mapping state wise of U4 vector of matrix U}
+    \end{figure}
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc4.png}
+            \caption{\label{fig:V_4} Time series analysis of V4 vector of matrix V}
+    \end{figure}
+    
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/eof5.png}
+            \caption{\label{fig:EOF_5} Mask mapping state wise of U5 vector of matrix U}
+    \end{figure}
+    
+     \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc5.png}
+            \caption{\label{fig:V_5} Time series analysis of V5 vector of matrix V}
     \end{figure}
