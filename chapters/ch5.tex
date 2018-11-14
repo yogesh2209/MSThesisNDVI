@@ -184,7 +184,7 @@ The main purpose of using mean and standard deviation as a parameter for analysi
  A = UDV^{T}
 \end{equation}
 
-where $A$ is $m$ x $voin$ real matrix with $m>n$, $U$ as $m$ x $m$ and $V$ as an $n$ x $n$. Figure 5.20 shows visualisation of the matrix multiplications in \gls{svd}.
+where $A$ is $m$ x $n$ real matrix with $m>n$, $U$ as $m$ x $m$ and $V$ as an $n$ x $n$. Figure 5.20 shows visualisation of the matrix multiplications in \gls{svd}.
 
     \begin{figure}[H]
             \centering
@@ -201,11 +201,11 @@ Steps involved in the process of implementing \gls{svd} are as follows.
     \item Load the csv file in R code and remove invalid or null entries with 0.
     \item Remove the states which we don't have the data for.
     \item Plot the eigen values of \gls{ndvi} covariance matrix.
-    \item Implement SVD on the matrix.
+    \item Implement \gls{svd} on the matrix.
     \item Plot first five \gls{eof}'s and \gls{pca}'s.
 \end{itemize}
 
-Figure 5.21 shows the portion of snapshot of the mean \gls{ndvi} data that has been used for the analysis.
+Figure 5.21 shows the portion of mean \gls{ndvi} data that has been used for the analysis.
 
   \begin{figure}[H]
             \centering
