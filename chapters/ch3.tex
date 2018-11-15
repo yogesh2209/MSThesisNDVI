@@ -13,7 +13,7 @@
 
 \centerline{\textbf{Terra vs. Aqua}}
 
-According to \gls{nsidc} distributes \gls{modis} data from both the Terra and Aqua satellites. Figure 3.1 shows the difference between the two satellites. For the application, we have worked with Aqua satellite's data.
+According to \gls{nsidc} distributes \gls{modis} data from both the Terra and Aqua satellites. Figure~\ref{fig:modis_satellites_difference} shows the difference between the two satellites. For the application, we have worked with Aqua satellite's data.
 
  \begin{figure}[H]
             \centering
@@ -27,7 +27,7 @@ According to \gls{nsidc} distributes \gls{modis} data from both the Terra and Aq
 
 As of now, NASA has the website to utilize the GIMMS Global Agricultural Monitoring (GLAM) System to see MODIS NDVI symbolism and recover MODIS NDVI time arrangement information. The framework gives close ongoing and science quality Terra and Aqua MODIS 8-day composited, worldwide NDVI datasets. These datasets are acquired from the Collection 6 MOD09 and MYD09 surface reflectance items which are given by NASA/GSFC/EOSDIS LANCE and NASA/GSFC MODAPS.
 
-The GIMMS MODIS GLAM System is produced and given by the NASA/GSFC/GIMMS bunch for the USDA/FAS/IPAD Global Agricultural Monitoring venture. The USDA/FAS/IPAD mission is to give objective, auspicious, and consistent appraisal of the worldwide agrarian generation standpoint and conditions influencing worldwide sustenance security. Figures 3.2 and 3.3 represents the user guide of the \gls{nasa}'s \gls{ndvi} website.
+The GIMMS MODIS GLAM System is produced and given by the NASA/GSFC/GIMMS bunch for the USDA/FAS/IPAD Global Agricultural Monitoring venture. The USDA/FAS/IPAD mission is to give objective, auspicious, and consistent appraisal of the worldwide agrarian generation standpoint and conditions influencing worldwide sustenance security. Figures~\ref{fig:nasa_website_1} and ~\ref{fig:nasa_website_2} represents the user guide of the \gls{nasa}'s \gls{ndvi} website.
 
     \begin{figure}[H]
             \centering
@@ -52,7 +52,7 @@ The vegetation records are recovered from day by day, air redressed, bidirection
     \end{equation} 
 
 
-where \gls{nir} represnts Near-Infrared and \gls{red} refers to Red Light. Solid vegetation (chlorophyll) reflects more close \gls{nir} and green light contrasted with different wavelengths. In any case, it retains more red and blue light. This is the reason our eyes consider vegetation to be the shading green. As shown below, fig 3.4 explains the concept of vegetation index.
+where \gls{nir} represnts Near-Infrared and \gls{red} refers to Red Light. Solid vegetation (chlorophyll) reflects more close \gls{nir} and green light contrasted with different wavelengths. In any case, it retains more red and blue light. This is the reason our eyes consider vegetation to be the shading green. As shown below, Figure~\ref{fig:ndvi_example} explains the concept of vegetation index.
 
     \begin{figure}[H]
             \centering
@@ -75,8 +75,7 @@ As innovation enhances and the methods in which we would now be able to catch th
 
 \section{Wireframes Designs}
 
-A versatile application wireframe, otherwise called a page schematic or screen outline, is a visual guide that speaks to the skeletal structure of an application. Wireframes are made to arrange components to best achieve a specific reason. In other words, they are the skeleton of any product. This skeleton is a two-dimensional delineation of a page's interface that demonstrates the dividing of components on the page, how content is organized, what functionalities are accessible, and how clients will cooperate with the site. They likewise assume an essential job in interfacing data engineering to the visual parts of the outline by indicating pathways between the different pages. Wireframes are purposefully drained of shading, illustrations and adapted textual styles. The tool used for creating wireframes here is \textbf{Axure RP 8}. \\
-Reasons for using wireframes are mentioned below.
+A versatile application wireframe, otherwise called a page schematic or screen outline, is a visual guide that speaks to the skeletal structure of an application. Wireframes are made to arrange components to best achieve a specific reason. In other words, they are the skeleton of any product. This skeleton is a two-dimensional delineation of a page's interface that demonstrates the dividing of components on the page, how content is organized, what functionalities are accessible, and how clients will cooperate with the site. They likewise assume an essential job in interfacing data engineering to the visual parts of the outline by indicating pathways between the different pages. Wireframes are purposefully drained of shading, illustrations and adapted textual styles. The tool used for creating wireframes here is \textbf{Axure RP 8}. Reasons for using wireframes are mentioned below.
 
 \begin{itemize}
     \item Wireframes enable you to outline the usefulness of the pages, get issues early, and spare time on corrections later. It is considerably less excruciating to roll out improvements to a wireframe than to a high devotion mockup with heaps of plan components. \\
@@ -84,11 +83,13 @@ Reasons for using wireframes are mentioned below.
     \item Wireframes are an incredible method to organize content by uncovering space requirements and planning the pecking order of components on the page. Having the open door right off the bat to envision the chain of command of your pages and start outwardly showing the space requirements will spare you a ton of time later when you start adapting the pages and filling them with substance. \\
 \end{itemize}
 
-Some of the Wireframes designs are shown below in figure 3.5, 3.6 and 3.7.
+\newpage
+
+Some of the Wireframes designs are shown below in Figure~\ref{fig:wireframe_1}, ~\ref{fig:wireframe_2} and ~\ref{fig:wireframe_3}.
 
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch3/wireframe_1.png}
+            \includegraphics[width=1.0\linewidth]{figures/ch3/wireframe_1.png}
             \caption{\label{fig:wireframe_1} Wireframe - Registration process}
     \end{figure}
   
@@ -96,7 +97,7 @@ Some of the Wireframes designs are shown below in figure 3.5, 3.6 and 3.7.
   
     \begin{figure}[H]
             \centering
-            \includegraphics[width=0.5\linewidth]{figures/ch3/wireframe_2.png}
+            \includegraphics[width=0.75\linewidth]{figures/ch3/wireframe_2.png}
             \caption{\label{fig:wireframe_2} Wireframe - Login and forgot password process}
     \end{figure}
     
@@ -109,7 +110,7 @@ Some of the Wireframes designs are shown below in figure 3.5, 3.6 and 3.7.
 
 \section{Database Architecture}
 
-An organized arrangement of information held in a \gls{pc}, particularly one that is available in different ways. Database structure was outlined subsequent to planning \gls{uml} Diagrams in order to improve comprehension of the structure. In the \gls{uml}, an utilization case chart can condense the subtle elements of your framework's clients (otherwise called on-screen characters) and their communications with the framework. Figure 3.8 shows the use case diagram of the app.
+An organized arrangement of information held in a \gls{pc}, particularly one that is available in different ways. Database structure was outlined subsequent to planning \gls{uml} Diagrams in order to improve comprehension of the structure. In the \gls{uml}, an utilization case chart can condense the subtle elements of your framework's clients (otherwise called on-screen characters) and their communications with the framework. Figure~\ref{fig:use_case} shows the use case diagram of the app.
 
     \begin{figure}[H]
             \centering
@@ -117,7 +118,7 @@ An organized arrangement of information held in a \gls{pc}, particularly one tha
             \caption{\label{fig:use_case} Use case diagram of the app}
     \end{figure}
 
-As you can see in the above figure, it clearly shows the actions in which a given user can interact within the app. On the other hand, class diagrams are a standout amongst the most valuable kinds of outlines in \gls{uml}, as they plainly delineate the structure of a specific framework by demonstrating its classes, characteristics, activities, and connections between articles. With our  \gls{uml} graphing programming, making these charts isn't as overpowering as it may show up. This guide will demonstrate to you generally accepted methods to comprehend, plan, and make your own class outlines. Figure 3.9 will give you better understanding how class diagrams can be used to make the product better.
+As you can see in the above Figure, it clearly shows the actions in which a given user can interact within the app. On the other hand, class diagrams are a standout amongst the most valuable kinds of outlines in \gls{uml}, as they plainly delineate the structure of a specific framework by demonstrating its classes, characteristics, activities, and connections between articles. With our  \gls{uml} graphing programming, making these charts isn't as overpowering as it may show up. This guide will demonstrate to you generally accepted methods to comprehend, plan, and make your own class outlines. Figure~\ref{fig:class_diag} will give you better understanding how class diagrams can be used to make the product better.
 
     \begin{figure}[H]
             \centering
@@ -129,7 +130,7 @@ As you can see in the above figure, it clearly shows the actions in which a give
 
  \centerline{\textbf{Database Structure}}    
   PostgreSQL database has been used for the project, which is a general purpose and object-relational database management system. 
-  Database tables and their entities are shown in the figure 3.10.
+  Database tables and their entities are shown in the Figure~\ref{fig:database_structure}.
   
   \begin{figure}[H]
             \centering

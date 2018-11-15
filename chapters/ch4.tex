@@ -75,7 +75,7 @@ Sign up process is a one time process which enables you to enter the application
             \caption{\label{fig:register_personal_ch4} Register Part-I Personal detail screen}
     \end{figure}
     
-    Here in figure 4.2, mandatory fields are First name, Last name and year of birth where as we have kept middle name as an optional because not everyone has one. UIPickerView is used for selection of year of birth, According to Apple's documentation, UIPickerView is a view that uses a spinning-wheel or slot-machine metaphor to show one or more sets of values. Figure 4.3 shows the image of the pickerview designed in the application.
+    Here in Figure~\ref{fig:register_personal_ch4}, mandatory fields are First name, Last name and year of birth where as we have kept middle name as an optional because not everyone has one. UIPickerView is used for selection of year of birth, According to Apple's documentation, UIPickerView is a view that uses a spinning-wheel or slot-machine metaphor to show one or more sets of values. Figure~\ref{fig:pickerview} shows the image of the pickerview designed in the application.
     
     \begin{figure}[H]
             \centering
@@ -93,7 +93,7 @@ Sign up process is a one time process which enables you to enter the application
             \caption{\label{fig:register_contact_ch4} Register Part-II Contact detail screen}
     \end{figure}
     
-    Figure 4.4 represents contact detail screen in which both the fields i.e Email and Phone are mandatory for record purpose and to avoid fake entries. User with unique email and phone can register only once. It's a good point to note that both the fields have been verified syntactically here.
+    Figure~\ref{fig:register_contact_ch4} represents contact detail screen in which both the fields i.e Email and Phone are mandatory for record purpose and to avoid fake entries. User with unique email and phone can register only once. It's a good point to note that both the fields have been verified syntactically here.
     
     \item Location details
     
@@ -113,7 +113,7 @@ Sign up process is a one time process which enables you to enter the application
             \caption{\label{fig:credentials_setup_ch4} Register Part-IV Credentials setup screen}
     \end{figure}
     
-    As you can see in figure 4.6, it allows you to setup password for your secure log in. Point to note here is that minimum length of password has been set 6 digits.
+    As you can see in Figure~\ref{fig:credentials_setup_ch4} , it allows you to setup password for your secure log in. Point to note here is that minimum length of password has been set 6 digits.
    
     \item Purpose of using the app
     
@@ -140,38 +140,38 @@ User can log in in the app via certain ways which are mentioned below.
     \begin{itemize}
         \item Facebook Login
         
-       The Facebook \gls{sdk} for \gls{iOS} provides developers to integrate a plugin, which allows users to log into their Facebook accounts. Figure 4.8 shows the pop up alert which comes after tapping on Facebook login button and 4.9 shows the screens when user opts for Facebook log in after clicking continue in fig 4.8.
+       The Facebook \gls{sdk} for \gls{iOS} provides developers to integrate a plugin, which allows users to log into their Facebook accounts. Figure~\ref{fig:facebook_part_1} shows the pop up alert which comes after tapping on Facebook login button and 4.9 shows the screens when user opts for Facebook log in after clicking continue in Figure~\ref{fig:facebook_part_1}.
        
       \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch4/facebook_1.png}
-            \caption{Facebook log in Part-I}\label{Fig:facebook_part_1}
+            \caption{Facebook log in Part-I}\label{fig:facebook_part_1}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch4/facebook_2.png}
-            \caption{Facebook log in Part-II}\label{Fig:facebook_part_2}
+            \caption{Facebook log in Part-II}\label{fig:facebook_part_2}
         \end{minipage}
     \end{figure}
     
-        As you can see in fig 4.9, user doesn't have to enter his Facebook id and password every time, it's a one time process, the \gls{sdk} helps developers to remember the credentials used previously they logged in on the app.
+        As you can see in Figure~\ref{fig:facebook_part_2}, user doesn't have to enter his Facebook id and password every time, it's a one time process, the \gls{sdk} helps developers to remember the credentials used previously they logged in on the app.
         
       
         \item Google Sign in
         
-        User can also log in through their Gmail account by tapping on Google sign in button in the fig 4.10 if they don't have Facebook account or vice-verse. Google's \gls{api} for Sign-in has been implemented to create this functionality in the app. Figure 4.10 and 4.11 shows Google \gls{sdk} sign in process. \\
+        User can also log in through their Gmail account by tapping on Google sign in button in the Figure~\ref{fig:google_part_1} if they don't have Facebook account or vice-verse. Google's \gls{api} for Sign-in has been implemented to create this functionality in the app. Figure~\ref{fig:google_part_1} and ~\ref{fig:google_part_2} shows Google \gls{sdk} sign in process. \\
         
         \begin{figure}[!htb]
         \begin{minipage}{0.5\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch4/google_1.png}
-            \caption{Google sign in Part-I}\label{Fig:google_part_1}
+            \caption{Google sign in Part-I}\label{fig:google_part_1}
         \end{minipage}\hfill
         \begin{minipage}{0.5\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch4/google_2.png}
-            \caption{Google sign in Part-II}\label{Fig:google_part_2}
+            \caption{Google sign in Part-II}\label{fig:google_part_2}
         \end{minipage}
     \end{figure}
         
@@ -179,7 +179,7 @@ User can log in in the app via certain ways which are mentioned below.
  
     \item Login via email
     
-    Those users who have registered via email can utilize the functionality of log in via email. They will be required to enter valid email and password to do so. Figure 4.12 shows the login with email screen.
+    Those users who have registered via email can utilize the functionality of log in via email. They will be required to enter valid email and password to do so. Figure~\ref{fig:login_email_ch4} shows the login with email screen.
     
     \begin{figure}[H]
             \centering
@@ -200,7 +200,7 @@ User can log in in the app via certain ways which are mentioned below.
             \caption{\label{fig:pass_recovery_1} Password Recovery Part-I - Email verification}
         \end{figure}
     
-    First part of the password recovery is to check if the user exist with the email he entered in the fig 4.13. If yes, then take him to next screen else show him the alert saying that record does not exist with this email.
+    First part of the password recovery is to check if the user exist with the email he entered in the Figure~\ref{fig:pass_recovery_1}. If yes, then take him to next screen else show him the alert saying that record does not exist with this email.
     
      \item Year of birth verification screen
         
@@ -307,7 +307,7 @@ This is one of the most crucial part of the application which enables user to fi
         \begin{minipage}{0.5\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{figures/ch4/dates_list.png}
-            \caption{Date list on selecting year}\label{Fig:date_list_ch4}
+            \caption{Dates list after selecting year}\label{Fig:date_list_ch4}
         \end{minipage}
     \end{figure}
    
@@ -437,7 +437,7 @@ This section contains all three cases of Admin Level and their effect on Home sc
     
      \begin{figure}[H]
             \centering
-            \includegraphics[width=0.25\linewidth]{figures/ch4/side_menu.png}
+            \includegraphics[width=0.25\linewidth]{figures/ch4/admin_level_2.png}
             \caption{\label{fig:admin_level_2_visual}  Admin level 2 data visualization}
         \end{figure}
     
