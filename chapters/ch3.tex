@@ -9,13 +9,13 @@
 
 \centerline{\MYhref{https://modis.gsfc.nasa.gov/}{NASA's MODIS website}}
 
-\gls{modis} is a key instrument on board the Terra (initially known as EOS AM-1) and Aqua (initially known as EOS PM-1) satellites. Land's circle around the Earth is coordinated with the goal that it goes from north to south over the equator early in the day, while Aqua disregards south to north the equator toward the evening. Land \gls{modis} and Aqua \gls{modis} are seeing the whole Earth's surface each 1 to 2 days, gaining information in 36 ghastly groups, or gatherings of wavelengths (see \gls{modis} Technical Specifications). These information will enhance our comprehension of worldwide elements and procedures happening on the land, in the seas, and in the lower climate. \gls{modis} is assuming a fundamental job in the improvement of approved, worldwide, intuitive Earth framework models ready to foresee worldwide change precisely enough to help arrangement creators in settling on quality choices concerning the security of our condition. \cite{MODIS} \\
+\gls{modis} is a key instrument on board the satellites Terra (initially known as EOS AM-1) and Aqua (initially known as EOS PM-1) satellites. Land's circle around the Earth is coordinated with the goal that it goes from north to south over the equator early in the day, while Aqua disregards south to north the equator toward the evening. Land \gls{modis} and Aqua \gls{modis} are seeing the whole Earth's surface each 1 to 2 days, gaining information in 36 awful groups, or gatherings of wavelengths (see \gls{modis} Technical Specifications). These information will enhance our comprehension of worldwide elements and procedures happening on the land, in the seas, and in the lower climate. \gls{modis} is assuming a fundamental job in the improvement of approved, worldwide, intuitive Earth framework models ready to foresee worldwide change precisely enough to help arrangement creators in settling on quality choices concerning the security of our condition. \cite{MODIS} \\
 
 \centerline{\textbf{Terra vs. Aqua}}
 
 According to \gls{nsidc} distributes \gls{modis} data from both the Terra and Aqua satellites. Figure~\ref{fig:modis_satellites_difference} shows the difference between the two satellites. For the application, we have worked with Aqua satellite's data.
 
- \begin{figure}[H]
+    \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch3/satellites.png}
             \caption{\label{fig:modis_satellites_difference} Difference between MODIS satellites \cite{NSIDC}}
@@ -35,15 +35,13 @@ The GIMMS MODIS GLAM System is produced and given by the NASA/GSFC/GIMMS bunch f
             \caption{\label{fig:nasa_website_1} NASA's NDVI website user guide part-I \cite{GAM}}
     \end{figure}
     
-    
     \begin{figure}[H]
             \centering
             \includegraphics[width=1.0\linewidth]{figures/ch3/nasa_website_2.png}
             \caption{\label{fig:nasa_website_2} NASA's NDVI website user guide part-II \cite{GAM}}
     \end{figure}    
 
-
-The vegetation records are recovered from day by day, air redressed, bidirectional surface reflectance. The \gls{vi}'s utilization, a \gls{modis}-particular compositing strategy dependent on item quality confirmation measurements to evacuate low quality pixels. From the great quality \gls{vi} values, an obliged see edge approach at that point chooses a pixel to speak to the compositing time frame (from the two most elevated \gls{ndvi} values it chooses the pixel that is nearest to-nadir). Since the \gls{modis} sensors on board Terra and Aqua satellites are indistinguishable, the \gls{vi} calculation creates every 16-day composite eight days separated (staged items) to allow a higher worldly goals item by joining the two information records. The \gls{modis} \gls{vi} item suite is currently utilized effectively in all environment, atmosphere, and regular assets administration contemplates and operational research as exhibited by the consistently expanding group of associate distributions. \\
+The vegetation records are gathered from day by day, air redressed, bidirectional surface reflectance. The \gls{vi}'s utilization, a \gls{modis}-particular compositing strategy dependent on item quality confirmation measurements to evacuate low quality pixels. From the great quality \gls{vi} values, an obliged see edge approach at that point chooses a pixel which relates to the compositing time frame (from the two most elevated \gls{ndvi} values it chooses the pixel that is nearest to-nadir). Since the \gls{modis} sensors on board Terra and Aqua satellites are indistinguishable, the \gls{vi} calculation creates every 16-day composite eight days separated (staged items) to allow a higher worldly goals item by joining the two information records. The \gls{modis} \gls{vi} item suite is currently utilized effectively in all environment, atmosphere, and regular assets administration contemplates and operational research as exhibited by the consistently expanding group of associate distributions. \\
 
 \centerline{\textbf{How do you calculate NDVI?  \cite{theGISGeography}}}
 
@@ -51,8 +49,7 @@ The vegetation records are recovered from day by day, air redressed, bidirection
        NDVI = \frac{NIR - RED}{NIR + RED}
     \end{equation} 
 
-
-where \gls{nir} represnts Near-Infrared and \gls{red} refers to Red Light. Solid vegetation (chlorophyll) reflects more close \gls{nir} and green light contrasted with different wavelengths. In any case, it retains more red and blue light. This is the reason our eyes consider vegetation to be the shading green. As shown below, Figure~\ref{fig:ndvi_example} explains the concept of vegetation index.
+where \gls{ndvi} is Normalised Data Vegetation Index, \gls{nir} represnts Near-Infrared and \gls{red} refers to Red Light. Solid vegetation (chlorophyll) reflects more close \gls{nir} and green light contrasted with different wavelengths. In any case, it retains more red and blue light. This is the reason our eyes consider vegetation to be the shading green. As shown below, Figure~\ref{fig:ndvi_example} explains the concept of vegetation index.
 
     \begin{figure}[H]
             \centering
@@ -62,16 +59,15 @@ where \gls{nir} represnts Near-Infrared and \gls{red} refers to Red Light. Solid
 
 Data is normally stored in a \gls{gdac} \gls{ftp} server, at a US-based server at \url{https://gimms.gsfc.nasa.gov/MODIS/}.
 
-The information is thought to be adequately quality controlled and arranged. This information structure does not permit regular determination or spatial choice: a key element to any atmosphere informational index. The FTP server is intended to go about as a chronicle. Researchers are urged to download the information locally for their utilization's, a procedure that depends on noteworthy space learning of the FTP website. Barely any individuals will experience the inconvenience of understanding the FTP structure, less still will set aside opportunity to make the procedure less demanding for other people.
+The information is thought to be adequately quality controlled and arranged. This information structure does not permit regular determination or spatial choice: a key element to any atmosphere informational index. The FTP server is intended to go about as a chronicle. Researchers are urged to download the information locally for their utilization's, a procedure that depends on noteworthy space learning of the FTP website.
 
 \subsection{Significance}
 
-The term \gls{ndvi} in the farming business has positively increased more mindfulness of late because of the developing ubiquity of little unmanned elevated vehicles. \gls{ndvi} is positively not another child on the square and with regards to social affair and preparing this data, rural experts have known and been utilizing this information for quite a long time. However, already assembling this information may have been tedious, awkward, not exceptionally precise and costly. 
+The term \gls{ndvi} in the farming business has positively increased more awareness lately because of the developing ubiquity of little unmanned elevated vehicles. With regards to social affair and preparing this data, rural experts have known and been utilizing this information for quite a long time. However, already assembling this information may have been tedious, awkward, not exceptionally precise and costly. 
 
 As innovation enhances and the methods in which we would now be able to catch this information, agriculturists are beginning to take this basic and successful information all the more genuinely by hoping to join this technique into their product administration methodology. Information is enter in exactness farming, knowing your product's well being is a certain something yet really pre-empting the state of harvest's well being, endorsing compost application, distinguish any potential sickness and precisely assessing yield puts the control in your grasp consequently making you all around educated to settle on the correct business choices as and when required.
 
 \gls{ndvi} is valuable for evaluating the well being and thickness of vegetation. \gls{ndvi} esteems close to 0 show extremely inadequate vegetation. Thick vegetation is demonstrated by \gls{ndvi} esteems moving toward 1. By utilizing a period arrangement of \gls{ndvi} perceptions, one can look at the elements of the developing season and screen wonders, for example, dry spell. A full supplement of information has been finished from the earliest starting point of Terra satellite activity to the present and is accessible for download in peruse and 250m goals.
-
 
 \section{Wireframes Designs}
 
@@ -93,8 +89,6 @@ Some of the Wireframes designs are shown below in Figure~\ref{fig:wireframe_1}, 
             \caption{\label{fig:wireframe_1} Wireframe - Registration process}
     \end{figure}
   
-  
-  
     \begin{figure}[H]
             \centering
             \includegraphics[width=0.75\linewidth]{figures/ch3/wireframe_2.png}
@@ -107,10 +101,9 @@ Some of the Wireframes designs are shown below in Figure~\ref{fig:wireframe_1}, 
             \caption{\label{fig:wireframe_3} Wireframe - Main screen and home screen}
     \end{figure}
 
-
 \section{Database Architecture}
 
-An organized arrangement of information held in a \gls{pc}, particularly one that is available in different ways. Database structure was outlined subsequent to planning \gls{uml} Diagrams in order to improve comprehension of the structure. In the \gls{uml}, an utilization case chart can condense the subtle elements of your framework's clients (otherwise called on-screen characters) and their communications with the framework. Figure~\ref{fig:use_case} shows the use case diagram of the app.
+It is the set of specifications, rules, and processes that dictate how data is stored in a database. It includes data types, relationships, and naming conventions. Database structure was outlined subsequent to planning \gls{uml} Diagrams in order to improve comprehension of the structure. For the thesis, the tool Axure RP 8 has been used to create \gls{uml} diagrams. In the \gls{uml}, an utilization case chart can condense the subtle elements of your framework's clients (otherwise called on-screen characters) and their communications with the framework. Figure~\ref{fig:use_case} shows the use case diagram of the app.
 
     \begin{figure}[H]
             \centering
@@ -137,9 +130,3 @@ As you can see in the above Figure, it clearly shows the actions in which a give
             \includegraphics[width=1.0\linewidth]{figures/ch3/database_structure.png}
             \caption{\label{fig:database_structure} Database tables}
     \end{figure}
-    
-    
-
-
-
-
