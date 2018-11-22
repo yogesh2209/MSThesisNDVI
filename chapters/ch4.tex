@@ -41,9 +41,9 @@ The development of the iOS app is divided into two areas which are mentioned bel
 Apple provides Built-In Interface Builder in the \gls{ide} for designing.
 According to Apple's website, The Interface Builder editor within Xcode makes it simple to design a full user interface without writing any code. Simply drag and drop windows, buttons, text fields, and other objects onto the design canvas to create a functioning user interface. \cite{Xcode} \\
 
-Because Cocoa and Cocoa Touch are built using the Model-View-Controller pattern, it is easy to independently design your interfaces, separate from their implementations. User interfaces are actually archived Cocoa or Cocoa Touch objects (saved as .nib files), and \gls{macOS} and \gls{iOS} will dynamically create the connection between \gls{ui} and code when the app is run. Built in feature of Xcode which is Interface builder using storyboard has been used for designing. Apple also provides one more tool for Visualization of the design which is the \textbf{Storyboard}. \\
+Because Cocoa and Cocoa Touch are built using the Model-View-Controller pattern, it is easy to independently design your interfaces, separate from their implementations. User interfaces are actually archived Cocoa or Cocoa Touch objects (saved as storyboard files), and \gls{macOS} and \gls{iOS} will dynamically create the connection between \gls{ui} and code when the app is run. Built in feature of Xcode which is Interface builder using storyboard has been used for designing. Apple also provides one more tool for Visualization of the design which is the \textbf{Storyboard}. \\
 
-According to Apple, A storyboard is a visual representation of the user interface of an \gls{iOS} application, showing screens of content and the connections between those screens. A storyboard is composed of a sequence of scenes, each of which represents a view controller and its views; scenes are connected by segue objects, which represent a transition between two view controllers. \cite{Storyboard}  \\
+According to Apple, Storyboard is a visual representation of the user interface of an \gls{iOS} application, showing screens of content and the connections between those screens. A storyboard is composed of a sequence of scenes, each of which represents a view controller and its views; scenes are connected by segue objects, which represent a transition between two view controllers. \cite{Storyboard}  \\
 
 Xcode provides a visual editor for storyboards, where you can lay out and design the user interface of your application by adding views such as buttons, table views, and text views onto scenes. In addition, a storyboard enables you to connect a view to its controller object, and to manage the transfer of data between view controllers. Using storyboards is the recommended way to design the user interface of your application because they enable you to visualize the appearance and flow of your user interface on one canvas. Figure 4.1 shows the storyboard of the app. Some of the advantages of using Storyboard are mentioned below.
 
@@ -63,7 +63,7 @@ Xcode provides a visual editor for storyboards, where you can lay out and design
 
 \subsubsection{Sign-up via Email}
 
-Sign up process is a one time process which enables you to enter the application out of the blue. It likewise gives us the chance to include the client in our database for future logins and additionally the record. Sign up via email process consists of 5 screens which are listed below.
+Sign up process is a one time process which enables you to enter the application out of the blue. It likewise gives us the chance to include the client in our database for future logins and additionally for the record purpose. Sign up via email process consists of 5 screens which are listed below.
 
 \begin{itemize}
 
@@ -75,7 +75,7 @@ Sign up process is a one time process which enables you to enter the application
             \caption{\label{fig:register_personal_ch4} Register Part-I Personal detail screen}
     \end{figure}
     
-    Here in Figure~\ref{fig:register_personal_ch4}, mandatory fields are First name, Last name and year of birth where as we have kept middle name as an optional because not everyone has one. UIPickerView is used for selection of year of birth, According to Apple's documentation, UIPickerView is a view that uses a spinning-wheel or slot-machine metaphor to show one or more sets of values. Figure~\ref{fig:pickerview} shows the image of the pickerview designed in the application.
+    Here in Figure~\ref{fig:register_personal_ch4}, mandatory fields are First name, Last name and year of birth where as we have kept middle name as an optional because not everyone has one. Year of birth has been taken from user to get the idea about what age group are using the application. UIPickerView is used for selection of year of birth, According to Apple's documentation, UIPickerView is a view that uses a spinning-wheel or slot-machine metaphor to show one or more sets of values. Figure~\ref{fig:pickerview} shows the image of the pickerview designed in the application.
     
     \begin{figure}[H]
             \centering
@@ -103,7 +103,7 @@ Sign up process is a one time process which enables you to enter the application
             \caption{\label{fig:register_location_ch4} Register Part-III Location detail screen}
     \end{figure}
     
-    This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of device. In this screen, user has two possible choices for entering his location, he can enter the area physically or can simply tap on pickup current area which will eventually get the present location and display it in text area showed. Despite everything he can still alter the area if he wants to.
+    The reason for having this screen is to get the location of the users that are using the application for analytics purpose. This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of device. In this screen, user has two possible choices for entering his location, he can enter the area physically or can simply tap on pickup current area which will eventually get the present location and display it in text area showed. Despite everything he can still alter the area if he wants to.
   
     \item Setup Credentials
     
@@ -123,7 +123,7 @@ Sign up process is a one time process which enables you to enter the application
             \caption{\label{fig:purpose_app_ch4} Register Part-V Purpose of using the app screen}
     \end{figure}
     
-    This screen is really important for us to know what and why people wants to use this app. Moreover, it has an additional check mark for privacy policy and terms of use to which every user must agree before going further. It also protects the application from bot attack.
+    This screen is really important for us to know what and why people wants to use this app. Moreover, it has an additional check mark for privacy policy and terms of use to which every user must agree before going further.
    
 \end{itemize}
 
@@ -243,7 +243,7 @@ This is an essential part of any application. In a context of mobile application
         \end{minipage}
     \end{figure}
     
-    It also includes Google Ads at the bottom of the screen. Google AdMob for \gls{iOS} framework has been integrated to achieve this. Google has a lot of different types of ads but the one we have implemented is the banner view.
+    The purpose of including Google Ads is to make money while giving the application to users for free. It also includes Google Ads at the bottom of the screen. Google AdMob for \gls{iOS} framework has been integrated to achieve this. Google has a lot of different types of ads but the one we have implemented is the banner view.
 
 \subsubsection{Sliding Menu}
 
@@ -357,7 +357,7 @@ According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which
     \begin{itemize}
         \item Find the beginning of the 8-day set and make your string formatted according to Nasa's file name format.
         
-        \item Open zip without unfastening it in such a case that you unfasten the file, the record gets 16 times bigger in size which at last puts weight on processor to process the file.
+        \item Open zip without decompressing it in such a case that you unzip the file, the record gets 16 times bigger in size which at last puts weight on processor to process the file.
         
         \item Read the file row by row one at a time and process the data accordingly by converting data points to \gls{ndvi} values.
         
@@ -368,7 +368,7 @@ According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which
 
 \textbf{RESTful web services} are built to work best on the Web. Representational State Transfer (REST) is an architectural style that specifies constraints, such as the uniform interface, that if applied to a web service induce desirable properties, such as performance, scalability, and modifiability, that enable services to work best on the Web. In the REST architectural style, data and functionality are considered resources and are accessed using Uniform Resource Identifiers (URIs), typically links on the Web. The resources are acted upon by using a set of simple, well-defined operations. The REST architectural style constrains an architecture to a client/server architecture and is designed to use a stateless communication protocol, typically HTTP. In the REST architecture style, clients and servers exchange representations of resources by using a standardized interface and protocol. \cite{RESTful_web_services} \\
 
-\textbf{\gls{json}} is a lightweight information trade arrange. JSON is a content arrangement that is totally dialect free yet utilizes traditions that are recognizable to software engineers of the C-group of dialects, including C, C++, Java, JavaScript, PHP, Python, and numerous others. These properties make JSON a perfect information exchange dialect and helps developers to transfer data between the server and the front-end of any software. The language used for creating web services is \textbf{\gls{php}}. List of web services creates for the project are mentioned below.
+\textbf{\gls{json}} is a lightweight information parser. JSON is a content arrangement that is totally dialect free yet utilizes traditions that are recognizable to software engineers of the C-group of dialects, including C, C++, Java, JavaScript, PHP, Python, and numerous others. These properties make JSON a better information exchange dialect and helps developers to transfer data between the server and the front-end of any software. The language used for creating web services is \textbf{\gls{php}}. List of web services creates for the project are mentioned below.
 
 \begin{itemize}
     \item \textbf{dbcon.php} \\
@@ -453,15 +453,15 @@ Major APIs used in the project to make the application better are explained belo
 \begin{itemize}
     \item \textbf{Alamofire} - HTTP Networking Library
     
-    Alamofire is a Swift-based HTTP networking library for \gls{iOS} and \gls{macOS}. It gives a rich interface over Apple's Foundation organizing stack that disentangles various basic networking assignments. \cite{Alamofire}. It can be found here - \url{https://github.com/Alamofire/Alamofire} \\
+    Alamofire is a Swift-based HTTP networking library for \gls{iOS} and \gls{macOS}. It gives a rich interface over Apple's Foundation organizing stack that disentangles various basic networking assignments\cite{Alamofire}. It can be found here - \url{https://github.com/Alamofire/Alamofire} \\
    
     \item \textbf{WhirlyGlobe} - Globe SDK
     
-    Focusing on mobile technology with based on OpenGL ES, WhirlyGlobe-Maply is an open source library which is utilized in a wide assortment of Atlas, climate, representation, and guide applications. The \gls{sdk} is both a 3D intelligent globe for \gls{iOS} and a 2D map for \gls{iOS}. \cite{WhirlyGlobe}. One important thing to mention is this library has been customized a lot according to the needs of the application. Classes has been modified by adding some delegate methods which enables developers to have more control on the visualization. It can be found here - \url{https://github.com/mousebird/WhirlyGlobe} \\
+    Focusing on mobile technology with based on OpenGL ES, WhirlyGlobe-Maply is an open source library which is utilized in a wide assortment of Atlas, climate, representation, and guide applications. The \gls{sdk} is both a 3D intelligent globe for \gls{iOS} and a 2D map for \gls{iOS}\cite{WhirlyGlobe}. One important thing to mention is this library has been customized a lot according to the needs of the application. Classes has been modified by adding some delegate methods which enables developers to have more control on the visualization. It can be found here - \url{https://github.com/mousebird/WhirlyGlobe} \\
     
     \item \textbf{SwiftCSVExport} - Exporting data
     
-    Swift CSV Export is lightweight and rich highlights framework and it accommodating to make, read and compose CSV records in basic way. \cite{Swift_CSV_Export}. This library has been utilized to change over the JSONDictionary to the required objects which it takes and to package the information into CSV file and at last to send out it through email. Remember, this library has also been customized and used according to our data types requirements. It can be found here - \url{https://github.com/vigneshuvi/SwiftCSVExport} \\ 
+    Swift CSV Export is lightweight and rich highlights framework enabling developers to make, read and compose CSV records in basic way\cite{Swift_CSV_Export}. This library has been utilized to change over the JSONDictionary to the required objects which it takes and to package the information into CSV file and at last to send out it through email. Remember, this library has also been customized and used according to our data types requirements. It can be found here - \url{https://github.com/vigneshuvi/SwiftCSVExport} \\ 
     
 \end{itemize}
 
@@ -521,5 +521,5 @@ List of software languages used in the process are mentioned below.
     \item \textbf{Swift 4.1} - for development of iOS app \\
     \item \textbf{PHP} - for data parsing between server and the app \\
     \item \textbf{Python} - script for getting data from \gls{nasa}'s server and storing it in database. \\
-    \item \textbf{R} - script for implementing \gls{svd} \\
+    \item \textbf{R} - script for implementing \gls{svd} for analysis. \\
 \end{itemize}
