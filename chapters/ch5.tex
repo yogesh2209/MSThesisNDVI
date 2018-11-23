@@ -5,7 +5,7 @@
 
 \section{Data downloading}
 
-\textbf{Downloading} is defined as the transfer of data from server to your system or belonging. In other words, it is defined as the transmission of data from one machine to another. The significant advantage of downloading is that it gives you the full power over the information with the goal that you can utilize that information. The app gives you the feature of exporting any admim level (0, 1 or 2) data in \gls{csv} format via email option so that it can be used in any form of spatial analysis. Process of data downloading is described below.
+\textbf{Downloading} is defined as the transfer of data from server to your system or belonging. In other words, it is defined as the transmission of data from one machine to another. The significant advantage of downloading is that it gives you the full access over the downloaded data with the goal that you can utilize that information. The app gives you the feature of exporting any admim level (0, 1 or 2) data in \gls{csv} format via email option so that it can be used in any form of spatial analysis. Process of data downloading is described below.
 
 \begin{itemize}
     \item Select year, date and tap on country to see the data and then tap on any region. Once you do that, you will see two buttons on both top corners of the screen. Figure 5.1 shows the two buttons which appears after having valid data on globe / map. \\
@@ -24,7 +24,7 @@
             \caption{\label{fig:info_button} Information button action}
         \end{figure}
        
-     \item Right button in figure 5.1 corresponds to export button which prompts you for exporting current data which is visible on globe / map. Figure 5.3 shows the export view on tapping of export button. \\
+     \item Right button in figure 5.1 corresponds to export button which prompts you for exporting current data in \gls{csv} format via email which is visible on globe / map. Figure 5.3 shows the export view on tapping of export button. \\
      
      \begin{figure}[H]
             \centering
@@ -48,7 +48,7 @@
 
 \begin{itemize}
     \item \textbf{Mean} \\
-    According to a paper published in 1997, the mean of a data set is simply the arithmetic average of the values in the set, obtained by summing the values and dividing by the number of values. Recall that when we summarize a data set in a frequency distribution, we are approximating the data set by "rounding" each value in a given class to the class mark. With this in mind, it is natural to define the mean of a frequency distribution by Figure 5.5. \cite{Mean_SD}
+    According to a paper published about Descriptive Statistics in 1997, the mean of a data set is simply the arithmetic average of the values in the set, obtained by summing the values and dividing by the number of values. Recall that when we summarize a data set in a frequency distribution, we are approximating the data set by "rounding" each value in a given class to the class mark. With this in mind, it is natural to define the mean of a frequency distribution by Figure 5.5\cite{Mean_SD}.
     
     \begin{equation} \label{eq:mean_formula}
        \mu = \frac{1}{n} \sum\limits_{i=1}^{n}f_{i}x_{i} \doteq \sum\limits_{i=1}^{n}p_{i}x_{i}
@@ -68,7 +68,7 @@ where $\sigma$ represents the standard deviation, $x_{i}$ are the individual val
 
 \centerline{\textbf{Why use mean and standard deviation for analysis?}}
 
-The main purpose of using mean and standard deviation as a parameter for analysis is that the Normal Curve discloses to us that numerical data will be disseminated in an pattern around a normal line whereas Standard deviation is viewed as the most valuable list of variability. It is a solitary number that discloses to us the inconstancy, or spread, of an appropriation (gathering of scores). We have investigated \gls{ndvi} and Anomaly a portion of the nations just to demonstrate that with the sent out information through the app, client can do these things:
+The main purpose of using mean and standard deviation as a parameter for analysis is that the Normal Curve discloses to us that numerical data will be disseminated in an pattern around a normal line whereas Standard deviation is viewed as the most valuable list of variability. It is a solitary number that discloses to us the inconstancy, or spread, of an appropriation (gathering of scores). We have investigated \gls{ndvi} and Anomaly data for some of the countries just to demonstrate that with the sent out information through the app, client can do these things:
 
 \newpage
 
@@ -197,7 +197,7 @@ As an application, SVD is utilized to perform principle component analysis (PCA)
 Steps involved in the process of implementing \gls{svd} are as follows.
 
 \begin{itemize}
-    \item Conversion of \gls{json} data into a formatted \gls{csv} file.
+    \item Conversion of \gls{json} \gls{ndvi} fetched data from server into a formatted \gls{csv} file on the client side.
     \item Load the csv file in R code and remove invalid or null entries with 0.
     \item Remove the states which we don't have the data for.
     \item Plot the eigen values of \gls{ndvi} covariance matrix.
