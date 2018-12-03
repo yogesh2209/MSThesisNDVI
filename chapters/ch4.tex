@@ -36,7 +36,7 @@ Any part of the software or \gls{ui} that a user sees on the screen and interact
 
 \subsection{App Designing}
 
-\textbf{Xcode 9.2} has been used for the development of the app. It is an \gls{ide}, which implies it pulls every one of the instruments expected to create an application (especially a content tool, a compiler, and a manufacture framework) into one programming bundle instead of abandoning them as an arrangement of individual devices associated by contents. Xcode is Apple's authentic \gls{ide} for \gls{mac} and \gls{iOS} engineers. It was initially known as Project Builder in the NeXT days, and renamed to Xcode some place around Mac OS X 10.3 or 10.4. By adaptation 4, Apple had collapsed in the sidekick Interface Builder program so there was just a single application package; the plan of the program hasn't changed a ton from that point forward, albeit clearly the instruments are refreshed routinely. \\
+\textbf{Xcode 9.2} has been used for the development of the app. It is an \gls{ide}, which implies it pulls every one of the instruments expected to create an application (especially a content tool, a compiler, and a manufacture framework) into one programming bundle instead of abandoning them as an arrangement of individual devices associated by contents. Xcode is Apple's authentic \gls{ide} for \gls{mac} and \gls{iOS} engineers. It was initially known as Project Builder in the NeXT days and renamed to Xcode some place around Mac OS X 10.3 or 10.4. By adaptation 4, Apple had collapsed in the sidekick Interface Builder program so there was just a single application package; the plan of the program hasn't changed a ton from that point forward, albeit clearly the instruments are refreshed routinely. \\
 Apple provides Built-In Interface Builder in the \gls{ide} for designing.
 According to Apple's website, The Interface Builder editor within Xcode makes it simple to design a full user interface without writing any code. Simply drag and drop windows, buttons, text fields, and other objects onto the design canvas to create a functioning user interface. \cite{Xcode} \\
 Because Cocoa and Cocoa Touch are built using the Model-View-Controller pattern, it is easy to independently design your interfaces, separate from their implementations. User interfaces are actually archived Cocoa or Cocoa Touch objects (saved as storyboard files), and \gls{macOS} and \gls{iOS} will dynamically create the connection between \gls{ui} and code when the app is run. Built in feature of Xcode which is Interface builder using storyboard has been used for designing. Apple also provides one more tool for Visualization of the design which is the \textbf{Storyboard}. \\
@@ -57,11 +57,11 @@ Xcode provides a visual editor for storyboards, where the developer can lay out 
     
 \subsection{Mobile App screens and their significance}
 
-This part of the thesis focuses on the screens and their usage in the application. It explains all the screens categorised by the processes such as signup, login, home, slide out menu and filter.
+This part of the thesis focuses on the screens and their usage in the application. It explains all the screens categorized by the processes such as signup, login, home, slide out menu and filter.
 
 \subsubsection{Sign-up via Email}
 
-Sign up process is a one time process which enables the user to enter the application out of the blue. It likewise gives the chance to include the client in the database for future logins and additionally for the record purpose. Sign up via email process consists of 5 screens which are listed below.
+Sign up process is a one-time process which enables the user to enter the application out of the blue. It likewise gives the chance to include the client in the database for future logins and additionally for the record purpose. Sign up via email process consists of 5 screens which are listed below.
 
 \begin{itemize}
 
@@ -89,7 +89,7 @@ Sign up process is a one time process which enables the user to enter the applic
             \caption{\label{fig:register_contact_ch4} Register Part-II Contact detail screen}
     \end{figure}
     
-    Figure~\ref{fig:register_contact_ch4} represents contact detail screen in which the fields i.e email and phone are mandatory for record purpose and to provide login via email functionality. User with unique email and phone can register only once. It's good to note that both fields have been verified syntactically here.
+    Figure~\ref{fig:register_contact_ch4} represents contact detail screen in which the fields i.e. email and phone are mandatory for record purpose and to provide login via email functionality. User with unique email and phone can register only once. It's good to note that both fields have been verified syntactically here.
     
     \item Location details
     
@@ -99,7 +99,7 @@ Sign up process is a one time process which enables the user to enter the applic
             \caption{\label{fig:register_location_ch4} Register Part-III Location detail screen}
     \end{figure}
     
-    The reason for having this screen is to get the location of the users that are using the application for analytics purpose. This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of the device. In this screen, user has two possible choices for entering the location, the user can enter the area physically or can simply tap on pickup current area which will eventually get the present location and display it in text area. Despite everything the user can still alter the area if needed.
+    The reason for having this screen is to get the location of the users that are using the application for analytics purpose. This screen makes use of Apple's Core Location framework which allows developers to obtain current geographic location of the device. In this screen, user has two choices for entering the location, the user can enter the area physically or can simply tap on pickup current area which will eventually get the present location and display it in text area. Despite everything the user can still alter the area if needed.
   
     \item Setup Credentials
     
@@ -205,7 +205,7 @@ Users can login into the app via certain ways which are mentioned below.
             \caption{\label{fig:pass_recovery_2} Password Recovery Part-II - Year of birth verification}
     \end{figure}
     
-    This screen is to make this process more secure by asking users year of birth. It must match the year of birth they entered in registering via email process. If this matches, then user is allowed to change the password.
+    This screen is to make this process more secure by asking users year of birth. It must match the year of birth they entered in registering via email process. If this match, then user is allowed to change the password.
  
      \item Change credentials screen
         
@@ -242,7 +242,7 @@ This is an essential part of any application. In a context of mobile application
 
 \subsubsection{Sliding Menu}
 
-Sliding menu has been used in the app to make navigation easier for the user. It enables user to visit some of the key screens without any hustle. Figure 4.18 shows the sliding menu and the options it includes.
+Sliding menu has been used in the app to make navigation easier for the user. It enables user to visit some of the key screens without any hustle. Figure~\ref{fig:side_menu_ch4} shows the sliding menu and the options it includes.
 
     \begin{figure}[H]
             \centering
@@ -257,7 +257,7 @@ Sliding menu has been used in the app to make navigation easier for the user. It
     By tapping on home, it takes user to the home i.e landing page.
     
         \item About \\
-            The main role of an about us page is to inform user about the organization and its tasks. This is a clear objective that almost all organizations need to satisfy in some form or another.
+            The main role of an about us page is to inform user about the organization and its tasks. This is a clear objective that all organizations need to satisfy in some form or another.
     
          \item Help \\
             The main reason for keeping help screen in slide menu is to provide user easier access to help in case of any query. He can follow certain steps and contact the developer / organization in case of any difficulties.
@@ -330,9 +330,7 @@ This is one of the most crucial part of the application which enables user to fi
 
 \subsection{Process of getting data from NASA's server}
 
-A significant advance procedure of getting information from NASA's server and inserting information into the PostfreSWL, was developed and implemented using the python 3.6. The data on Nasa's server is in \gls{geoTiff} format. It is important to note that \gls{geoTiff} files stored in their server are compressed via zip.
-
-%put source wikipedia here
+A significant advance procedure of getting information from NASA's server and inserting information into the PostgreSQL, was developed and implemented using the python 3.6. The data on Nasa's server is in \gls{geoTiff} format. It is important to note that \gls{geoTiff} files stored in their server are compressed via zip.
 
 According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which allows georeferencing information to be embedded within a TIFF file. The potential additional information includes map projection, coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact spatial reference for the file \cite{GeoTIFF_Wikipedia}. Figure~\ref{fig:geotiff} represents NASA's data bundled in \gls{geoTiff} file.
 
@@ -342,7 +340,7 @@ According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which
             \caption{\label{fig:geotiff} Sample of NASA's NDVI GeoTiff data file}
     \end{figure}
 
-    Steps taken to get the raw data from this \gls{geoTiff} file, process the data and finally to store that data to a database are as follows :
+    Steps taken to get the raw data from this \gls{geoTiff} file, process the data and finally to store that data to a database are as follows:
     
     \begin{itemize}
         \item Find the beginning of the 8-day set and make your string formatted according to Nasa's file name format.
@@ -375,11 +373,7 @@ According to Wikipedia, \gls{geoTiff} is a public domain metadata standard which
 
 \subsection{Data Visualization}
 
-%this section will include images of the home screen different cases and explaining that images
-
-% have some info about the image - date selected, country selected, mean values and all and show them in the picture
-
-Process of displaying the data is describred as below.
+Process of displaying the data is described as below.
 
 \begin{itemize}
     \item Select any filter options if desired.
@@ -450,7 +444,7 @@ Major APIs used in the project to make the application better are explained belo
     
     \item \textbf{SwiftCSVExport} - Exporting data
     
-    Swift CSV Export is lightweight and rich. It enables developers to create, read and compose CSV records easily\cite{Swift_CSV_Export}. This library has been utilized to change over the JSONDictionary to the required objects which it takes and to package the information into CSV fil and send it through email. Remember, this library has also been customized and used according to the data type. It can be found here 
+    Swift CSV Export is lightweight and rich. It enables developers to create, read and compose CSV records easily\cite{Swift_CSV_Export}. This library has been utilized to change over the \gls{json} dictionary to the required objects which it takes and to package the information into CSV fil and send it through email. Remember, this library has also been customized and used according to the data type. It can be found here 
     - \url{https://github.com/vigneshuvi/SwiftCSVExport} \\ 
     
 \end{itemize}

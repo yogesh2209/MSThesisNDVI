@@ -42,7 +42,6 @@
     
 \end{itemize}
 
-\newpage
 
 \section{Computing mean, standard deviation and histogram}
 
@@ -55,7 +54,7 @@
     \end{equation}
     
     \item \textbf{Standard Deviation} \\
-   It is defined as the amount computed to show the degree of deviation for a gathering all in all. Where $\sigma$ represents the standard deviation, $x_{i}$ are the individual values and $\mu$ represents the mean which can be calculated by equation 5.1.
+   It is defined as the amount computed to show the degree of deviation for a gathering all in all. Where $\sigma$ represents the standard deviation, $x_{i}$ are the individual values and $\mu$ represents the mean which can be calculated by Equation 5.1.
    
   \begin{equation} \label{eq:standarddeviation_formula}
       \sigma = \sqrt{\frac{\sum\limits_{i=1}^{n}(x_{i} - \mu)^2}{n}}
@@ -69,8 +68,6 @@
 \centerline{\textbf{Why use mean and standard deviation for analysis?}}
 
 The main purpose of using mean and standard deviation as a parameter for analysis is that the Normal Curve discloses pattern around a normal line whereas Standard deviation is viewed as the most valuable list of variability. It discloses to us the inconstancy, or spread, of an appropriation (gathering of scores). This paper investigates \gls{ndvi} and Anomaly data for some regions to demonstrate with the information through the app. The user is able to do the following:
-
-\newpage
 
 \begin{itemize}
     \item \textbf{Mean NDVI \& Anomaly distribution over the years}
@@ -137,8 +134,7 @@ The main purpose of using mean and standard deviation as a parameter for analysi
             \caption{\label{fig:US_SD}Standard deviation graph - United States}
     \end{figure}
    
-    \newpage
-    
+   
     \item \textbf{Histogram NDVI \& Anomaly distribution over the years}
     
     \begin{figure}[H]
@@ -172,20 +168,20 @@ The main purpose of using mean and standard deviation as a parameter for analysi
             \includegraphics[width=1.0\linewidth]{figures/ch5/Histograms/US_histogram.png}
             \caption{\label{fig:US_histogram} Histogram graph - United States}
     \end{figure}
-\newpage
+
 
 \end{itemize}
 
 \section{SVD Analysis}
 
-\gls{svd} is the overview of the eigendecomposition of a positive semidefinite normal matrix to any $m$ x $n$ matrix through a calculation of the polar breakdown. It has numerous practical functions in signal processing, statistics, and data analysis.
-One way to visualize SVD is by considering what happens to the unit sphere in the vector space as it’s being transformed. Transformation creates a rotation if a matrix has orthonormal rows. A scaling process is also taking place, followed by a rotation. Any transformation can be expressed as a rotation followed by a scaling and by an aditional rotation \cite{SVD}.
+\gls{svd} is the overview of the eigen decomposition of a positive semidefinite normal matrix to any $m$ x $n$ matrix through a calculation of the polar breakdown. It has numerous practical functions in signal processing, statistics, and data analysis.
+One way to visualize SVD is by considering what happens to the unit sphere in the vector space as it’s being transformed. Transformation creates a rotation if a matrix has orthonormal rows. A scaling process is also taking place, followed by a rotation. Any transformation can be expressed as a rotation followed by a scaling and by an additional rotation \cite{SVD}.
 
 \begin{equation} \label{eq:svd_formula}
  A = UDV^{T}
 \end{equation}
 
-Equation 5.3 show "SVD" mathematical expression where $A$ is $m$ x $n$ real matrix with $m>n$, $U$ with dimensions $m$ x $m$ and $V$ with dimensions $n$ x $n$. Figure~\ref{fig:svd_matrix} shows visualisation of the matrix multiplications in \gls{svd}.
+Equation 5.3 show "SVD" mathematical expression where $A$ is $m$ x $n$ real matrix with $m>n$, $U$ with dimensions $m$ x $m$ and $V$ with dimensions $n$ x $n$. Figure~\ref{fig:svd_matrix} shows visualization of the matrix multiplications in \gls{svd}.
 
     \begin{figure}[H]
             \centering
@@ -214,15 +210,13 @@ Figure~\ref{fig:svd_data_snapshot} shows the portion of mean \gls{ndvi} data tha
             \caption{\label{fig:svd_data_snapshot} Snapshot of United States mean NDVI data of all years represented state wise}
     \end{figure}
     
-\newpage    
-Eigen values of \gls{ndvi} covariance matrix plot has been shown in the Figure~\ref{fig:covriance}.
+Figure~\ref{fig:covriance} shows that within the first few modes of the curve, a big change can be observed in both the cumulative variance and the percentage variance going from about 0 to 17 and from about 32 to 10 respectively, notice that the values get smaller at the extremes, causing the points to overlap in the presence of noise.
 
 \begin{figure}[H]
             \centering
             \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/covarianceeigen.png}
             \caption{\label{fig:covriance} Eigen values of NDVI covariance matrix.}
     \end{figure}
-
 
 The size of $A$ matrix is $47$ x $714$, column belongs to dates and row for states. After applying \gls{svd} to matrix $A$, the matrices, $U$, $D$ and $VT$ are shown below in Figure~\ref{fig:svd_result_matrices}.
 
@@ -240,11 +234,15 @@ The size of $A$ matrix is $47$ x $714$, column belongs to dates and row for stat
             \caption{\label{fig:EOF_1} Mask mapping state wise of U1 vector of matrix U}
     \end{figure}
     
+    Figure~\ref{fig:EOF_1} shows the mask mapping of state wise anomaly values, notice that there is little to no change in the continental US, while Alaska shows the highest value.
+    
      \begin{figure}[H]
             \centering
             \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc1.png}
             \caption{\label{fig:V_1} Time series analysis of V1 vector of matrix V}
     \end{figure}
+    
+    Figure~\ref{fig:V_1} describes extreme local minimums in 2002, 2005, 2007, 2008, 2013, 2016, and a global maximum in 2012. Local maximums are shown in 2002, 2006, 2007, 2009, and a global maximum in 2015. 
     
     \begin{figure}[H]
             \centering
@@ -252,11 +250,15 @@ The size of $A$ matrix is $47$ x $714$, column belongs to dates and row for stat
             \caption{\label{fig:EOF_2} Mask mapping state wise of U2 vector of matrix U}
     \end{figure}
     
+     Figure~\ref{fig:EOF_2} shows the east and west patters as positive indicating close to zero anomaly, on the other hand the mountain region shows the opposite, the values are on the negative side.
+    
     \begin{figure}[H]
             \centering
             \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc2.png}
             \caption{\label{fig:V_2} Time series analysis of V2 vector of matrix V}
     \end{figure}
+    
+    Figure~\ref{fig:V_2} shows an increase and then a sudden drop around 2005, 2010 and 2015 showing an interesting pattern in the anomaly.
     
      \begin{figure}[H]
             \centering
@@ -264,11 +266,15 @@ The size of $A$ matrix is $47$ x $714$, column belongs to dates and row for stat
             \caption{\label{fig:EOF_3} Mask mapping state wise of U3 vector of matrix U}
     \end{figure}
     
+   Figure~\ref{fig:EOF_3} shows the southeast area with almost zero to negative anomaly, while northwest shows the opposite.
+    
      \begin{figure}[H]
             \centering
             \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc3.png}
             \caption{\label{fig:V_3} Time series analysis of V3 vector of matrix V}
     \end{figure}
+    
+    Figure~\ref{fig:V_3} explains an increase and then a sudden drop around 2004 , 2005, 2006, 2010 and 2014 showing an interesting pattern in the anomaly.
     
     
      \begin{figure}[H]
@@ -277,21 +283,29 @@ The size of $A$ matrix is $47$ x $714$, column belongs to dates and row for stat
             \caption{\label{fig:EOF_4} Mask mapping state wise of U4 vector of matrix U}
     \end{figure}
     
+    Figure~\ref{fig:EOF_4} notice that the anomaly values are not changing much compare to previous one, more research needs to be done to get more accurate results
+    
      \begin{figure}[H]
             \centering
             \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc4.png}
             \caption{\label{fig:V_4} Time series analysis of V4 vector of matrix V}
     \end{figure}
     
-    
+    Figure~\ref{fig:V_4} shows extreme global minimum in 2007 and 2012. Global maximum in 2012. 
+
+
      \begin{figure}[H]
             \centering
             \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/eof5.png}
             \caption{\label{fig:EOF_5} Mask mapping state wise of U5 vector of matrix U}
     \end{figure}
     
+    Figure~\ref{fig:EOF_5} shows how anomaly across the united states is evenly spread with the exception of California.
+    
      \begin{figure}[H]
             \centering
             \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/pc5.png}
             \caption{\label{fig:V_5} Time series analysis of V5 vector of matrix V}
     \end{figure}
+    
+    Figure~\ref{fig:V_5} shows the minimum and maximum values on 2005, 2006, 2007, 2009, and 2012.
