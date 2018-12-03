@@ -206,18 +206,17 @@ Figure~\ref{fig:svd_data_snapshot} shows the portion of mean \gls{ndvi} data tha
 
   \begin{figure}[H]
             \centering
-            \includegraphics[width=1.0\linewidth]{figures/ch5/svd_data_snapshot.png}
+            \includegraphics[width=0.9\linewidth]{figures/ch5/svd_data_snapshot.png}
             \caption{\label{fig:svd_data_snapshot} Snapshot of United States mean NDVI data of all years represented state wise}
     \end{figure}
     
-Figure~\ref{fig:covriance} shows that within the first few modes of the curve, a big change can be observed in both the cumulative variance and the percentage variance going from about 0 to 17 and from about 32 to 10 respectively, notice that the values get smaller at the extremes, causing the points to overlap in the presence of noise.
-
 \begin{figure}[H]
             \centering
             \includegraphics[width=0.70\linewidth]{figures/ch5/SVD/covarianceeigen.png}
             \caption{\label{fig:covriance} Eigen values of NDVI covariance matrix.}
     \end{figure}
-
+    
+Figure~\ref{fig:covriance} shows that within the first few modes of the curve, a big change can be observed in both the cumulative variance and the percentage variance going from about 0 to 17 and from about 32 to 10 respectively, notice that the values get smaller at the extremes, causing the points to overlap in the presence of noise.  \\
 The size of $A$ matrix is $47$ x $714$, column belongs to dates and row for states. After applying \gls{svd} to matrix $A$, the matrices, $U$, $D$ and $VT$ are shown below in Figure~\ref{fig:svd_result_matrices}.
 
     \begin{figure}[H]
