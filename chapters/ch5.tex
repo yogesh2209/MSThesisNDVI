@@ -178,13 +178,14 @@ The main purpose of using mean and standard deviation as a parameter for analysi
 
 \section{SVD Analysis}
 
-\gls{svd} is a factorization of a real or complex matrix.  It is the generalization of the eigendecomposition of a positive semidefinite normal matrix (for example, a symmetric matrix with positive eigenvalues) to any $m$ x $n$ matrix via an extension of the polar decomposition. It has many useful applications in signal processing and statistics. \cite{SVD}
+\gls{svd} is the overview of the eigendecomposition of a positive semidefinite normal matrix to any $m$ x $n$ matrix through a calculation of the polar breakdown. It has numerous practical functions in signal processing, statistics, and data analysis.
+One way to visualize SVD is by considering what happens to the unit sphere in the vector space as it’s being transformed. Transformation creates a rotation if a matrix has orthonormal rows. A scaling process is also taking place, followed by a rotation. Any transformation can be expressed as a rotation followed by a scaling and by an aditional rotation \cite{SVD}.
 
 \begin{equation} \label{eq:svd_formula}
  A = UDV^{T}
 \end{equation}
 
-where $A$ is $m$ x $n$ real matrix with $m>n$, $U$ as $m$ x $m$ and $V$ as an $n$ x $n$. Figure~\ref{fig:svd_matrix} shows visualisation of the matrix multiplications in \gls{svd}.
+Equation 5.3 show "SVD" mathematical expression where $A$ is $m$ x $n$ real matrix with $m>n$, $U$ with dimensions $m$ x $m$ and $V$ with dimensions $n$ x $n$. Figure~\ref{fig:svd_matrix} shows visualisation of the matrix multiplications in \gls{svd}.
 
     \begin{figure}[H]
             \centering
